@@ -1,0 +1,717 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   DESIGN TOKENS — extracted from strlco.com reference design
+   ========================================================= */
+:root {
+  --color-navy-dark: #032a3a;
+  --color-navy-deep: #004987;
+  --color-navy-mid: #0e4987;
+  --color-navy-light: #315b7c;
+  --color-cyan-accent: #00BCD4;
+  --color-cyan-soft: #4698ca;
+  --color-gold-accent: #ffb81c;
+  --color-text-dark: #101010;
+  --color-text-body: #032a3a;
+  --color-text-gray: #54565a;
+  --color-text-muted: #9c9c9c;
+  --color-bg-light: #f2f2f2;
+  --color-bg-tint: #e6f2ff;
+
+  --font-heading: 'Urbanist', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+}
+
+/* =========================================================
+   BASE STYLES
+   ========================================================= */
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100vw;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-body);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+#root {
+  width: 100%;
+  max-width: 100vw;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+img, video, svg, iframe, canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-body);
+  letter-spacing: -0.01em;
+}
+
+/* Section H1 / hero headline (design-matched) */
+.hero-h1 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* Section H2 */
+.section-h2 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+}
+
+/* Card H3 */
+.card-h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+/* Body copy base */
+.text-body-copy {
+  font-family: var(--font-body);
+  font-size: 16.5px;
+  line-height: 1.7;
+}
+
+.text-body-copy-lg {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* Section vertical padding — rhythm matched */
+.py-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-section-sm {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Container horizontal padding */
+.px-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .px-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .py-section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .py-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* =========================================================
+   REUSABLE COMPONENT UTILITIES (design-matched)
+   ========================================================= */
+
+@layer components {
+  /* Section eyebrow — uppercase, small, letter-spaced */
+  .section-eyebrow {
+    @apply inline-block uppercase tracking-[0.18em] font-bold;
+    font-size: 12px;
+    line-height: 1;
+    color: var(--color-cyan-accent);
+    margin-bottom: 1rem;
+  }
+
+  /* Section container with max-width */
+  .container-site {
+    @apply mx-auto w-full max-w-site px-container;
+    min-width: 0;
+    max-width: min(1280px, 100%);
+  }
+
+  /* Primary CTA button — filled, sharp, uppercase */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-3.5 font-bold uppercase tracking-wider text-white transition-all duration-200;
+    background-color: var(--color-cyan-accent);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-navy-deep);
+    transform: translateY(-1px);
+  }
+
+  /* Secondary CTA button — outline, sharp, uppercase */
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-7 py-3.5 font-bold uppercase tracking-wider transition-all duration-200 border-2;
+    border-color: var(--color-cyan-accent);
+    color: var(--color-text-body);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    background-color: transparent;
+  }
+  .btn-outline:hover {
+    background-color: var(--color-cyan-accent);
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+
+  /* White button variant for dark backgrounds */
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center px-7 py-3.5 font-bold uppercase tracking-wider transition-all duration-200 border-2;
+    border-color: #ffffff;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    background-color: transparent;
+  }
+  .btn-outline-white:hover {
+    background-color: #ffffff;
+    color: var(--color-navy-dark);
+    transform: translateY(-1px);
+  }
+
+  /* Gold underline divider */
+  .divider-gold {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-gold-accent);
+    margin: 15px 0;
+  }
+
+  /* =========================================================
+     RESPONSIVE GRID RULES — strict per PRD Section 6
+     Key rules:
+     - Desktop (>=1024px): natural columns (3 or 4 per row) — normal font
+     - Tablet (768-1023) & Mobile (<=767px): EXACTLY 2 per row — LARGER font
+     ========================================================= */
+
+  /* 4-col desktop → 2-col tablet/mobile */
+  .grid-4-to-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  /* 3-col desktop → 2-col tablet/mobile */
+  .grid-3-to-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* 6-col (2 rows x 3 cols on desktop) → 2-col tablet/mobile (3 rows x 2 cols) */
+  .grid-6-32-to-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Horizontal row (icon-link cards) */
+  .row-3-to-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Highlights strip (4 items in row) */
+  .strip-4-to-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Analytics row (8 items) */
+  .grid-8-42-to-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Mobile/Tablet breakpoint — apply 2-column rule + LARGER fonts */
+  @media (max-width: 1023px) {
+    .grid-4-to-2,
+    .grid-3-to-2,
+    .grid-6-32-to-2,
+    .row-3-to-2,
+    .strip-4-to-2,
+    .grid-8-42-to-2 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    /* LARGER font for card content in 2-per-row layout (PRD §6.3) */
+    .card-scaled h3,
+    .grid-4-to-2 h3,
+    .grid-3-to-2 h3,
+    .grid-6-32-to-2 h3,
+    .row-3-to-2 h3 {
+      font-size: 1.35rem !important;
+      line-height: 1.3;
+    }
+    .card-scaled p,
+    .grid-4-to-2 p,
+    .grid-3-to-2 p,
+    .grid-6-32-to-2 p,
+    .row-3-to-2 p {
+      font-size: 1.05rem !important;
+      line-height: 1.65;
+    }
+    .card-scaled .scaled-label,
+    .grid-4-to-2 .scaled-label,
+    .grid-3-to-2 .scaled-label {
+      font-size: 1rem !important;
+    }
+
+    /* Iconlink card: vertical layout on mobile — icon on top, text below, arrow at bottom-right */
+    .iconlink-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1.25rem;
+    }
+    .iconlink-card .flex-1 {
+      width: 100%;
+    }
+    .iconlink-card .fa-arrow-right {
+      align-self: flex-end;
+      margin-top: 0.25rem;
+    }
+    .iconlink-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  /* Very small mobile keep 2-per-row — never collapse to 1 (per PRD §6.2) */
+  @media (max-width: 479px) {
+    .grid-4-to-2,
+    .grid-3-to-2,
+    .grid-6-32-to-2,
+    .row-3-to-2,
+    .strip-4-to-2,
+    .grid-8-42-to-2 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.875rem;
+    }
+
+    .iconlink-card {
+      padding: 1rem;
+      gap: 0.5rem;
+    }
+    .iconlink-icon {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Hero quick-links row */
+  .hero-quicklinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  @media (max-width: 1023px) {
+    .hero-quicklinks {
+      justify-content: center;
+    }
+  }
+
+  /* Feature card — subtle elevation with hover */
+  .feature-card {
+    @apply relative p-7 bg-white transition-all duration-300;
+    border: 1px solid rgba(3, 42, 58, 0.08);
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(3, 42, 58, 0.15);
+    border-color: var(--color-cyan-accent);
+  }
+  .feature-card:hover .feature-icon {
+    color: var(--color-cyan-accent);
+  }
+  .feature-icon {
+    @apply text-3xl mb-4 transition-colors duration-300;
+    color: var(--color-navy-deep);
+  }
+
+  /* Commitment card (Our Approach section) */
+  .commitment-card {
+    @apply relative p-8 transition-all duration-300;
+    background-color: #ffffff;
+    border-top: 3px solid var(--color-cyan-accent);
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .commitment-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px -20px rgba(3, 42, 58, 0.2);
+  }
+
+  /* Strategy numbered card */
+  .strategy-card {
+    @apply relative p-7 bg-white transition-all duration-300;
+    border-left: 3px solid var(--color-gold-accent);
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .strategy-card:hover {
+    background-color: var(--color-bg-tint);
+    transform: translateX(4px);
+  }
+  .strategy-number {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 2.75rem;
+    line-height: 1;
+    color: var(--color-cyan-accent);
+    opacity: 0.25;
+    margin-bottom: 0.5rem;
+  }
+
+  /* SEO/Marketing capability item */
+  .capability-item {
+    @apply flex items-start gap-3 p-5 transition-colors duration-200;
+    background-color: #ffffff;
+    border: 1px solid rgba(3, 42, 58, 0.06);
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .capability-item:hover {
+    background-color: var(--color-bg-tint);
+    border-color: var(--color-cyan-accent);
+  }
+  .capability-check {
+    color: var(--color-cyan-accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 1.1rem;
+  }
+
+  /* Growth bullet item */
+  .growth-item {
+    @apply flex items-start gap-3 py-3;
+  }
+  .growth-check {
+    color: var(--color-cyan-accent);
+    flex-shrink: 0;
+    margin-top: 4px;
+    font-size: 1.1rem;
+  }
+
+  /* Highlight strip item */
+  .highlight-item {
+    @apply flex flex-col items-center text-center p-6 transition-all duration-300;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .highlight-item:hover {
+    border-color: var(--color-gold-accent);
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+
+  /* Analytics metric card */
+  .metric-card {
+    @apply flex flex-col items-center justify-center p-6 text-center transition-all duration-300;
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--color-cyan-accent);
+  }
+  .metric-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -12px rgba(3, 42, 58, 0.12);
+  }
+  .metric-icon {
+    font-size: 2rem;
+    color: var(--color-cyan-accent);
+    margin-bottom: 0.75rem;
+  }
+
+  /* Quote chip (hero quick links) */
+  .quote-chip {
+    @apply inline-flex items-center gap-2 px-6 py-3.5 font-bold uppercase transition-all duration-200;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+  }
+  .quote-chip:hover {
+    background-color: var(--color-cyan-accent);
+    border-color: var(--color-cyan-accent);
+    transform: translateY(-2px);
+  }
+
+  /* Icon-link card (3-column solution row) */
+  .iconlink-card {
+    @apply relative flex items-center gap-4 p-6 transition-all duration-300 cursor-pointer;
+    background-color: #ffffff;
+    border-top: 3px solid var(--color-gold-accent);
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .iconlink-card:hover {
+    background-color: var(--color-bg-tint);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px -15px rgba(3, 42, 58, 0.15);
+  }
+  .iconlink-icon {
+    font-size: 2rem;
+    color: var(--color-cyan-accent);
+    flex-shrink: 0;
+  }
+
+  /* Form inputs */
+  .form-input {
+    @apply w-full px-4 py-3 border transition-colors duration-200 outline-none;
+    border-color: rgba(3, 42, 58, 0.15);
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--color-text-body);
+    background-color: #ffffff;
+  }
+  .form-input:focus {
+    border-color: var(--color-cyan-accent);
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.1);
+  }
+  .form-label {
+    @apply block mb-2 font-semibold uppercase;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--color-text-body);
+  }
+}
+
+/* =========================================================
+   ANIMATIONS & UTILITIES
+   ========================================================= */
+
+/* Slide-in panel */
+.panel-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(3, 42, 58, 0.65);
+  z-index: 80;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.panel-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.slide-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(480px, 100%);
+  background-color: #ffffff;
+  z-index: 90;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  box-shadow: -20px 0 60px -15px rgba(0, 0, 0, 0.3);
+}
+.slide-panel.active {
+  transform: translateX(0);
+}
+@media (max-width: 640px) {
+  .slide-panel {
+    width: 100%;
+  }
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-navy-dark);
+  z-index: 70;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* Scrollbar */
+.slide-panel::-webkit-scrollbar,
+.mobile-menu::-webkit-scrollbar {
+  width: 6px;
+}
+.slide-panel::-webkit-scrollbar-thumb,
+.mobile-menu::-webkit-scrollbar-thumb {
+  background-color: var(--color-cyan-accent);
+  border-radius: 0;
+}
+
+/* Fade-in on scroll */
+.fade-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: transform, opacity;
+}
+.fade-section.hidden-init {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   IMAGE LOADING UTILITIES
+   ========================================================= */
+
+/* Loading spinner overlay */
+.img-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-light);
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+.img-loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.img-loader-spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid rgba(0, 188, 212, 0.2);
+  border-top-color: var(--color-cyan-accent);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+.img-loader-sm .img-loader-spinner {
+  width: 28px;
+  height: 28px;
+  border-width: 2.5px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Skeleton shimmer */
+.img-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-light) 0%,
+    #e8e8e8 50%,
+    var(--color-bg-light) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+  z-index: 1;
+}
+.img-skeleton.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Hero/page banner background placeholder */
+.bg-img-placeholder {
+  background-color: var(--color-navy-dark);
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(0, 188, 212, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 184, 28, 0.08) 0%, transparent 50%);
+}
+
+/* Portrait card background placeholder */
+.bg-img-placeholder-portrait {
+  background-color: #d9d9d9;
+  background-image:
+    radial-gradient(circle at 30% 40%, rgba(3, 42, 58, 0.08) 0%, transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(0, 188, 212, 0.1) 0%, transparent 55%);
+}
+
+/* Ensure img tags don't show broken icons while loading */
+img {
+  color: transparent;
+}
+img::before {
+  content: '';
+  display: block;
+}
+
+/* Image container for stable layout */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
