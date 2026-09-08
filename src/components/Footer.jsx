@@ -19,7 +19,7 @@ const SERVICES = [
   { label: 'Interior Finishing', to: '/services' },
 ]
 
-const INSTAGRAM_LINK = 'https://www.instagram.com/p/DcmIyXHu3bL/?igsi=MWx5aDQ3d2hrc2RpaQ=='
+const INSTAGRAM_LINK = 'https://www.instagram.com/spectrumrealestateuganda/'
 
 export default function Footer({ onOpenQuote }) {
   const [email, setEmail] = useState('')
@@ -45,21 +45,20 @@ export default function Footer({ onOpenQuote }) {
                   clipPath: 'polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%)',
                 }}
               >
-                A
+                S
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="font-heading font-bold text-white text-[17px] tracking-wide">
-                  APEX CONSTRUCTION
+                  SPECTRUM PROPERTIES
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.2em] font-semibold" style={{ color: 'var(--color-gold-accent)' }}>
-                  [Placeholder Company Name]
+                  Real Estate & Construction Solutions
                 </span>
               </div>
             </div>
 
             <p className="text-white/60 text-[14.5px] leading-relaxed mb-6">
-              A full-service construction partner combining quality craftsmanship with
-              AI-powered digital marketing to help you win more projects and grow steadily.
+              Full-service real estate, construction, and property management partner in Kampala, Uganda — building quality projects and managing investments.
             </p>
 
             <button type="button" onClick={onOpenQuote} className="btn-primary">
@@ -120,19 +119,19 @@ export default function Footer({ onOpenQuote }) {
               <li className="flex items-start gap-3">
                 <i className="fa fa-map-marker-alt mt-1 text-cyan-accent" />
                 <span className="text-white/65 text-[14.5px] leading-relaxed">
-                  [Company Address Placeholder]
+                  Mama Africa Close, Old Kira Road, Kampala, Uganda
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <i className="fa fa-phone text-cyan-accent" />
-                <a href="tel:0000000000" className="text-white/65 text-[14.5px] hover:text-white transition-colors">
-                  (000) 000-0000
+                <a href="tel:+256709220000" className="text-white/65 text-[14.5px] hover:text-white transition-colors">
+                  +256 709 220 000 / +256 773 186 768
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <i className="fa fa-envelope text-cyan-accent" />
-                <a href="mailto:info@placeholder.com" className="text-white/65 text-[14.5px] hover:text-white transition-colors">
-                  info@[placeholder].com
+                <a href="mailto:info@spectrumproperties.co.ug" className="text-white/65 text-[14.5px] hover:text-white transition-colors">
+                  info@spectrumproperties.co.ug
                 </a>
               </li>
             </ul>

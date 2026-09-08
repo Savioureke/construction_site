@@ -115,19 +115,19 @@ export default function Contact({ onOpenQuote }) {
               {
                 icon: 'fa-map-location-dot',
                 title: 'Visit Us',
-                lines: ['[Company Address Placeholder]', '[City, State ZIP]'],
+                lines: ['Mama Africa Close, Old Kira Road', 'Kampala, Uganda'],
                 accent: 'var(--color-cyan-accent)',
               },
               {
                 icon: 'fa-phone',
                 title: 'Call Us',
-                lines: ['Phone: (000) 000-0000', 'Mon – Fri: 7am – 6pm'],
+                lines: ['+256 709 220 000', '+256 773 186 768'],
                 accent: 'var(--color-gold-accent)',
               },
               {
                 icon: 'fa-envelope',
                 title: 'Email Us',
-                lines: ['info@[placeholder].com', 'We reply within 24 hours'],
+                lines: ['info@spectrumproperties.co.ug', 'We reply within 24 hours'],
                 accent: 'var(--color-cyan-accent)',
               },
             ].map((c) => (

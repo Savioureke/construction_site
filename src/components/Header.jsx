@@ -36,11 +36,11 @@ export default function Header({ scrolled, onOpenQuote }) {
               Building trust through quality craftsmanship since 2008
             </div>
             <div className="hidden md:flex items-center gap-5 text-[11.5px] uppercase tracking-[0.1em] font-semibold text-white/80">
-              <a href="mailto:info@apexconstruction.com" className="hover:text-gold-accent transition-colors">
-                <i className="fa fa-envelope mr-1.5" /> info@[placeholder].com
+              <a href="mailto:info@spectrumproperties.co.ug" className="hover:text-gold-accent transition-colors">
+                <i className="fa fa-envelope mr-1.5" /> info@spectrumproperties.co.ug
               </a>
-              <a href="tel:0000000000" className="hover:text-gold-accent transition-colors">
-                <i className="fa fa-phone mr-1.5" /> (000) 000-0000
+              <a href="tel:+256709220000" className="hover:text-gold-accent transition-colors">
+                <i className="fa fa-phone mr-1.5" /> +256 709 220 000
               </a>
             </div>
           </div>
