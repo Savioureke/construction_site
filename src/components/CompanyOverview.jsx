@@ -26,16 +26,13 @@ export default function CompanyOverview() {
     <section className="py-section bg-white fade-section overflow-x-hidden w-full">
       <div className="container-site">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="section-eyebrow">Company Overview</span>
+          <span className="section-eyebrow">Spectrum Real Estate Solutions</span>
           <h2 className="section-h2 mb-6">
-            A Website Built to Win{' '}
-            <span style={{ color: 'var(--color-cyan-accent)' }}>More Construction Projects</span>
+            Building Excellence & Managing Real Estate{' '}
+            <span style={{ color: 'var(--color-cyan-accent)' }}>In Kampala, Uganda</span>
           </h2>
           <p className="text-body-copy text-text-body/85 leading-relaxed max-w-3xl mx-auto">
-            Most construction websites are created once and left unchanged. Ours is different
-            — built with a continuous AI-powered SEO and marketing system so it keeps
-            improving after launch, helping you get found, build trust, generate enquiries,
-            and convert visitors into clients.
+            Spectrum Properties delivers comprehensive real estate development, property sales and rentals, custom home building, commercial construction, agribusiness, and professional property management to local and international investors.
           </p>
         </div>
 

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Hero from '../components/Hero.jsx'
 import CompanyOverview from '../components/CompanyOverview.jsx'
+import SpectrumVideoShowcase from '../components/SpectrumVideoShowcase.jsx'
 import WhatWeBuild from '../components/WhatWeBuild.jsx'
 import SEOAndMarketing from '../components/SEOAndMarketing.jsx'
 import RankingStrategy from '../components/RankingStrategy.jsx'
@@ -31,6 +32,7 @@ export default function Home({ onOpenQuote }) {
     <main className="w-full">
       <Hero onOpenQuote={onOpenQuote} />
       <CompanyOverview />
+      <SpectrumVideoShowcase />
       <WhatWeBuild />
       <SEOAndMarketing />
       <RankingStrategy />

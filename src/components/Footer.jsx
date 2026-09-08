@@ -192,14 +192,14 @@ export default function Footer({ onOpenQuote }) {
       <div className="border-t border-white/10">
         <div className="container-site py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <p className="text-white/45 text-[12.5px] text-center md:text-left">
-            © {new Date().getFullYear()} Apex Construction Group [Placeholder Name]. All Rights Reserved.
+            © {new Date().getFullYear()} Spectrum Real Estate Solutions / Spectrum Properties. All Rights Reserved.
             &nbsp;&nbsp;»&nbsp;&nbsp;
             <a href="#" className="hover:text-white/70 transition-colors">Privacy Policy</a>
             &nbsp;&nbsp;»&nbsp;&nbsp;
             <a href="#" className="hover:text-white/70 transition-colors">Site Map</a>
           </p>
           <p className="text-white/35 text-[11.5px] text-center md:text-right">
-            Placeholder company details — replace with real branding and contact information.
+            Spectrum Properties — Mama Africa Close, Old Kira Road, Kampala, Uganda.
           </p>
         </div>
       </div>

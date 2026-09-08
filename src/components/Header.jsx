@@ -59,14 +59,14 @@ export default function Header({ scrolled, onOpenQuote }) {
                 clipPath: 'polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%)',
               }}
             >
-              A
+              S
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-heading font-bold text-white text-[18px] tracking-wide">
-                APEX CONSTRUCTION
+                SPECTRUM PROPERTIES
               </span>
               <span className="text-[10.5px] uppercase tracking-[0.22em] font-semibold" style={{ color: 'var(--color-gold-accent)' }}>
-                Building With Intelligence
+                Real Estate & Construction
               </span>
             </div>
           </Link>
@@ -139,10 +139,10 @@ export default function Header({ scrolled, onOpenQuote }) {
                   clipPath: 'polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%)',
                 }}
               >
-                A
+                S
               </div>
               <span className="font-heading font-bold text-white text-[17px] tracking-wide">
-                APEX CONSTRUCTION
+                SPECTRUM PROPERTIES
               </span>
             </Link>
             <button

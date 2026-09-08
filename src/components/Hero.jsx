@@ -37,7 +37,7 @@ export default function Hero({ onOpenQuote }) {
           <div className="mb-6 flex items-center gap-4">
             <span className="w-10 h-[2px]" style={{ backgroundColor: 'var(--color-gold-accent)' }} />
             <span className="uppercase tracking-[0.22em] font-bold text-[11.5px] text-white/80">
-              Building With Intelligence
+              Spectrum Real Estate & Construction
             </span>
           </div>
 
@@ -45,15 +45,15 @@ export default function Hero({ onOpenQuote }) {
             className="font-heading hero-h1 text-white mb-6"
             style={{ textShadow: '0 4px 30px rgba(0,0,0,0.45)' }}
           >
-            Trusted Construction.{' '}
+            Premier Property &{' '}
             <span style={{ color: 'var(--color-cyan-accent)' }}>
-              Continuously Growing Visibility.
+              Construction Solutions.
             </span>
           </h1>
 
           <p className="text-white/85 text-[19px] lg:text-[21px] leading-relaxed mb-10 max-w-2xl font-body">
-            Get found &nbsp;→&nbsp; Build trust &nbsp;→&nbsp; Generate enquiries
-            &nbsp;→&nbsp; Convert visitors into clients.
+            Delivering custom luxury homes, commercial towers, property management,
+            and high-ROI land development across Kampala, Uganda.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-14 lg:mb-20">
