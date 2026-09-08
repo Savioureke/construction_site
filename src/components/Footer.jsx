@@ -37,16 +37,11 @@ export default function Footer({ onOpenQuote }) {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div
-                className="w-11 h-11 flex items-center justify-center font-heading font-black text-xl"
-                style={{
-                  backgroundColor: 'var(--color-cyan-accent)',
-                  color: '#ffffff',
-                  clipPath: 'polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%)',
-                }}
-              >
-                S
-              </div>
+              <img
+                src="/images/spectrum logo.jpg"
+                alt="Spectrum Real Estate Solutions"
+                className="w-11 h-11 object-cover rounded-lg shadow-md border border-cyan-accent/30"
+              />
               <div className="flex flex-col leading-tight">
                 <span className="font-heading font-bold text-white text-[17px] tracking-wide">
                   SPECTRUM PROPERTIES

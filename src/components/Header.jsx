@@ -51,16 +51,11 @@ export default function Header({ scrolled, onOpenQuote }) {
           style={{ backgroundColor: '#002d40' }}
         >
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <div
-              className="w-11 h-11 flex items-center justify-center font-heading font-black text-xl"
-              style={{
-                backgroundColor: 'var(--color-cyan-accent)',
-                color: '#ffffff',
-                clipPath: 'polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%)',
-              }}
-            >
-              S
-            </div>
+            <img
+              src="/images/spectrum logo.jpg"
+              alt="Spectrum Real Estate Solutions"
+              className="w-11 h-11 object-cover rounded-lg shadow-md border border-cyan-accent/30"
+            />
             <div className="flex flex-col leading-tight">
               <span className="font-heading font-bold text-white text-[18px] tracking-wide">
                 SPECTRUM PROPERTIES
@@ -131,16 +126,11 @@ export default function Header({ scrolled, onOpenQuote }) {
         <div className="container-site pt-6 pb-8">
           <div className="flex items-center justify-between h-20 mb-6">
             <Link to="/" onClick={closeMobile} className="flex items-center gap-3">
-              <div
-                className="w-11 h-11 flex items-center justify-center font-heading font-black text-xl"
-                style={{
-                  backgroundColor: 'var(--color-cyan-accent)',
-                  color: '#ffffff',
-                  clipPath: 'polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%)',
-                }}
-              >
-                S
-              </div>
+              <img
+                src="/images/spectrum logo.jpg"
+                alt="Spectrum Real Estate Solutions"
+                className="w-11 h-11 object-cover rounded-lg shadow-md border border-cyan-accent/30"
+              />
               <span className="font-heading font-bold text-white text-[17px] tracking-wide">
                 SPECTRUM PROPERTIES
               </span>

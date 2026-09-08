@@ -10,23 +10,23 @@ export default function Hero({ onOpenQuote }) {
 
   return (
     <section
-      className="relative w-full min-h-screen flex items-center overflow-hidden bg-img-placeholder"
-      style={{
-        backgroundImage: `url('${HERO_IMG_URL}')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center',
-      }}
+      className="relative w-full min-h-screen flex items-center overflow-hidden bg-slate-900"
     >
-      {!bgReady && (
-        <div className="img-loader" style={{ backgroundColor: 'transparent' }}>
-          <div className="img-loader-spinner" />
-        </div>
-      )}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/videos/video-home.mp4"
+        poster={HERO_IMG_URL}
+      />
       <div
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(90deg, rgba(3,42,58,0.78) 0%, rgba(3,42,58,0.5) 50%, rgba(3,42,58,0.22) 100%), linear-gradient(180deg, rgba(3,42,58,0.45) 0%, rgba(3,42,58,0.15) 50%, rgba(3,42,58,0.65) 100%)',
+            'linear-gradient(90deg, rgba(3,42,58,0.85) 0%, rgba(3,42,58,0.65) 50%, rgba(3,42,58,0.4) 100%), linear-gradient(180deg, rgba(3,42,58,0.5) 0%, rgba(3,42,58,0.2) 50%, rgba(3,42,58,0.75) 100%)',
         }}
       />
 

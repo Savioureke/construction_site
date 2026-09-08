@@ -1,85 +1,87 @@
 import { useState, useEffect } from 'react'
 
-// Direct mapping from exact prompts or keywords to unique local images in public/images
+// All 24 extracted Instagram images provided by user in public/images
+export const INSTAGRAM_IMAGES = Array.from({ length: 24 }, (_, i) => `/images/html-img-${i + 1}.jpg`)
+
 const PROMPT_MAP = {
   // Home page
-  hero_home: '/images/hero.jpg',
-  growth_home: '/images/growth-home.jpg',
-  cta_home: '/images/cta-home.jpg',
+  hero_home: INSTAGRAM_IMAGES[0],
+  growth_home: INSTAGRAM_IMAGES[1],
+  cta_home: INSTAGRAM_IMAGES[2],
 
   // About page
-  hero_about: '/images/hero-about.jpg',
-  story_about: '/images/company-story-about.jpg',
-  cta_about: '/images/cta-about.jpg',
+  hero_about: INSTAGRAM_IMAGES[3],
+  story_about: INSTAGRAM_IMAGES[4],
+  cta_about: INSTAGRAM_IMAGES[5],
 
   // Services page
-  hero_services: '/images/hero-services.jpg',
-  cta_services: '/images/cta-services.jpg',
+  hero_services: INSTAGRAM_IMAGES[6],
+  cta_services: INSTAGRAM_IMAGES[7],
 
   // Projects page
-  hero_projects: '/images/hero-projects.jpg',
-  cta_projects: '/images/cta-projects.jpg',
-  proj_luxury: '/images/proj-luxury-residence.jpg',
-  proj_office: '/images/proj-office-complex.jpg',
-  proj_historic: '/images/proj-historic-renovation.jpg',
-  proj_suburban: '/images/proj-suburban-homes.jpg',
-  proj_logistics: '/images/proj-logistics-center.jpg',
-  proj_mixed: '/images/proj-mixed-use.jpg',
-  proj_waterfront: '/images/proj-waterfront-estate.jpg',
-  proj_manufacturing: '/images/proj-manufacturing.jpg',
+  hero_projects: INSTAGRAM_IMAGES[8],
+  cta_projects: INSTAGRAM_IMAGES[9],
+  proj_luxury: INSTAGRAM_IMAGES[10],
+  proj_office: INSTAGRAM_IMAGES[11],
+  proj_historic: INSTAGRAM_IMAGES[12],
+  proj_suburban: INSTAGRAM_IMAGES[13],
+  proj_logistics: INSTAGRAM_IMAGES[14],
+  proj_mixed: INSTAGRAM_IMAGES[15],
+  proj_waterfront: INSTAGRAM_IMAGES[16],
+  proj_manufacturing: INSTAGRAM_IMAGES[17],
 
   // Why Us page
-  hero_whyus: '/images/hero-whyus.jpg',
-  cta_whyus: '/images/cta-whyus.jpg',
+  hero_whyus: INSTAGRAM_IMAGES[18],
+  cta_whyus: INSTAGRAM_IMAGES[19],
 
   // Blog page
-  hero_blog: '/images/hero-blog.jpg',
-  faq_blog: '/images/faq-blog.jpg',
-  cta_blog: '/images/cta-blog.jpg',
-  blog_hiring: '/images/blog-hiring-contractor.jpg',
-  blog_waterfront: '/images/blog-waterfront-spotlight.jpg',
-  blog_commercial: '/images/blog-commercial-trends.jpg',
-  blog_budgeting: '/images/blog-budgeting-guide.jpg',
-  blog_seo: '/images/blog-local-seo.jpg',
-  blog_sustainable: '/images/blog-sustainable-materials.jpg',
-  blog_kitchen: '/images/blog-kitchen-renovation.jpg',
-  blog_manufacturing: '/images/blog-manufacturing-spotlight.jpg',
-  blog_custom: '/images/blog-custom-vs-spec.jpg',
+  hero_blog: INSTAGRAM_IMAGES[20],
+  faq_blog: INSTAGRAM_IMAGES[21],
+  cta_blog: INSTAGRAM_IMAGES[22],
+  blog_hiring: INSTAGRAM_IMAGES[0],
+  blog_waterfront: INSTAGRAM_IMAGES[1],
+  blog_commercial: INSTAGRAM_IMAGES[2],
+  blog_budgeting: INSTAGRAM_IMAGES[3],
+  blog_seo: INSTAGRAM_IMAGES[4],
+  blog_sustainable: INSTAGRAM_IMAGES[5],
+  blog_kitchen: INSTAGRAM_IMAGES[6],
+  blog_manufacturing: INSTAGRAM_IMAGES[7],
+  blog_custom: INSTAGRAM_IMAGES[8],
 
   // Contact page
-  hero_contact: '/images/hero-contact.jpg',
-  map_contact: '/images/city-map-contact.jpg',
-  skyscrapers_contact: '/images/skyscrapers-contact.jpg',
+  hero_contact: INSTAGRAM_IMAGES[23],
+  map_contact: INSTAGRAM_IMAGES[22],
+  skyscrapers_contact: INSTAGRAM_IMAGES[21],
 }
 
 const KEYWORD_GALLERY = [
-  { keywords: ['hiring', 'essential questions'], url: '/images/blog-hiring-contractor.jpg' },
-  { keywords: ['harbor view', 'waterfront estate'], url: '/images/blog-waterfront-spotlight.jpg' },
-  { keywords: ['trends every business'], url: '/images/blog-commercial-trends.jpg' },
-  { keywords: ['budgeting', 'cost overruns'], url: '/images/blog-budgeting-guide.jpg' },
-  { keywords: ['local seo', 'rankings'], url: '/images/blog-local-seo.jpg' },
-  { keywords: ['sustainable building'], url: '/images/blog-sustainable-materials.jpg' },
-  { keywords: ['kitchen renovation'], url: '/images/blog-kitchen-renovation.jpg' },
-  { keywords: ['tech park advanced manufacturing'], url: '/images/blog-manufacturing-spotlight.jpg' },
-  { keywords: ['custom vs. spec'], url: '/images/blog-custom-vs-spec.jpg' },
-  { keywords: ['modern luxury residence'], url: '/images/proj-luxury-residence.jpg' },
-  { keywords: ['riverside office complex'], url: '/images/proj-office-complex.jpg' },
-  { keywords: ['historic downtown renovation'], url: '/images/proj-historic-renovation.jpg' },
-  { keywords: ['suburban family home'], url: '/images/proj-suburban-homes.jpg' },
-  { keywords: ['industrial logistics center'], url: '/images/proj-logistics-center.jpg' },
-  { keywords: ['urban mixed-use'], url: '/images/proj-mixed-use.jpg' },
-  { keywords: ['waterfront estate renovation'], url: '/images/proj-waterfront-estate.jpg' },
-  { keywords: ['advanced manufacturing facility'], url: '/images/proj-manufacturing.jpg' },
-  { keywords: ['shaking hands', 'handshake', 'meeting'], url: '/images/cta-about.jpg' },
-  { keywords: ['map', 'location pin'], url: '/images/city-map-contact.jpg' },
-  { keywords: ['reception', 'headquarters'], url: '/images/hero-contact.jpg' },
-  { keywords: ['blueprints', 'hard hat'], url: '/images/cta-projects.jpg' },
+  { keywords: ['hiring', 'essential questions'], url: INSTAGRAM_IMAGES[0] },
+  { keywords: ['harbor view', 'waterfront estate'], url: INSTAGRAM_IMAGES[1] },
+  { keywords: ['trends every business'], url: INSTAGRAM_IMAGES[2] },
+  { keywords: ['budgeting', 'cost overruns'], url: INSTAGRAM_IMAGES[3] },
+  { keywords: ['local seo', 'rankings'], url: INSTAGRAM_IMAGES[4] },
+  { keywords: ['sustainable building'], url: INSTAGRAM_IMAGES[5] },
+  { keywords: ['kitchen renovation'], url: INSTAGRAM_IMAGES[6] },
+  { keywords: ['tech park advanced manufacturing'], url: INSTAGRAM_IMAGES[7] },
+  { keywords: ['custom vs. spec'], url: INSTAGRAM_IMAGES[8] },
+  { keywords: ['modern luxury residence'], url: INSTAGRAM_IMAGES[10] },
+  { keywords: ['riverside office complex'], url: INSTAGRAM_IMAGES[11] },
+  { keywords: ['historic downtown renovation'], url: INSTAGRAM_IMAGES[12] },
+  { keywords: ['suburban family home'], url: INSTAGRAM_IMAGES[13] },
+  { keywords: ['industrial logistics center'], url: INSTAGRAM_IMAGES[14] },
+  { keywords: ['urban mixed-use'], url: INSTAGRAM_IMAGES[15] },
+  { keywords: ['waterfront estate renovation'], url: INSTAGRAM_IMAGES[16] },
+  { keywords: ['advanced manufacturing facility'], url: INSTAGRAM_IMAGES[17] },
+  { keywords: ['shaking hands', 'handshake', 'meeting'], url: INSTAGRAM_IMAGES[5] },
+  { keywords: ['map', 'location pin'], url: INSTAGRAM_IMAGES[22] },
+  { keywords: ['reception', 'headquarters'], url: INSTAGRAM_IMAGES[23] },
+  { keywords: ['blueprints', 'hard hat'], url: INSTAGRAM_IMAGES[9] },
 ]
 
-const ALL_IMAGES = Object.values(PROMPT_MAP)
+export const ALL_IMAGES = INSTAGRAM_IMAGES
 
 /**
- * Builds a fast, non-repeating local image URL.
+ * Builds a fast, non-repeating local image URL using Instagram HTML images.
  */
 export const buildImgUrl = (prompt = '', size = 'landscape_16_9') => {
   if (!prompt) return ALL_IMAGES[0]
@@ -107,7 +109,8 @@ export const buildImgUrl = (prompt = '', size = 'landscape_16_9') => {
   if (lower.includes('office reception area')) return PROMPT_MAP.hero_contact
 
   // Fallback deterministically without repeats
-  const index = Math.abs(prompt.length) % ALL_IMAGES.length
+  const hash = Array.from(prompt).reduce((acc, char) => acc + char.charCodeAt(0), 0)
+  const index = Math.abs(hash) % ALL_IMAGES.length
   return ALL_IMAGES[index]
 }
 
@@ -137,3 +140,4 @@ export const useBgReady = (url) => {
 
   return ready
 }
+

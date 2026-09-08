@@ -2,39 +2,53 @@ import { useState, useRef } from 'react'
 
 const REELS = [
   {
-    title: '2 Bed Luxury Rental — Kalungu Bunga',
-    video: '/videos/spectrum-bunga-tour.mp4',
-    poster: '/images/spectrum-bunga-2bed.jpg',
-    tag: 'Bunga Kampala',
-    url: 'https://www.instagram.com/spectrumrealestateuganda/reel/Dc34jigt7Xr/',
-  },
-  {
-    title: '1 Bed Modern Rental — Munyonyo Kampala',
-    video: '/videos/spectrum-interior-tour.mp4',
-    poster: '/images/spectrum-munyonyo-kitchen.jpg',
+    title: 'Modern 1-Bedroom Apartment Rental — Munyonyo',
+    video: '/videos/video-home.mp4',
+    poster: '/images/html-img-1.jpg',
     tag: 'Munyonyo Kampala',
-    url: 'https://www.instagram.com/spectrumrealestateuganda/reel/DbGWG6MMQ-0/',
+    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
   },
   {
-    title: 'Exclusive Modern Villa & Gate Security Tour',
-    video: '/videos/spectrum-villa-tour.mp4',
-    poster: '/images/spectrum-villa-modern.jpg',
-    tag: 'Kololo Kampala',
-    url: 'https://www.instagram.com/spectrumrealestateuganda/',
+    title: '193-Acre Private Mailo Farm & Land — Mukono',
+    video: '/videos/video-about.mp4',
+    poster: '/images/html-img-2.jpg',
+    tag: 'Mukono Uganda',
+    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
   },
   {
-    title: 'Spectrum Executive Office & CEO Message',
-    video: '/videos/spectrum-office-tour.mp4',
-    poster: '/images/spectrum-ceo-office.jpg',
-    tag: 'Spectrum HQ',
-    url: 'https://www.instagram.com/spectrumrealestateuganda/reel/Dc34jigt7Xr/',
+    title: '2 Bedrooms Apartment — Munyonyo UGX 1.1M',
+    video: '/videos/video-services.mp4',
+    poster: '/images/html-img-3.jpg',
+    tag: 'Munyonyo Kampala',
+    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
   },
   {
-    title: 'Multi-Story Apartment Block Construction',
-    video: '/videos/spectrum-site-tour.mp4',
-    poster: '/images/spectrum-apartment-block.jpg',
-    tag: 'Naguru Kampala',
-    url: 'https://www.instagram.com/spectrumrealestateuganda/',
+    title: 'Luxury Residential Architecture Tour',
+    video: '/videos/video-projects.mp4',
+    poster: '/images/html-img-4.jpg',
+    tag: 'Kampala Prime',
+    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
+  },
+  {
+    title: '2-Bedroom Apartment For Rent — Bunga Soya',
+    video: '/videos/video-whyus.mp4',
+    poster: '/images/html-img-5.jpg',
+    tag: 'Bunga Soya',
+    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
+  },
+  {
+    title: '3-Bedroom Homes For Sale — Muyenga Kisugu',
+    video: '/videos/video-blog.mp4',
+    poster: '/images/html-img-6.jpg',
+    tag: 'Muyenga Kisugu',
+    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
+  },
+  {
+    title: 'Executive 1-Bedroom Apartment — Munyonyo',
+    video: '/videos/video-contact.mp4',
+    poster: '/images/html-img-7.jpg',
+    tag: 'Munyonyo Kampala',
+    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
   },
 ]
 
@@ -136,8 +150,8 @@ export default function SpectrumVideoShowcase() {
           </div>
         </div>
 
-        {/* 5 Video Reels Selector Thumbnails */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+        {/* 7 Video Reels Selector Thumbnails */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 max-w-6xl mx-auto">
           {REELS.map((reel, idx) => (
             <button
               key={reel.title}

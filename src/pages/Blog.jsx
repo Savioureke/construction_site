@@ -144,24 +144,26 @@ export default function Blog({ onOpenQuote }) {
   return (
     <main className="w-full pt-32">
       <section
-        className="relative w-full flex items-center overflow-hidden fade-section bg-img-placeholder"
+        className="relative w-full flex items-center overflow-hidden fade-section bg-slate-900"
         style={{
-          backgroundImage: `url('${HERO_IMG_URL}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          minHeight: '320px',
+          minHeight: '340px',
         }}
       >
-        {!heroReady && (
-          <div className="img-loader img-loader-sm" style={{ backgroundColor: 'transparent' }}>
-            <div className="img-loader-spinner" />
-          </div>
-        )}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/videos/video-blog.mp4"
+          poster={HERO_IMG_URL}
+        />
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(90deg, rgba(3,42,58,0.78) 0%, rgba(3,42,58,0.48) 60%, rgba(3,42,58,0.22) 100%), linear-gradient(180deg, rgba(3,42,58,0.4) 0%, transparent 50%, rgba(3,42,58,0.6) 100%)',
+              'linear-gradient(90deg, rgba(3,42,58,0.85) 0%, rgba(3,42,58,0.65) 60%, rgba(3,42,58,0.35) 100%), linear-gradient(180deg, rgba(3,42,58,0.5) 0%, transparent 50%, rgba(3,42,58,0.7) 100%)',
           }}
         />
         <div className="relative container-site py-20">
