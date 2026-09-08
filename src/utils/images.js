@@ -1,81 +1,88 @@
 import { useState, useEffect } from 'react'
 
-// All 24 extracted Instagram images provided by user in public/images
-export const INSTAGRAM_IMAGES = Array.from({ length: 24 }, (_, i) => `/images/html-img-${i + 1}.jpg`)
+// All 28 extracted Instagram property images provided by user in public/images
+export const INSTAGRAM_IMAGES = Array.from({ length: 28 }, (_, i) => `/images/html-img-${i + 1}.jpg`)
 
 const PROMPT_MAP = {
-  // Home page
+  // Home page (0 to 3)
   hero_home: INSTAGRAM_IMAGES[0],
   growth_home: INSTAGRAM_IMAGES[1],
   cta_home: INSTAGRAM_IMAGES[2],
+  overview_home: INSTAGRAM_IMAGES[3],
 
-  // About page
-  hero_about: INSTAGRAM_IMAGES[3],
-  story_about: INSTAGRAM_IMAGES[4],
-  cta_about: INSTAGRAM_IMAGES[5],
+  // About page (4 to 7)
+  hero_about: INSTAGRAM_IMAGES[4],
+  story_about: INSTAGRAM_IMAGES[5],
+  cta_about: INSTAGRAM_IMAGES[6],
+  approach_about: INSTAGRAM_IMAGES[7],
 
-  // Services page
-  hero_services: INSTAGRAM_IMAGES[6],
-  cta_services: INSTAGRAM_IMAGES[7],
+  // Services page (8 to 11)
+  hero_services: INSTAGRAM_IMAGES[8],
+  service_res: INSTAGRAM_IMAGES[9],
+  service_comm: INSTAGRAM_IMAGES[10],
+  cta_services: INSTAGRAM_IMAGES[11],
 
-  // Projects page
-  hero_projects: INSTAGRAM_IMAGES[8],
-  cta_projects: INSTAGRAM_IMAGES[9],
-  proj_luxury: INSTAGRAM_IMAGES[10],
-  proj_office: INSTAGRAM_IMAGES[11],
-  proj_historic: INSTAGRAM_IMAGES[12],
-  proj_suburban: INSTAGRAM_IMAGES[13],
-  proj_logistics: INSTAGRAM_IMAGES[14],
-  proj_mixed: INSTAGRAM_IMAGES[15],
-  proj_waterfront: INSTAGRAM_IMAGES[16],
-  proj_manufacturing: INSTAGRAM_IMAGES[17],
+  // Projects page (12 to 15)
+  hero_projects: INSTAGRAM_IMAGES[12],
+  proj_luxury: INSTAGRAM_IMAGES[13],
+  proj_office: INSTAGRAM_IMAGES[14],
+  proj_historic: INSTAGRAM_IMAGES[15],
+  proj_suburban: INSTAGRAM_IMAGES[12],
+  proj_logistics: INSTAGRAM_IMAGES[13],
+  proj_mixed: INSTAGRAM_IMAGES[14],
+  proj_waterfront: INSTAGRAM_IMAGES[15],
+  proj_manufacturing: INSTAGRAM_IMAGES[12],
+  cta_projects: INSTAGRAM_IMAGES[13],
 
-  // Why Us page
-  hero_whyus: INSTAGRAM_IMAGES[18],
+  // Why Us page (16 to 19)
+  hero_whyus: INSTAGRAM_IMAGES[16],
+  whyus_diff: INSTAGRAM_IMAGES[17],
+  whyus_analytics: INSTAGRAM_IMAGES[18],
   cta_whyus: INSTAGRAM_IMAGES[19],
 
-  // Blog page
+  // Blog page (20 to 23)
   hero_blog: INSTAGRAM_IMAGES[20],
   faq_blog: INSTAGRAM_IMAGES[21],
   cta_blog: INSTAGRAM_IMAGES[22],
-  blog_hiring: INSTAGRAM_IMAGES[0],
-  blog_waterfront: INSTAGRAM_IMAGES[1],
-  blog_commercial: INSTAGRAM_IMAGES[2],
-  blog_budgeting: INSTAGRAM_IMAGES[3],
-  blog_seo: INSTAGRAM_IMAGES[4],
-  blog_sustainable: INSTAGRAM_IMAGES[5],
-  blog_kitchen: INSTAGRAM_IMAGES[6],
-  blog_manufacturing: INSTAGRAM_IMAGES[7],
-  blog_custom: INSTAGRAM_IMAGES[8],
+  blog_hiring: INSTAGRAM_IMAGES[23],
+  blog_waterfront: INSTAGRAM_IMAGES[20],
+  blog_commercial: INSTAGRAM_IMAGES[21],
+  blog_budgeting: INSTAGRAM_IMAGES[22],
+  blog_seo: INSTAGRAM_IMAGES[23],
+  blog_sustainable: INSTAGRAM_IMAGES[20],
+  blog_kitchen: INSTAGRAM_IMAGES[21],
+  blog_manufacturing: INSTAGRAM_IMAGES[22],
+  blog_custom: INSTAGRAM_IMAGES[23],
 
-  // Contact page
-  hero_contact: INSTAGRAM_IMAGES[23],
-  map_contact: INSTAGRAM_IMAGES[22],
-  skyscrapers_contact: INSTAGRAM_IMAGES[21],
+  // Contact page (24 to 27)
+  hero_contact: INSTAGRAM_IMAGES[24],
+  map_contact: INSTAGRAM_IMAGES[25],
+  skyscrapers_contact: INSTAGRAM_IMAGES[26],
+  cta_contact: INSTAGRAM_IMAGES[27],
 }
 
 const KEYWORD_GALLERY = [
-  { keywords: ['hiring', 'essential questions'], url: INSTAGRAM_IMAGES[0] },
-  { keywords: ['harbor view', 'waterfront estate'], url: INSTAGRAM_IMAGES[1] },
-  { keywords: ['trends every business'], url: INSTAGRAM_IMAGES[2] },
-  { keywords: ['budgeting', 'cost overruns'], url: INSTAGRAM_IMAGES[3] },
-  { keywords: ['local seo', 'rankings'], url: INSTAGRAM_IMAGES[4] },
-  { keywords: ['sustainable building'], url: INSTAGRAM_IMAGES[5] },
-  { keywords: ['kitchen renovation'], url: INSTAGRAM_IMAGES[6] },
-  { keywords: ['tech park advanced manufacturing'], url: INSTAGRAM_IMAGES[7] },
-  { keywords: ['custom vs. spec'], url: INSTAGRAM_IMAGES[8] },
-  { keywords: ['modern luxury residence'], url: INSTAGRAM_IMAGES[10] },
-  { keywords: ['riverside office complex'], url: INSTAGRAM_IMAGES[11] },
-  { keywords: ['historic downtown renovation'], url: INSTAGRAM_IMAGES[12] },
-  { keywords: ['suburban family home'], url: INSTAGRAM_IMAGES[13] },
-  { keywords: ['industrial logistics center'], url: INSTAGRAM_IMAGES[14] },
-  { keywords: ['urban mixed-use'], url: INSTAGRAM_IMAGES[15] },
-  { keywords: ['waterfront estate renovation'], url: INSTAGRAM_IMAGES[16] },
-  { keywords: ['advanced manufacturing facility'], url: INSTAGRAM_IMAGES[17] },
-  { keywords: ['shaking hands', 'handshake', 'meeting'], url: INSTAGRAM_IMAGES[5] },
-  { keywords: ['map', 'location pin'], url: INSTAGRAM_IMAGES[22] },
-  { keywords: ['reception', 'headquarters'], url: INSTAGRAM_IMAGES[23] },
-  { keywords: ['blueprints', 'hard hat'], url: INSTAGRAM_IMAGES[9] },
+  { keywords: ['hiring', 'essential questions'], url: INSTAGRAM_IMAGES[23] },
+  { keywords: ['harbor view', 'waterfront estate'], url: INSTAGRAM_IMAGES[20] },
+  { keywords: ['trends every business'], url: INSTAGRAM_IMAGES[21] },
+  { keywords: ['budgeting', 'cost overruns'], url: INSTAGRAM_IMAGES[22] },
+  { keywords: ['local seo', 'rankings'], url: INSTAGRAM_IMAGES[23] },
+  { keywords: ['sustainable building'], url: INSTAGRAM_IMAGES[20] },
+  { keywords: ['kitchen renovation'], url: INSTAGRAM_IMAGES[21] },
+  { keywords: ['tech park advanced manufacturing'], url: INSTAGRAM_IMAGES[22] },
+  { keywords: ['custom vs. spec'], url: INSTAGRAM_IMAGES[23] },
+  { keywords: ['modern luxury residence'], url: INSTAGRAM_IMAGES[13] },
+  { keywords: ['riverside office complex'], url: INSTAGRAM_IMAGES[14] },
+  { keywords: ['historic downtown renovation'], url: INSTAGRAM_IMAGES[15] },
+  { keywords: ['suburban family home'], url: INSTAGRAM_IMAGES[12] },
+  { keywords: ['industrial logistics center'], url: INSTAGRAM_IMAGES[13] },
+  { keywords: ['urban mixed-use'], url: INSTAGRAM_IMAGES[14] },
+  { keywords: ['waterfront estate renovation'], url: INSTAGRAM_IMAGES[15] },
+  { keywords: ['advanced manufacturing facility'], url: INSTAGRAM_IMAGES[12] },
+  { keywords: ['shaking hands', 'handshake', 'meeting'], url: INSTAGRAM_IMAGES[6] },
+  { keywords: ['map', 'location pin'], url: INSTAGRAM_IMAGES[25] },
+  { keywords: ['reception', 'headquarters'], url: INSTAGRAM_IMAGES[24] },
+  { keywords: ['blueprints', 'hard hat'], url: INSTAGRAM_IMAGES[7] },
 ]
 
 export const ALL_IMAGES = INSTAGRAM_IMAGES

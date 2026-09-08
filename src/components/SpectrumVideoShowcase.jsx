@@ -2,77 +2,64 @@ import { useState, useRef } from 'react'
 
 const REELS = [
   {
-    title: 'Modern 1-Bedroom Apartment Rental — Munyonyo',
+    title: 'Modern 1-Bedroom Apartment Rental',
+    location: 'Munyonyo Kampala',
     video: '/videos/video-home.mp4',
     poster: '/images/html-img-1.jpg',
-    tag: 'Munyonyo Kampala',
-    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
+    tag: 'Home Section',
   },
   {
-    title: '193-Acre Private Mailo Farm & Land — Mukono',
+    title: '193-Acre Private Mailo Cattle Farm',
+    location: 'Mukono Uganda',
     video: '/videos/video-about.mp4',
-    poster: '/images/html-img-2.jpg',
-    tag: 'Mukono Uganda',
-    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
-  },
-  {
-    title: '2 Bedrooms Apartment — Munyonyo UGX 1.1M',
-    video: '/videos/video-services.mp4',
-    poster: '/images/html-img-3.jpg',
-    tag: 'Munyonyo Kampala',
-    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
-  },
-  {
-    title: 'Luxury Residential Architecture Tour',
-    video: '/videos/video-projects.mp4',
-    poster: '/images/html-img-4.jpg',
-    tag: 'Kampala Prime',
-    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
-  },
-  {
-    title: '2-Bedroom Apartment For Rent — Bunga Soya',
-    video: '/videos/video-whyus.mp4',
     poster: '/images/html-img-5.jpg',
-    tag: 'Bunga Soya',
-    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
+    tag: 'About Us',
   },
   {
-    title: '3-Bedroom Homes For Sale — Muyenga Kisugu',
+    title: '2 Bedrooms Apartment UGX 1.1M',
+    location: 'Munyonyo Kampala',
+    video: '/videos/video-services.mp4',
+    poster: '/images/html-img-9.jpg',
+    tag: 'Services',
+  },
+  {
+    title: 'Luxury Architecture & Modern Villa',
+    location: 'Kampala Prime',
+    video: '/videos/video-projects.mp4',
+    poster: '/images/html-img-13.jpg',
+    tag: 'Projects',
+  },
+  {
+    title: '2-Bedroom Apartment For Rent',
+    location: 'Bunga Soya',
+    video: '/videos/video-whyus.mp4',
+    poster: '/images/html-img-17.jpg',
+    tag: 'Why Choose Us',
+  },
+  {
+    title: '3-Bedroom Homes For Sale',
+    location: 'Muyenga Kisugu',
     video: '/videos/video-blog.mp4',
-    poster: '/images/html-img-6.jpg',
-    tag: 'Muyenga Kisugu',
-    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
+    poster: '/images/html-img-21.jpg',
+    tag: 'Blog & Resources',
   },
   {
-    title: 'Executive 1-Bedroom Apartment — Munyonyo',
+    title: 'Executive 1-Bedroom Apartment',
+    location: 'Munyonyo Kampala',
     video: '/videos/video-contact.mp4',
-    poster: '/images/html-img-7.jpg',
-    tag: 'Munyonyo Kampala',
-    url: 'https://www.instagram.com/reel/Dc34jigt7Xr/',
+    poster: '/images/html-img-25.jpg',
+    tag: 'Contact',
   },
 ]
 
 export default function SpectrumVideoShowcase() {
   const [activeReelIndex, setActiveReelIndex] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(true)
   const videoRef = useRef(null)
 
   const activeReel = REELS[activeReelIndex]
 
-  const togglePlay = () => {
-    if (!videoRef.current) return
-    if (isPlaying) {
-      videoRef.current.pause()
-      setIsPlaying(false)
-    } else {
-      videoRef.current.play()
-      setIsPlaying(true)
-    }
-  }
-
   const selectReel = (index) => {
     setActiveReelIndex(index)
-    setIsPlaying(true)
     if (videoRef.current) {
       videoRef.current.load()
       videoRef.current.play().catch(() => {})
@@ -82,20 +69,20 @@ export default function SpectrumVideoShowcase() {
   return (
     <section className="py-section bg-slate-900 text-white fade-section relative overflow-hidden" style={{ backgroundColor: '#032a3a' }}>
       <div className="container-site">
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <div className="max-w-3xl mx-auto text-center mb-10">
           <span className="section-eyebrow" style={{ color: 'var(--color-cyan-accent)' }}>
-            Instagram Video Reels & Virtual Tours
+            Video Tours & Walkthroughs
           </span>
-          <h2 className="section-h2 text-white mb-4">
+          <h2 className="section-h2 text-white mb-3">
             Spectrum Properties <span style={{ color: 'var(--color-cyan-accent)' }}>Video Tours</span>
           </h2>
-          <p className="text-white/80 text-[17px] leading-relaxed">
-            Watch real video walkthroughs of our luxury homes, apartments, and commercial projects direct from <strong className="text-white">@spectrumrealestateuganda</strong>.
+          <p className="text-white/80 text-[16px] leading-relaxed">
+            Real video walkthroughs of our properties across all 7 sections.
           </p>
         </div>
 
         {/* Main Featured Video Player */}
-        <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/10 group mb-10 bg-black">
+        <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/10 group mb-8 bg-black">
           <video
             ref={videoRef}
             src={activeReel.video}
@@ -106,47 +93,12 @@ export default function SpectrumVideoShowcase() {
             playsInline
             controls
             preload="auto"
-            className="w-full h-[440px] md:h-[520px] object-cover"
+            className="w-full h-[380px] md:h-[480px] object-cover"
           />
 
-          <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[12px] font-bold text-cyan-accent border border-cyan-accent/30 pointer-events-none">
-            <i className="fa-brands fa-instagram mr-1.5 text-pink-500" />
-            {activeReel.tag}
-          </div>
-
-          <div className="p-6 bg-slate-900/90 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div>
-              <div className="flex items-center gap-3 mb-1.5">
-                <span className="w-6 h-[2px]" style={{ backgroundColor: 'var(--color-gold-accent)' }} />
-                <span className="uppercase tracking-[0.2em] font-bold text-[11px] text-gold-accent">
-                  Featured Instagram Reel
-                </span>
-              </div>
-              <h3 className="font-heading font-bold text-lg md:text-xl text-white">
-                {activeReel.title}
-              </h3>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <button
-                type="button"
-                onClick={togglePlay}
-                className="px-4 py-2 rounded-full bg-white/15 hover:bg-white/30 backdrop-blur-md transition-all font-bold text-xs text-white flex items-center gap-2 border border-white/20"
-              >
-                <i className={`fa-solid ${isPlaying ? 'fa-pause' : 'fa-play'}`} />
-                {isPlaying ? 'Pause' : 'Play'}
-              </button>
-
-              <a
-                href={activeReel.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 transition-all font-bold text-xs text-white flex items-center gap-2 shadow-lg"
-              >
-                <i className="fa-brands fa-instagram text-sm" />
-                Watch on Instagram
-              </a>
-            </div>
+          <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[12px] font-bold text-cyan-accent border border-cyan-accent/30 pointer-events-none">
+            <i className="fa-solid fa-play mr-1.5 text-cyan-accent text-[10px]" />
+            {activeReel.tag} — {activeReel.location}
           </div>
         </div>
 
@@ -154,7 +106,7 @@ export default function SpectrumVideoShowcase() {
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 max-w-6xl mx-auto">
           {REELS.map((reel, idx) => (
             <button
-              key={reel.title}
+              key={reel.tag}
               type="button"
               onClick={() => selectReel(idx)}
               className={`relative rounded-xl overflow-hidden text-left border-2 transition-all duration-300 group ${
@@ -166,13 +118,13 @@ export default function SpectrumVideoShowcase() {
               <img
                 src={reel.poster}
                 alt={reel.title}
-                className="w-full h-28 object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-24 object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-2.5 flex flex-col justify-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent p-2 flex flex-col justify-end">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-cyan-accent">
-                  Reel {idx + 1}
+                  {reel.tag}
                 </span>
-                <p className="text-[11px] font-semibold text-white truncate">
+                <p className="text-[10.5px] font-semibold text-white/90 truncate">
                   {reel.title}
                 </p>
               </div>
