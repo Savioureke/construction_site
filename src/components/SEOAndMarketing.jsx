@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const CAPABILITIES = [
   'Certified Property Valuation Reports',
   'Investment Feasibility Studies',
