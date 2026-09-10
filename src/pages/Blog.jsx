@@ -12,7 +12,7 @@ const POSTS = [
     readTime: '7 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'How to verify Mailo, Freehold, and Leasehold titles at the Ministry of Lands before executing property purchases in Kampala and beyond.',
-    prompt: 'Modern home construction site with detailed planning documents, blueprints, and hard hat on wooden table, professional aesthetic, warm natural lighting',
+    image: '/extracted_images/land-acquisition-disposal/land-acquisition-disposal_2.jpg',
   },
   {
     title: 'Reinforced Concrete Standards: Why Mix Design Matters in High-Rise Builds',
@@ -21,7 +21,7 @@ const POSTS = [
     readTime: '8 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'An engineering analysis of slump tests, cube crushing strength, and curing practices for durable multi-storey structures in Uganda.',
-    prompt: 'Luxury waterfront modern home exterior with infinity pool overlooking water, sunset golden hour, premium real estate photography, detailed architecture',
+    image: '/extracted_images/construction-civil-engineering/construction-civil-engineering_2.jpg',
   },
   {
     title: 'Emerging Real Estate Investment Hotspots in Kampala and Mbarara',
@@ -30,7 +30,7 @@ const POSTS = [
     readTime: '6 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'Analyzing infrastructure expansion, road corridors, and urbanization driving high capital appreciation in Greater Kampala and Western Uganda.',
-    prompt: 'Modern commercial office interior with sustainable materials, green walls, open collaborative workspace, natural light pouring in, contemporary design',
+    image: '/extracted_images/real-estate-sales-brokerage/real-estate-sales-brokerage_2.jpg',
   },
   {
     title: 'Understanding Bills of Quantities (BOQ): How to Avoid Construction Overruns',
@@ -39,7 +39,7 @@ const POSTS = [
     readTime: '9 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'A practical guide for property developers on managing material schedules, labor rates, and contingency allowances effectively.',
-    prompt: 'Construction budgeting documents, spreadsheets, calculator, blueprint on desk, organized financial planning, professional office setting with natural light',
+    image: '/extracted_images/construction-civil-engineering/construction-civil-engineering_3.jpg',
   },
   {
     title: 'Due Diligence Checklist for Large-Acre Agricultural & Farm Land',
@@ -48,7 +48,7 @@ const POSTS = [
     readTime: '7 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'Crucial steps for acquiring 50+ acre Private Mailo farm land, boundary surveying, local council approvals, and deed transfers.',
-    prompt: 'Digital marketing dashboard showing SEO analytics, search rankings, map results for construction business, modern computer screen, professional marketing concept',
+    image: '/extracted_images/land-acquisition-disposal/land-acquisition-disposal_3.jpg',
   },
   {
     title: 'Residential Property Valuation: What Drives Market Value in Uganda?',
@@ -57,7 +57,7 @@ const POSTS = [
     readTime: '8 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'How certified valuers assess location, accessibility, title status, construction quality, and neighborhood sales comparisons.',
-    prompt: 'Sustainable construction materials, cross laminated timber panels, recycled steel beams, solar panels, eco-friendly building products displayed naturally',
+    image: '/extracted_images/real-estate-consultancy-valuation/real-estate-consultancy-valuation_2.jpg',
   },
   {
     title: 'Sustainable Drainage Design & Stormwater Management in East Africa',
@@ -66,7 +66,7 @@ const POSTS = [
     readTime: '6 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'Designing effective stormwater drainage, reinforced culverts, and erosion control systems for tropical rainfall seasons.',
-    prompt: 'Beautiful modern renovated kitchen with island, premium cabinets, quartz countertops, designer lighting, clean and organized, high-end residential photography',
+    image: '/extracted_images/construction-civil-engineering/construction-civil-engineering_4.jpg',
   },
   {
     title: 'Project Spotlight: The Munyonyo Luxury Villa Development',
@@ -75,7 +75,7 @@ const POSTS = [
     readTime: '8 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'How our engineering and construction team delivered a bespoke 6,200 sq ft luxury residence with full quality assurance and high finishes.',
-    prompt: 'Modern advanced manufacturing facility exterior, clean industrial architecture, loading docks, large warehouse, professional aerial photography, clear sky',
+    image: '/extracted_images/real-estate-sales-brokerage/real-estate-sales-brokerage_3.jpg',
   },
   {
     title: 'Buying Off-Plan vs. Custom Development: A Comprehensive Financial Comparison',
@@ -84,7 +84,7 @@ const POSTS = [
     readTime: '9 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'We weigh cashflow requirements, customization options, construction oversight, and return on investment for Ugandan property buyers.',
-    prompt: 'Two contrasting home styles side by side concept: custom luxury home with unique architecture and move-in-ready spec home with standard finishes',
+    image: '/extracted_images/company-profile/company-profile_2.jpg',
   },
 ]
 
@@ -92,13 +92,9 @@ export default function Blog({ onOpenQuote }) {
   const [activeCategory, setActiveCategory] = useState('All Articles')
   const [cardReady, setCardReady] = useState({})
 
-  const HERO_PROMPT = 'Modern construction blog concept hero: blueprints on wooden table, laptop showing blog article, hard hat, cup of coffee, warm natural lighting, professional flat lay photography'
-  const FAQ_PROMPT = 'Construction expert consulting with clients in modern office, reviewing 3D building renderings on computer screen, professional meeting, warm lighting, high detail photography'
-  const CTA_PROMPT = 'Newsletter subscription concept: email icon, construction newsletter on laptop, notepad with pencil, warm modern aesthetic, soft lighting'
-
-  const HERO_IMG_URL = useMemo(() => buildImgUrl(HERO_PROMPT, 'landscape_16_9'), [])
-  const FAQ_IMG_URL = useMemo(() => buildImgUrl(FAQ_PROMPT, 'portrait_4_3'), [])
-  const CTA_IMG_URL = useMemo(() => buildImgUrl(CTA_PROMPT, 'landscape_16_9'), [])
+  const HERO_IMG_URL = '/extracted_images/real-estate-sales-brokerage/real-estate-sales-brokerage_2.jpg'
+  const FAQ_IMG_URL = '/extracted_images/real-estate-consultancy-valuation/real-estate-consultancy-valuation_3.jpg'
+  const CTA_IMG_URL = '/extracted_images/about-us/about-us_4.jpg'
 
   const heroReady = useBgReady(HERO_IMG_URL)
   const faqReady = useBgReady(FAQ_IMG_URL)
@@ -134,7 +130,7 @@ export default function Blog({ onOpenQuote }) {
       const done = () => setCardReady((prev) => prev[key] ? prev : { ...prev, [key]: true })
       img.onload = done
       img.onerror = done
-      img.src = buildImgUrl(post.prompt, 'landscape_4_3')
+      img.src = post.image
       const t = setTimeout(done, MAX_WAIT_MS)
       timeouts.push(t)
     })
@@ -214,7 +210,6 @@ export default function Blog({ onOpenQuote }) {
           <div className="grid-3-to-2 card-scaled">
             {filteredPosts.map((post) => {
               const imgKey = `blog-${post.title}`
-              const imgUrl = buildImgUrl(post.prompt, 'landscape_4_3')
               const isReady = cardReady[imgKey]
               return (
                 <article
@@ -232,7 +227,7 @@ export default function Blog({ onOpenQuote }) {
                       </div>
                     )}
                     <img
-                      src={imgUrl}
+                      src={post.image}
                       alt={post.title}
                       referrerPolicy="no-referrer-when-downgrade"
                       loading="lazy"

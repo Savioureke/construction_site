@@ -4,7 +4,7 @@ import { buildImgUrl, useBgReady } from '../utils/images.js'
 const BG_PROMPT = 'Aerial view of modern suburban housing development construction site with several nearly completed homes, organized rows of houses at blue hour twilight, construction equipment parked, premium real estate aesthetic, professional drone photography'
 
 export default function QuoteCTASection({ onOpenQuote }) {
-  const BG_IMG_URL = useMemo(() => buildImgUrl(BG_PROMPT, 'landscape_16_9'), [])
+  const BG_IMG_URL = '/extracted_images/projects/projects_14.jpg'
   const bgReady = useBgReady(BG_IMG_URL)
 
   return (

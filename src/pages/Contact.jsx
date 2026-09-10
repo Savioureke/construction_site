@@ -14,13 +14,9 @@ export default function Contact({ onOpenQuote }) {
   const [submitted, setSubmitted] = useState(false)
   const [mapReady, setMapReady] = useState(false)
 
-  const HERO_PROMPT = 'Modern construction company office reception area with professional team greeting visitors, brand signage, contemporary design, warm welcoming atmosphere, high detail photography'
-  const MAP_PROMPT = 'Modern simplified city map illustration showing construction company location pin, clean professional style, soft colors, office building icon'
-  const CTA_PROMPT = 'Two construction professionals shaking hands after successful meeting at job site, sunset golden hour, completed building in background, celebratory positive moment, high detail photography'
-
-  const HERO_IMG_URL = useMemo(() => buildImgUrl(HERO_PROMPT, 'landscape_16_9'), [])
-  const MAP_IMG_URL = useMemo(() => buildImgUrl(MAP_PROMPT, 'landscape_4_3'), [])
-  const CTA_IMG_URL = useMemo(() => buildImgUrl(CTA_PROMPT, 'landscape_16_9'), [])
+  const HERO_IMG_URL = '/extracted_images/contact-us/contact-us_2.jpg'
+  const MAP_IMG_URL = '/extracted_images/our-branches/our-branches_2.jpg'
+  const CTA_IMG_URL = '/extracted_images/about-us/about-us_3.jpg'
 
   const heroReady = useBgReady(HERO_IMG_URL)
   const ctaReady = useBgReady(CTA_IMG_URL)

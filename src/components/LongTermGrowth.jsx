@@ -15,7 +15,7 @@ const FUTURE = [
 const BG_PROMPT = 'Modern construction team meeting at a high-rise building site, architects and engineers reviewing blueprints together at sunset, hard hats and safety vests, warm golden light, premium commercial photography, high detail, cinematic'
 
 export default function LongTermGrowth() {
-  const BG_IMG_URL = useMemo(() => buildImgUrl(BG_PROMPT, 'portrait_4_3'), [])
+  const BG_IMG_URL = '/extracted_images/construction-civil-engineering/construction-civil-engineering_3.jpg'
   const bgReady = useBgReady(BG_IMG_URL)
 
   return (

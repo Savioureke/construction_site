@@ -84,8 +84,8 @@ const HERO_PROMPT = 'Aerial view of multiple active construction sites with cran
 const CTA_PROMPT = 'Construction worker in safety gear giving thumbs up in front of completed modern building, afternoon light, positive attitude, professional commercial photography'
 
 export default function Services({ onOpenQuote }) {
-  const HERO_IMG_URL = useMemo(() => buildImgUrl(HERO_PROMPT, 'landscape_16_9'), [])
-  const CTA_IMG_URL = useMemo(() => buildImgUrl(CTA_PROMPT, 'landscape_16_9'), [])
+  const HERO_IMG_URL = '/extracted_images/construction-civil-engineering/construction-civil-engineering_2.jpg'
+  const CTA_IMG_URL = '/extracted_images/construction-civil-engineering/construction-civil-engineering_5.jpg'
   const heroReady = useBgReady(HERO_IMG_URL)
   const ctaReady = useBgReady(CTA_IMG_URL)
 

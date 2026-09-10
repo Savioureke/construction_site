@@ -12,7 +12,7 @@ const PROJECTS = [
     year: 'Completed',
     size: '24 Units • 4,500 m²',
     desc: 'Modern architectural luxury residential complex featuring 24 premium units, automated access, and panoramic city views.',
-    prompt: 'Modern luxury residential home exterior with glass facade, landscaped garden, infinity pool, modern architecture, golden hour, high-end real estate photography',
+    image: '/extracted_images/projects/projects_2.jpg',
   },
   {
     title: 'Metrak Commercial Plaza',
@@ -21,7 +21,7 @@ const PROJECTS = [
     year: 'Completed',
     size: '8 Floors • 12,000 m²',
     desc: 'Eight-storey modern office complex featuring energy-efficient glass facade, underground parking, and flexible floor plans.',
-    prompt: 'Modern glass office building exterior with landscaped plaza, reflective glass facade, contemporary commercial architecture, professional photography',
+    image: '/extracted_images/projects/projects_6.jpg',
   },
   {
     title: 'Greenwood Gated Community Estate',
@@ -30,7 +30,7 @@ const PROJECTS = [
     year: 'Under Construction',
     size: '45 Villas • 15 Acres',
     desc: 'Master-planned residential community with paved access roads, solar streetlights, and dedicated community green park zones.',
-    prompt: 'Row of beautiful new suburban family homes with landscaped front yards, tree-lined street, community development, blue sky day',
+    image: '/extracted_images/projects/projects_3.jpg',
   },
   {
     title: 'Industrial Logistics & Warehouse Hub',
@@ -39,7 +39,7 @@ const PROJECTS = [
     year: 'Completed',
     size: '10,000 m² Floor',
     desc: 'Heavy-duty steel warehouse development with reinforced concrete flooring engineered for heavy logistics and container transport.',
-    prompt: 'Large modern industrial warehouse and logistics center, loading docks with trucks, expansive facility, aerial view, professional commercial photography',
+    image: '/extracted_images/projects/projects_4.jpg',
   },
   {
     title: 'Executive Lakeside Condominiums',
@@ -48,7 +48,7 @@ const PROJECTS = [
     year: 'Upcoming',
     size: '18 Luxury Condos',
     desc: 'Ultra-contemporary residences designed for executive expatriates, diplomats, and discerning real estate investors.',
-    prompt: 'Luxury waterfront modern home exterior with infinity pool overlooking water, sunset golden hour, premium real estate photography, detailed architecture',
+    image: '/extracted_images/projects/projects_5.jpg',
   },
   {
     title: 'Highway Drainage & Stormwater Works',
@@ -57,7 +57,7 @@ const PROJECTS = [
     year: 'Completed',
     size: '4.8 km Drainage',
     desc: 'Civil engineering stormwater management and reinforced culvert project ensuring long-term flood resilience and road longevity.',
-    prompt: 'Civil engineering road construction and drainage site in East Africa, heavy excavators, concrete culverts, paved asphalt, professional construction photography',
+    image: '/extracted_images/projects/projects_7.jpg',
   },
   {
     title: 'Multi-Storey Commercial Retail Center',
@@ -66,7 +66,7 @@ const PROJECTS = [
     year: 'Completed',
     size: '3,200 m² Retail Space',
     desc: 'Modern retail and corporate banking premises engineered with open-span structural steel beams and high-traffic floor finishes.',
-    prompt: 'Modern mixed-use urban building with retail storefronts on ground floor, offices and residential above, bustling city street, contemporary architecture',
+    image: '/extracted_images/projects/projects_8.jpg',
   },
   {
     title: 'Suburban Villa Development',
@@ -75,7 +75,7 @@ const PROJECTS = [
     year: 'Completed',
     size: '12 Luxury Villas',
     desc: 'Private boutique estate featuring luxury 4-bedroom villas with individual swimming pools and Lake Victoria views.',
-    prompt: 'Modern luxury residential townhomes in gated community, brick and stone accents, manicured lawns, paved access street, golden hour light',
+    image: '/extracted_images/projects/projects_9.jpg',
   },
   {
     title: 'Heavy-Duty Reinforced Concrete Paving',
@@ -84,7 +84,7 @@ const PROJECTS = [
     year: 'Completed',
     size: '10,000 m² Yard',
     desc: 'Expansive 10,000 m² reinforced concrete yard engineered to withstand 60-tonne container transport trucks and heavy machinery.',
-    prompt: 'Industrial concrete paving works, smooth concrete yard, heavy machinery, high strength industrial flooring, professional photography',
+    image: '/extracted_images/projects/projects_10.jpg',
   },
 ]
 
@@ -92,11 +92,8 @@ export default function Projects({ onOpenQuote }) {
   const [activeCategory, setActiveCategory] = useState('All Projects')
   const [cardReady, setCardReady] = useState({})
 
-  const HERO_PROMPT = 'Diverse portfolio of completed construction projects collage style hero image, modern homes, office buildings, industrial facilities, golden hour, professional montage, high detail'
-  const CTA_PROMPT = 'Construction blueprints spread out on table with hard hat and tools, professional aesthetic, warm lighting, next project concept'
-
-  const HERO_IMG_URL = useMemo(() => buildImgUrl(HERO_PROMPT, 'landscape_16_9'), [])
-  const CTA_IMG_URL = useMemo(() => buildImgUrl(CTA_PROMPT, 'landscape_16_9'), [])
+  const HERO_IMG_URL = '/extracted_images/projects/projects_2.jpg'
+  const CTA_IMG_URL = '/extracted_images/projects/projects_14.jpg'
 
   const heroReady = useBgReady(HERO_IMG_URL)
   const ctaReady = useBgReady(CTA_IMG_URL)
@@ -130,7 +127,7 @@ export default function Projects({ onOpenQuote }) {
       const done = () => setCardReady((prev) => prev[key] ? prev : { ...prev, [key]: true })
       img.onload = done
       img.onerror = done
-      img.src = buildImgUrl(proj.prompt, 'landscape_4_3')
+      img.src = proj.image
       const t = setTimeout(done, MAX_WAIT_MS)
       timeouts.push(t)
     })
@@ -210,7 +207,6 @@ export default function Projects({ onOpenQuote }) {
           <div className="grid-3-to-2 card-scaled">
             {filteredProjects.map((proj) => {
               const imgKey = `proj-${proj.title}`
-              const imgUrl = buildImgUrl(proj.prompt, 'landscape_4_3')
               const isReady = cardReady[imgKey]
               return (
                 <article
@@ -228,7 +224,7 @@ export default function Projects({ onOpenQuote }) {
                       </div>
                     )}
                     <img
-                      src={imgUrl}
+                      src={proj.image}
                       alt={proj.title}
                       referrerPolicy="no-referrer-when-downgrade"
                       loading="lazy"

@@ -51,8 +51,8 @@ const HERO_PROMPT = 'Construction team shaking hands with happy clients in front
 const CTA_PROMPT = 'Two professionals in construction attire discussing plans at a clean modern conference table with blueprints, natural light, professional meeting, ready to start concept'
 
 export default function WhyUs({ onOpenQuote }) {
-  const HERO_IMG_URL = useMemo(() => buildImgUrl(HERO_PROMPT, 'landscape_16_9'), [])
-  const CTA_IMG_URL = useMemo(() => buildImgUrl(CTA_PROMPT, 'landscape_16_9'), [])
+  const HERO_IMG_URL = '/extracted_images/health-and-safety-commitment/health-and-safety-commitment_2.jpg'
+  const CTA_IMG_URL = '/extracted_images/about-us/about-us_4.jpg'
   const heroReady = useBgReady(HERO_IMG_URL)
   const ctaReady = useBgReady(CTA_IMG_URL)
 

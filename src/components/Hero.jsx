@@ -5,7 +5,7 @@ import { buildImgUrl, useBgReady } from '../utils/images.js'
 const HERO_PROMPT = 'Wide aerial panoramic photograph of a large-scale modern construction site at golden hour sunset, multiple cranes silhouetted against orange and deep blue sky, heavy machinery in foreground, steel beams and building frameworks rising, cinematic lighting, high-end editorial photography style, ultra sharp, professional'
 
 export default function Hero({ onOpenQuote }) {
-  const HERO_IMG_URL = useMemo(() => buildImgUrl(HERO_PROMPT, 'landscape_16_9'), [])
+  const HERO_IMG_URL = '/extracted_images/home/home_2.jpg'
   const bgReady = useBgReady(HERO_IMG_URL)
 
   return (

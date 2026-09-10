@@ -38,9 +38,9 @@ const TRUSTED_CLIENTS = [
 ]
 
 export default function About({ onOpenQuote }) {
-  const HERO_IMG_URL = useMemo(() => buildImgUrl(HERO_PROMPT, 'landscape_16_9'), [])
-  const STORY_IMG_URL = useMemo(() => buildImgUrl(STORY_PROMPT, 'portrait_4_3'), [])
-  const CTA_IMG_URL = useMemo(() => buildImgUrl(CTA_PROMPT, 'landscape_16_9'), [])
+  const HERO_IMG_URL = '/extracted_images/about-us/about-us_3.jpg'
+  const STORY_IMG_URL = '/extracted_images/about-us/about-us_4.jpg'
+  const CTA_IMG_URL = '/extracted_images/about-us/about-us_5.jpg'
 
   const heroReady = useBgReady(HERO_IMG_URL)
   const storyReady = useBgReady(STORY_IMG_URL)
