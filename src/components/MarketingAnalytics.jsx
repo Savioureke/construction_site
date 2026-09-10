@@ -1,12 +1,12 @@
 const METRICS = [
-  { label: 'Search Impressions', icon: 'fa-eye' },
-  { label: 'Search Clicks', icon: 'fa-mouse-pointer' },
-  { label: 'Keywords Tracked', icon: 'fa-key' },
-  { label: 'Website Visitors', icon: 'fa-users' },
-  { label: 'Popular Pages', icon: 'fa-chart-line' },
-  { label: 'User Behavior', icon: 'fa-chart-pie' },
-  { label: 'Conversion Opportunities', icon: 'fa-rocket' },
-  { label: 'SEO Growth Trends', icon: 'fa-arrow-trend-up' },
+  { label: 'Quality Assurance Checks', icon: 'fa-clipboard-check' },
+  { label: 'HSE Safety Inspections', icon: 'fa-shield-halved' },
+  { label: 'Concrete Mix Precision', icon: 'fa-cubes' },
+  { label: 'Verified Title Records', icon: 'fa-file-shield' },
+  { label: 'Structural Audits', icon: 'fa-building-circle-check' },
+  { label: 'Milestones Completed', icon: 'fa-chart-line' },
+  { label: 'Lab Material Testing', icon: 'fa-flask-vial' },
+  { label: 'On-Budget Delivery', icon: 'fa-scale-balanced' },
 ]
 
 export default function MarketingAnalytics() {
@@ -18,16 +18,16 @@ export default function MarketingAnalytics() {
       <div className="container-site">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="section-eyebrow" style={{ color: 'var(--color-gold-accent)' }}>
-            Data-Driven Growth
+            Operational Rigour
           </span>
           <h2 className="section-h2 text-white mb-6">
             Tracking What{' '}
             <span style={{ color: 'var(--color-cyan-accent)' }}>Matters</span>
           </h2>
           <p className="text-body-copy text-white/75 leading-relaxed max-w-2xl mx-auto">
-            Every decision is backed by real numbers. You'll always know exactly how your
-            website is performing, where your traffic comes from, and which pages are
-            producing real business.
+            Every project phase is measured and monitored. From daily batching plants to
+            structural inspections and land registry verifications, Metrak ensures
+            uncompromising build quality and legal certainty.
           </p>
         </div>
 

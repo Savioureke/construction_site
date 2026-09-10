@@ -2,14 +2,14 @@ import { useMemo } from 'react'
 import { buildImgUrl, useBgReady } from '../utils/images.js'
 
 const FUTURE = [
-  'New services added as your business expands',
-  'New project locations and service areas',
-  'New project case studies as you build them',
-  'More SEO landing pages for high-value queries',
-  'Construction guides and in-depth blog articles',
-  'Lead-generation campaigns and landing pages',
-  'AI-powered marketing features and automation',
-  'Online quotation and request systems',
+  'Custom residential villas and estates',
+  'Commercial office complexes and multi-storey builds',
+  'Road infrastructure, earthworks, and stormwater drainage',
+  'High-capacity concrete pumping up to 10,000 sqm daily',
+  'Land acquisition due diligence & title verification',
+  'Real estate asset valuation and feasibility reports',
+  'Integrated facility management and tenant coordination',
+  'Turnkey architectural and structural engineering',
 ]
 
 const BG_PROMPT = 'Modern construction team meeting at a high-rise building site, architects and engineers reviewing blueprints together at sunset, hard hats and safety vests, warm golden light, premium commercial photography, high detail, cinematic'
@@ -47,25 +47,26 @@ export default function LongTermGrowth() {
                 Long-Term Partnership
               </p>
               <p className="font-heading text-white text-[22px] lg:text-[26px] leading-tight font-bold">
-                We don't build websites and disappear — we build marketing systems that grow
-                alongside your business for years.
+                We don't just erect buildings — we forge long-term partnerships, delivering
+                sustainable infrastructure and valuable real estate assets for generations.
               </p>
             </div>
           </div>
 
           <div>
-            <span className="section-eyebrow">Built To Grow</span>
+            <span className="section-eyebrow">Built To Last</span>
             <h2 className="section-h2 mb-7">
-              A Website That Grows{' '}
-              <span style={{ color: 'var(--color-cyan-accent)' }}>With Your Business</span>
+              Solutions Built For{' '}
+              <span style={{ color: 'var(--color-cyan-accent)' }}>Long-Term Value</span>
             </h2>
             <p className="text-body-copy text-text-body/85 leading-relaxed mb-6">
-              This isn't a static brochure site. The architecture, CMS structure, and SEO
-              foundation are designed from day one to support new content, new service
-              lines, new geographic areas, and new campaigns as your company scales.
+              Metrak Real Estate and Construction Ltd combines civil engineering excellence
+              with end-to-end property advisory. Whether you are building from the ground up,
+              acquiring land, or managing prime developments, our team supports your growth
+              across Uganda.
             </p>
             <p className="text-body-copy text-text-body/85 leading-relaxed mb-8">
-              Here are just some of the things we can add on an ongoing basis:
+              Key capabilities we deliver across every project lifecycle:
             </p>
 
             <div className="grid sm:grid-cols-2 gap-x-6 gap-y-1">

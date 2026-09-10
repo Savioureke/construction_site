@@ -33,14 +33,14 @@ export default function Header({ scrolled, onOpenQuote }) {
           <div className="container-site flex items-center justify-between h-9">
             <div className="text-[11.5px] uppercase tracking-[0.12em] font-semibold text-white/85 truncate">
               <span className="text-gold-accent mr-2">•</span>
-              Building trust through quality craftsmanship since 2008
+              Trusted Real Estate & Construction Across East Africa
             </div>
             <div className="hidden md:flex items-center gap-5 text-[11.5px] uppercase tracking-[0.1em] font-semibold text-white/80">
-              <a href="mailto:info@spectrumproperties.co.ug" className="hover:text-gold-accent transition-colors">
-                <i className="fa fa-envelope mr-1.5" /> info@spectrumproperties.co.ug
+              <a href="mailto:info@metrakrealestate.com" className="hover:text-gold-accent transition-colors">
+                <i className="fa fa-envelope mr-1.5" /> info@metrakrealestate.com
               </a>
-              <a href="tel:+256709220000" className="hover:text-gold-accent transition-colors">
-                <i className="fa fa-phone mr-1.5" /> +256 709 220 000
+              <a href="tel:+256200959400" className="hover:text-gold-accent transition-colors">
+                <i className="fa fa-phone mr-1.5" /> +256 200 959 400
               </a>
             </div>
           </div>
@@ -53,12 +53,12 @@ export default function Header({ scrolled, onOpenQuote }) {
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
             <img
               src="/images/spectrum logo.jpg"
-              alt="Spectrum Real Estate Solutions"
+              alt="Metrak Real Estate and Construction"
               className="w-11 h-11 object-cover rounded-lg shadow-md border border-cyan-accent/30"
             />
             <div className="flex flex-col leading-tight">
               <span className="font-heading font-bold text-white text-[18px] tracking-wide">
-                SPECTRUM PROPERTIES
+                METRAK REAL ESTATE
               </span>
               <span className="text-[10.5px] uppercase tracking-[0.22em] font-semibold" style={{ color: 'var(--color-gold-accent)' }}>
                 Real Estate & Construction
@@ -128,11 +128,11 @@ export default function Header({ scrolled, onOpenQuote }) {
             <Link to="/" onClick={closeMobile} className="flex items-center gap-3">
               <img
                 src="/images/spectrum logo.jpg"
-                alt="Spectrum Real Estate Solutions"
+                alt="Metrak Real Estate and Construction"
                 className="w-11 h-11 object-cover rounded-lg shadow-md border border-cyan-accent/30"
               />
               <span className="font-heading font-bold text-white text-[17px] tracking-wide">
-                SPECTRUM PROPERTIES
+                METRAK REAL ESTATE
               </span>
             </Link>
             <button
@@ -176,15 +176,15 @@ export default function Header({ scrolled, onOpenQuote }) {
           <div className="mt-10 pt-8 border-t border-white/10 flex flex-col gap-4 text-[13px] text-white/70">
             <div className="flex items-center gap-3">
               <i className="fa fa-phone text-cyan-accent" />
-              (000) 000-0000
+              +256 200 959 400 / +256 700 312 036
             </div>
             <div className="flex items-center gap-3">
               <i className="fa fa-envelope text-cyan-accent" />
-              info@[placeholder].com
+              info@metrakrealestate.com
             </div>
             <div className="flex items-center gap-3">
               <i className="fa fa-map-marker-alt text-cyan-accent" />
-              [Company Address]
+              Dungu 5 Building Rm. D.1, Press House Road, Kampala
             </div>
           </div>
         </div>

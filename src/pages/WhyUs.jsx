@@ -8,43 +8,43 @@ import { buildImgUrl, useBgReady } from '../utils/images.js'
 const REASONS = [
   {
     icon: 'fa-award',
-    title: 'Proven Track Record',
-    desc: 'Over 15 years of experience and 250+ successfully completed projects across residential, commercial, and industrial sectors.',
+    title: 'Proven Engineering Track Record',
+    desc: 'Over 15 years of combined experience delivering landmark residential, commercial, and civil infrastructure developments across Uganda.',
   },
   {
     icon: 'fa-users-gear',
-    title: 'Expert In-House Team',
-    desc: 'Our team of licensed architects, engineers, project managers, and skilled tradespeople ensure quality at every step.',
+    title: 'Multidisciplinary In-House Team',
+    desc: 'Our team of licensed civil engineers, registered architects, quantity surveyors, and certified valuation experts ensures technical excellence.',
   },
   {
-    icon: 'fa-coins',
-    title: 'Transparent Pricing',
-    desc: 'Detailed, itemized quotes with no hidden fees. We believe in honest pricing and clear communication from day one.',
+    icon: 'fa-file-shield',
+    title: '100% Legal & Title Due Diligence',
+    desc: 'Rigorous land registry due diligence, boundary confirmations, and clean title transfer guarantees on every parcel and development.',
+  },
+  {
+    icon: 'fa-cubes',
+    title: 'High-Capacity Concreting Fleet',
+    desc: 'Own batching operations and concrete boom pumps capable of placing up to 10,000 sqm of certified concrete daily.',
   },
   {
     icon: 'fa-shield-halved',
-    title: 'Fully Licensed & Insured',
-    desc: 'Complete peace of mind with full licensing, bonding, and comprehensive insurance coverage on every project we undertake.',
+    title: 'Strict HSE & Quality Standards',
+    desc: 'Stringent Health, Safety, and Environment protocols ensuring zero compromise on site safety, concrete lab testing, and structural longevity.',
   },
   {
-    icon: 'fa-clock',
-    title: 'On-Time, Every Time',
-    desc: '94% on-time delivery rate across our portfolio. We respect your timeline and work diligently to meet every milestone.',
-  },
-  {
-    icon: 'fa-handshake',
-    title: 'Long-Term Partnership',
-    desc: 'We don\'t just build and disappear. Our integrated marketing support means we grow with you for the long haul.',
+    icon: 'fa-coins',
+    title: 'Transparent Itemized Costing',
+    desc: 'Detailed bills of quantities (BOQ), milestone-based invoicing, and total financial transparency with no hidden surprises.',
   },
 ]
 
 const PROCESS = [
-  { num: 1, title: 'Initial Consultation', desc: 'We meet with you to understand your vision, goals, budget, and timeline. This is where we get to know your project inside out.' },
-  { num: 2, title: 'Custom Design & Planning', desc: 'Our team creates detailed plans, 3D renderings, and a comprehensive project scope tailored specifically to your needs.' },
-  { num: 3, title: 'Transparent Proposal', desc: 'You receive a detailed, itemized quote with clear timelines, payment schedules, and no hidden fees or surprises.' },
-  { num: 4, title: 'Pre-Construction Prep', desc: 'We secure permits, finalize subcontractors, order materials, and set everything in motion before ground breaks.' },
-  { num: 5, title: 'Quality Construction', desc: 'Our skilled teams execute the build with meticulous attention to quality, safety, and adherence to the approved plans.' },
-  { num: 6, title: 'Final Walkthrough & Warranty', desc: 'We conduct a thorough walkthrough, address any items, and stand behind our work with a comprehensive warranty program.' },
+  { num: 1, title: 'Consultation & Site Evaluation', desc: 'We evaluate your project vision, site topography, land title status, and technical requirements in detail.' },
+  { num: 2, title: 'Architectural & Engineering Design', desc: 'Our licensed team creates structural designs, 3D architectural models, and comprehensive engineering drawings.' },
+  { num: 3, title: 'Detailed BOQ & Fixed Proposal', desc: 'You receive an itemized bill of quantities with clear construction milestones, material schedules, and payment terms.' },
+  { num: 4, title: 'Statutory Permitting & HSE Plan', desc: 'We coordinate physical planning approvals, municipal building permits, and implement comprehensive site safety protocols.' },
+  { num: 5, title: 'Precision Execution & Concreting', desc: 'Our civil teams and batching fleets execute the build with daily laboratory quality control and precision.' },
+  { num: 6, title: 'Final Inspection & Certified Handover', desc: 'We conduct rigorous structural testing, snagging resolution, and provide complete documentation and warranties.' },
 ]
 
 const HERO_PROMPT = 'Construction team shaking hands with happy clients in front of newly completed luxury home, celebrating successful project completion, golden hour, professional commercial photography'
@@ -109,11 +109,11 @@ export default function WhyUs({ onOpenQuote }) {
               className="font-heading hero-h1 text-white mb-5"
               style={{ textShadow: '0 4px 30px rgba(0,0,0,0.45)', fontSize: 'clamp(2rem, 4.5vw, 3.5rem)' }}
             >
-              Why Choose <span style={{ color: 'var(--color-cyan-accent)' }}>Us</span>
+              Why Choose <span style={{ color: 'var(--color-cyan-accent)' }}>Metrak</span>
             </h1>
             <p className="text-white/85 text-[18px] lg:text-[20px] leading-relaxed max-w-2xl font-body">
-              Six concrete reasons clients choose us over other contractors — and why you'll
-              be glad you did too.
+              Six compelling reasons why investors, developers, and homeowners partner with
+              Metrak Real Estate and Construction Ltd across Uganda.
             </p>
           </div>
         </div>
@@ -127,9 +127,8 @@ export default function WhyUs({ onOpenQuote }) {
               Six Reasons We're the <span style={{ color: 'var(--color-cyan-accent)' }}>Right Choice</span>
             </h2>
             <p className="text-body-copy text-text-body/85 leading-relaxed max-w-3xl mx-auto">
-              Choosing a construction partner is one of the most important decisions you'll
-              make. Here's what makes our approach different — and why it produces better
-              results for our clients.
+              Choosing a construction and property partner requires confidence in execution,
+              engineering integrity, and legal security. Here is why clients rely on Metrak.
             </p>
           </div>
           <div className="grid-3-to-2 card-scaled">

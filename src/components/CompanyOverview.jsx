@@ -2,21 +2,21 @@ import { Link } from 'react-router-dom'
 
 const PILLARS = [
   {
-    title: 'Residential & Commercial Construction',
+    title: 'Construction & Civil Engineering',
     icon: 'fa-hammer',
-    desc: 'Full-service construction from custom homes to large commercial developments.',
+    desc: 'From residential bungalows and apartments to commercial complexes, roads, and civil infrastructure.',
     to: '/services',
   },
   {
-    title: 'Project Portfolio & Case Studies',
-    icon: 'fa-diagram-project',
-    desc: 'Showcasing completed projects with real results, budgets, and timelines.',
+    title: 'Real Estate Sales & Land Transactions',
+    icon: 'fa-map-location-dot',
+    desc: 'Prime land acquisition, residential & commercial sales, leasing, and verified due diligence.',
     to: '/projects',
   },
   {
-    title: 'Quote Requests & Client Support',
-    icon: 'fa-headset',
-    desc: 'Easy online quoting and dedicated support at every stage of your build.',
+    title: 'Consultancy & Property Valuation',
+    icon: 'fa-chart-pie',
+    desc: 'Professional valuation reports, investment feasibility studies, and strategic property advisory.',
     to: '/contact',
   },
 ]
@@ -26,13 +26,13 @@ export default function CompanyOverview() {
     <section className="py-section bg-white fade-section overflow-x-hidden w-full">
       <div className="container-site">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="section-eyebrow">Spectrum Real Estate Solutions</span>
+          <span className="section-eyebrow">Metrak Real Estate and Construction Ltd</span>
           <h2 className="section-h2 mb-6">
-            Building Excellence & Managing Real Estate{' '}
-            <span style={{ color: 'var(--color-cyan-accent)' }}>In Kampala, Uganda</span>
+            Building Excellence & Developing Real Estate{' '}
+            <span style={{ color: 'var(--color-cyan-accent)' }}>Across Uganda & East Africa</span>
           </h2>
           <p className="text-body-copy text-text-body/85 leading-relaxed max-w-3xl mx-auto">
-            Spectrum Properties delivers comprehensive real estate development, property sales and rentals, custom home building, commercial construction, agribusiness, and professional property management to local and international investors.
+            Metrak Real Estate and Construction Ltd is a fully registered, multi-service company delivering property development, land transactions, civil engineering, building construction, and real estate advisory to individuals, investors, and organizations.
           </p>
         </div>
 

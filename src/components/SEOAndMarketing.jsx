@@ -1,18 +1,16 @@
-import { Link } from 'react-router-dom'
-
 const CAPABILITIES = [
-  'Keyword research & opportunity identification',
-  'SEO content planning',
-  'Blog/content generation & optimization',
-  'Optimization of existing website pages',
-  'Meta titles & descriptions',
-  'Internal linking recommendations',
-  'Search-intent analysis',
-  'Content performance analysis',
-  'Identification of new search topics',
-  'Competitor & market analysis',
-  'Conversion optimization recommendations',
-  'Continuous SEO improvement',
+  'Certified Property Valuation Reports',
+  'Investment Feasibility Studies',
+  'Real Estate Project Advisory',
+  'Market Trends & Price Forecasting',
+  'Land Title & Legal Due Diligence',
+  'Boundary Opening & Site Inspections',
+  'Structural Engineering Assessments',
+  'Architectural Planning & Floor Designs',
+  'Commercial Asset Management',
+  'Tenant Profiling & Lease Advisory',
+  'Turnkey Construction Costing',
+  'Health, Safety & Code Compliance',
 ]
 
 export default function SEOAndMarketing() {
@@ -21,23 +19,19 @@ export default function SEOAndMarketing() {
       <div className="container-site w-full overflow-hidden">
         <div className="grid lg:grid-cols-5 xl:grid-cols-5 gap-8 lg:gap-10 xl:gap-12 items-start w-full max-w-full">
           <div className="lg:col-span-2 xl:col-span-2 lg:sticky xl:sticky lg:top-32 xl:top-36 w-full min-w-0">
-            <span className="section-eyebrow">AI-Powered SEO & Marketing</span>
+            <span className="section-eyebrow">Real Estate Advisory & Valuation</span>
             <h2 className="section-h2 mb-7">
-              A Website That Keeps{' '}
-              <span style={{ color: 'var(--color-cyan-accent)' }}>Improving After Launch</span>
+              Strategic Advisory That{' '}
+              <span style={{ color: 'var(--color-cyan-accent)' }}>Maximizes Project Value</span>
             </h2>
             <p className="text-body-copy text-text-body/85 leading-relaxed mb-6">
-              A static website is yesterday's approach. We combine modern construction-site
-              design with an AI-powered SEO and marketing engine that runs continuously —
-              researching, writing, optimizing, and reporting so your online presence gets
-              stronger every month.
+              Metrak Real Estate delivers institutional-grade property valuation, investment analysis, and construction advisory across Uganda and the East African region.
             </p>
             <p className="text-body-copy text-text-body/85 leading-relaxed mb-8">
-              Every quarter, you'll see measurable gains in search impressions, clicks, and
-              qualified enquiries — instead of watching your site collect dust.
+              Whether you are acquiring prime land, planning modern residential developments, or assessing capital returns on commercial structures, our insights ensure precision at every step.
             </p>
             <Link to="/contact" className="btn-primary">
-              See Our Strategy
+              Request Advisory
               <i className="fa fa-arrow-right ml-2.5 text-[11px]" />
             </Link>
           </div>

@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 
 const SERVICE_OPTIONS = [
-  'Residential Construction',
-  'Commercial Construction',
-  'Both',
-  'Not Sure',
+  'Construction & Civil Engineering',
+  'Real Estate Sales & Brokerage',
+  'Land Acquisition & Disposal',
+  'Valuation & Advisory',
+  'Property Development',
+  'General Inquiry',
 ]
 
 export default function QuotePanel({ isOpen, onClose }) {
@@ -112,7 +114,7 @@ export default function QuotePanel({ isOpen, onClose }) {
             Request a Free Quote
           </h3>
           <p className="text-white/70 text-[15px] leading-relaxed">
-            Fill out the form below and we'll prepare a tailored proposal for your next project.
+            Fill out the form below and our Metrak team will prepare a tailored proposal for your project.
           </p>
         </div>
 

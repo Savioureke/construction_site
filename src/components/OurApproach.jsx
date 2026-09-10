@@ -2,22 +2,22 @@ import { Link } from 'react-router-dom'
 
 const COLUMNS = [
   {
-    title: 'Get Found',
-    icon: 'fa-magnifying-glass-chart',
+    title: 'Trusted Experience',
+    icon: 'fa-shield-halved',
     body:
-      'SEO and local visibility strategy that puts your company in front of people actively searching for the exact construction services you offer.',
+      'A comprehensive portfolio of successful projects across residential, commercial, civil, and land developments in both public and private sectors.',
   },
   {
-    title: 'Build Trust',
-    icon: 'fa-handshake',
+    title: 'Operational Efficiency',
+    icon: 'fa-clock-rotate-left',
     body:
-      'A credible, professional site with real project case studies, honest testimonials, and clear service information that reads like a company you can hire today.',
+      'Timely project delivery, disciplined budget management, and transparent communication ensuring your investment creates maximum lasting value.',
   },
   {
-    title: 'Convert Visitors',
-    icon: 'fa-comments-dollar',
+    title: 'Full Compliance & Safety',
+    icon: 'fa-file-circle-check',
     body:
-      'Clear calls-to-action, easy quote requests, and a site designed around enquiries and conversions — not just pretty pictures.',
+      'Strict adherence to Uganda and regional building codes, environmental standards, legal title due diligence, and rigorous site health & safety.',
   },
 ]
 
@@ -26,7 +26,7 @@ export default function OurApproach() {
     <section id="approach" className="py-section bg-white fade-section">
       <div className="container-site">
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <span className="section-eyebrow">Our Approach</span>
+          <span className="section-eyebrow">The Metrak Standard</span>
           <h2
             className="font-heading mb-7"
             style={{
@@ -36,14 +36,12 @@ export default function OurApproach() {
               color: 'var(--color-navy-dark)',
             }}
           >
-            Get Found. Build Trust.{' '}
+            Trusted Experience. Absolute Efficiency.{' '}
             <br className="hidden sm:block" />
-            Generate Enquiries.{' '}
-            <span style={{ color: 'var(--color-cyan-accent)' }}>Convert Clients.</span>
+            <span style={{ color: 'var(--color-cyan-accent)' }}>Proven Compliance & Integrity.</span>
           </h2>
           <p className="text-body-copy text-text-body/85 leading-relaxed max-w-2xl mx-auto">
-            Every decision in the design, copy, and SEO of this site flows through a single
-            question: does it move someone further down this four-step funnel?
+            Our approach combines deep technical engineering expertise, local East African market insight, and a customer-first philosophy to build lasting value.
           </p>
         </div>
 

@@ -74,10 +74,10 @@ export default function SpectrumVideoShowcase() {
             Video Tours & Walkthroughs
           </span>
           <h2 className="section-h2 text-white mb-3">
-            Spectrum Properties <span style={{ color: 'var(--color-cyan-accent)' }}>Video Tours</span>
+            Metrak Real Estate <span style={{ color: 'var(--color-cyan-accent)' }}>Project Video Tours</span>
           </h2>
           <p className="text-white/80 text-[16px] leading-relaxed">
-            Real video walkthroughs of our properties across all 7 sections.
+            Explore real video walkthroughs of our featured properties, civil developments, and residential projects across Uganda.
           </p>
         </div>
 

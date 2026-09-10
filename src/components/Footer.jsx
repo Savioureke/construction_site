@@ -11,15 +11,15 @@ const QUICK_LINKS = [
 ]
 
 const SERVICES = [
-  { label: 'Residential Construction', to: '/services' },
-  { label: 'Commercial Construction', to: '/services' },
-  { label: 'Renovations & Additions', to: '/services' },
-  { label: 'Project Management', to: '/services' },
-  { label: 'Custom Home Builds', to: '/services' },
-  { label: 'Interior Finishing', to: '/services' },
+  { label: 'Construction & Civil Engineering', to: '/services' },
+  { label: 'Real Estate Sales & Brokerage', to: '/services' },
+  { label: 'Land Acquisition & Disposal', to: '/services' },
+  { label: 'Property Development & Housing', to: '/services' },
+  { label: 'Consultancy & Valuation', to: '/services' },
+  { label: 'Health & Safety Quality Assurance', to: '/services' },
 ]
 
-const INSTAGRAM_LINK = 'https://www.instagram.com/spectrumrealestateuganda/'
+const INSTAGRAM_LINK = 'https://metrakrealestate.com/'
 
 export default function Footer({ onOpenQuote }) {
   const [email, setEmail] = useState('')
@@ -27,7 +27,7 @@ export default function Footer({ onOpenQuote }) {
   const onSubscribe = (e) => {
     e.preventDefault()
     if (!email) return
-    alert(`Thanks — placeholder subscribe endpoint goes here: ${email}`)
+    alert(`Thanks for subscribing to Metrak Real Estate updates: ${email}`)
     setEmail('')
   }
 
@@ -39,21 +39,21 @@ export default function Footer({ onOpenQuote }) {
             <div className="flex items-center gap-3 mb-6">
               <img
                 src="/images/spectrum logo.jpg"
-                alt="Spectrum Real Estate Solutions"
+                alt="Metrak Real Estate and Construction"
                 className="w-11 h-11 object-cover rounded-lg shadow-md border border-cyan-accent/30"
               />
               <div className="flex flex-col leading-tight">
                 <span className="font-heading font-bold text-white text-[17px] tracking-wide">
-                  SPECTRUM PROPERTIES
+                  METRAK REAL ESTATE
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.2em] font-semibold" style={{ color: 'var(--color-gold-accent)' }}>
-                  Real Estate & Construction Solutions
+                  Real Estate & Construction Ltd
                 </span>
               </div>
             </div>
 
             <p className="text-white/60 text-[14.5px] leading-relaxed mb-6">
-              Full-service real estate, construction, and property management partner in Kampala, Uganda — building quality projects and managing investments.
+              Multi-service real estate, civil engineering, building construction, and land advisory company headquartered in Kampala, Uganda — delivering lasting value across East Africa.
             </p>
 
             <button type="button" onClick={onOpenQuote} className="btn-primary">
@@ -114,31 +114,31 @@ export default function Footer({ onOpenQuote }) {
               <li className="flex items-start gap-3">
                 <i className="fa fa-map-marker-alt mt-1 text-cyan-accent" />
                 <span className="text-white/65 text-[14.5px] leading-relaxed">
-                  Mama Africa Close, Old Kira Road, Kampala, Uganda
+                  Head Office: Dungu 5 Building Rm. D.1, Press House Road, Kampala, Uganda
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <i className="fa fa-phone text-cyan-accent" />
-                <a href="tel:+256709220000" className="text-white/65 text-[14.5px] hover:text-white transition-colors">
-                  +256 709 220 000 / +256 773 186 768
+                <a href="tel:+256200959400" className="text-white/65 text-[14.5px] hover:text-white transition-colors">
+                  +256 200 959 400 / +256 700 312 036
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <i className="fa fa-envelope text-cyan-accent" />
-                <a href="mailto:info@spectrumproperties.co.ug" className="text-white/65 text-[14.5px] hover:text-white transition-colors">
-                  info@spectrumproperties.co.ug
+                <a href="mailto:info@metrakrealestate.com" className="text-white/65 text-[14.5px] hover:text-white transition-colors">
+                  info@metrakrealestate.com
                 </a>
               </li>
             </ul>
 
             <div className="flex items-center gap-2.5 mb-7">
               <a
-                href="#" aria-label="Facebook" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1877F2'; e.currentTarget.style.borderColor = '#1877F2' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
+                href="https://metrakrealestate.com/" aria-label="Facebook" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1877F2'; e.currentTarget.style.borderColor = '#1877F2' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
               >
                 <i className="fa-brands fa-facebook-f" />
               </a>
               <a
-                href={INSTAGRAM_LINK}
+                href="https://metrakrealestate.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -147,12 +147,12 @@ export default function Footer({ onOpenQuote }) {
                 <i className="fa-brands fa-instagram" />
               </a>
               <a
-                href="#" aria-label="LinkedIn" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0A66C2'; e.currentTarget.style.borderColor = '#0A66C2' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
+                href="https://metrakrealestate.com/" aria-label="LinkedIn" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0A66C2'; e.currentTarget.style.borderColor = '#0A66C2' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
               >
                 <i className="fa-brands fa-linkedin-in" />
               </a>
               <a
-                href="#" aria-label="WhatsApp" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#25D366'; e.currentTarget.style.borderColor = '#25D366' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
+                href="https://wa.me/256200959400" aria-label="WhatsApp" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#25D366'; e.currentTarget.style.borderColor = '#25D366' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
               >
                 <i className="fa-brands fa-whatsapp" />
               </a>
@@ -187,14 +187,14 @@ export default function Footer({ onOpenQuote }) {
       <div className="border-t border-white/10">
         <div className="container-site py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <p className="text-white/45 text-[12.5px] text-center md:text-left">
-            © {new Date().getFullYear()} Spectrum Real Estate Solutions / Spectrum Properties. All Rights Reserved.
+            © {new Date().getFullYear()} Metrak Real Estate and Construction Ltd. All Rights Reserved.
             &nbsp;&nbsp;»&nbsp;&nbsp;
             <a href="#" className="hover:text-white/70 transition-colors">Privacy Policy</a>
             &nbsp;&nbsp;»&nbsp;&nbsp;
             <a href="#" className="hover:text-white/70 transition-colors">Site Map</a>
           </p>
           <p className="text-white/35 text-[11.5px] text-center md:text-right">
-            Spectrum Properties — Mama Africa Close, Old Kira Road, Kampala, Uganda.
+            Metrak Real Estate & Construction — Dungu 5 Building Rm. D.1, Press House Road, Kampala, Uganda.
           </p>
         </div>
       </div>

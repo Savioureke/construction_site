@@ -44,9 +44,9 @@ export default function QuoteCTASection({ onOpenQuote }) {
           </h2>
 
           <p className="text-body-copy-lg text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
-            Ready to discuss your target locations, services, and competitors? Request a
-            free, no-obligation quote today and we'll put together a tailored proposal for
-            how this system can work for your construction business.
+            Ready to discuss your property development, construction project, or land
+            acquisition? Request a free, transparent consultation today and our engineering
+            and real estate team will provide a tailored proposal.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center">
@@ -54,7 +54,7 @@ export default function QuoteCTASection({ onOpenQuote }) {
               <i className="fa fa-file-invoice-dollar mr-2" />
               Request a Free Quote
             </button>
-            <a href="tel:0000000000" className="btn-outline-white">
+            <a href="tel:+256200959400" className="btn-outline-white">
               <i className="fa fa-phone mr-2" />
               Call Us Today
             </a>

@@ -1,39 +1,39 @@
 const STRATEGY = [
   {
     num: 1,
-    title: 'Technical SEO',
+    title: 'Site Feasibility & Due Diligence',
     body:
-      'Clean site structure, fast loading speed, mobile optimization, indexing configuration, and structured data so search engines trust your site.',
+      'Topographical surveys, boundary verification, title authentication, soil testing, and environmental impact assessments before ground break.',
   },
   {
     num: 2,
-    title: 'Local SEO',
+    title: 'Architectural & Structural Design',
     body:
-      'Optimization around the specific locations and service areas your company covers — appearing for searches in your target region.',
+      'Collaborative floor planning, 3D visualizations, and structural engineering that balance functionality, aesthetic elegance, and cost efficiency.',
   },
   {
     num: 3,
-    title: 'Service-Based SEO',
+    title: 'Permitting & Regulatory Compliance',
     body:
-      'Dedicated, optimized landing pages for each major construction service with copy that matches the exact intent of searchers.',
+      'Securing all municipal building permits, physical planning approvals, and environmental compliance certificates seamlessly.',
   },
   {
     num: 4,
-    title: 'Content SEO',
+    title: 'Civil & Foundation Engineering',
     body:
-      'An ongoing blog and content system that targets the real questions and searches your potential clients are typing into Google.',
+      'Site preparation, earthworks, drainage systems, and high-capacity reinforced concreting using modern construction machinery.',
   },
   {
     num: 5,
-    title: 'On-Page Optimization',
+    title: 'Superstructure & MEP Installation',
     body:
-      'Every page optimized around target keywords, search intent, heading structure, metadata, and smart internal linking.',
+      'High-grade masonry, structural steelworks, roofing, electrical grids, plumbing, and mechanical systems executed to top industry codes.',
   },
   {
     num: 6,
-    title: 'Continuous Optimization',
+    title: 'Quality Handover & Asset Management',
     body:
-      'Ongoing use of analytics and real search-performance data to guide weekly and monthly improvements, not one-and-done tweaks.',
+      'Meticulous final inspections, title conveyance handover, warranty protection, and dedicated facility support for lasting asset value.',
   },
 ]
 
@@ -42,14 +42,13 @@ export default function RankingStrategy() {
     <section className="py-section fade-section" style={{ backgroundColor: 'var(--color-bg-tint)' }}>
       <div className="container-site">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="section-eyebrow">Our SEO Strategy</span>
+          <span className="section-eyebrow">Our Execution Framework</span>
           <h2 className="section-h2 mb-6">
-            SEO Built In From the Start —{' '}
-            <span style={{ color: 'var(--color-navy-deep)' }}>Not Bolted On Later</span>
+            Engineered For Excellence —{' '}
+            <span style={{ color: 'var(--color-navy-deep)' }}>From Concept to Handover</span>
           </h2>
           <p className="text-body-copy text-text-body/85 leading-relaxed max-w-3xl mx-auto">
-            Six interlocking pillars working together — engineered specifically to put
-            construction companies in front of people actively looking for their services.
+            Six interlocking operational pillars ensuring every real estate and construction venture is delivered with precision, safety, and commercial value.
           </p>
         </div>
 

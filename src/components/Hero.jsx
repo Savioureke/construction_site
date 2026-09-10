@@ -37,7 +37,7 @@ export default function Hero({ onOpenQuote }) {
           <div className="mb-6 flex items-center gap-4">
             <span className="w-10 h-[2px]" style={{ backgroundColor: 'var(--color-gold-accent)' }} />
             <span className="uppercase tracking-[0.22em] font-bold text-[11.5px] text-white/80">
-              Spectrum Real Estate & Construction
+              Metrak Real Estate & Construction
             </span>
           </div>
 
@@ -45,15 +45,15 @@ export default function Hero({ onOpenQuote }) {
             className="font-heading hero-h1 text-white mb-6"
             style={{ textShadow: '0 4px 30px rgba(0,0,0,0.45)' }}
           >
-            Premier Property &{' '}
+            Excellence, Integrity &{' '}
             <span style={{ color: 'var(--color-cyan-accent)' }}>
-              Construction Solutions.
+              Transformative Developments.
             </span>
           </h1>
 
           <p className="text-white/85 text-[19px] lg:text-[21px] leading-relaxed mb-10 max-w-2xl font-body">
-            Delivering custom luxury homes, commercial towers, property management,
-            and high-ROI land development across Kampala, Uganda.
+            Delivering innovative, reliable property development, prime land transactions,
+            civil engineering, and trusted real estate advisory across Uganda & East Africa.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-14 lg:mb-20">
@@ -72,12 +72,12 @@ export default function Hero({ onOpenQuote }) {
 
           <div className="hero-quicklinks">
             <Link to="/services" className="quote-chip">
-              <i className="fa fa-home text-[15px]" />
-              Residential Construction
+              <i className="fa fa-building text-[15px]" />
+              Civil & Building Construction
             </Link>
             <Link to="/services" className="quote-chip">
-              <i className="fa fa-building text-[15px]" />
-              Commercial Construction
+              <i className="fa fa-map-location-dot text-[15px]" />
+              Real Estate Sales & Land
             </Link>
             <button type="button" onClick={onOpenQuote} className="quote-chip">
               <i className="fa fa-file-invoice-dollar text-[15px]" />

@@ -2,80 +2,80 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { buildImgUrl, useBgReady, MAX_WAIT_MS } from '../utils/images.js'
 
-const CATEGORIES = ['All Projects', 'Residential', 'Commercial', 'Renovations', 'Industrial']
+const CATEGORIES = ['All Projects', 'Residential', 'Commercial', 'Civil Engineering', 'Developments']
 
 const PROJECTS = [
   {
-    title: 'Modern Luxury Residence',
+    title: 'Munyonyo Luxury Residential Villa',
     category: 'Residential',
-    location: 'Downtown District',
+    location: 'Munyonyo, Kampala',
     year: '2025',
-    size: '5,200 sq ft',
-    desc: 'A stunning custom home featuring floor-to-ceiling windows, smart home technology, and premium finishes throughout.',
+    size: '6,200 sq ft',
+    desc: 'High-end bespoke residential development featuring reinforced concrete framing, premium architectural finishes, and integrated smart building systems.',
     prompt: 'Modern luxury residential home exterior with glass facade, landscaped garden, infinity pool, modern architecture, golden hour, high-end real estate photography',
   },
   {
-    title: 'Riverside Office Complex',
+    title: 'Dungu Commercial Complex',
     category: 'Commercial',
-    location: 'Business Park',
+    location: 'Press House Road, Kampala',
     year: '2024',
-    size: '45,000 sq ft',
-    desc: 'LEED-certified multi-tenant office building with open floor plans, rooftop terrace, and energy-efficient systems.',
+    size: '38,000 sq ft',
+    desc: 'Multi-storey commercial office and retail development with subterranean parking, advanced MEP systems, and modern glass curtain wall.',
     prompt: 'Modern glass office building exterior with landscaped plaza, reflective glass facade, contemporary commercial architecture, professional photography',
   },
   {
-    title: 'Historic Downtown Renovation',
-    category: 'Renovations',
-    location: 'Historic District',
+    title: 'Mbarara Urban Infrastructure & Drainage',
+    category: 'Civil Engineering',
+    location: 'Mbarara Central',
     year: '2024',
-    size: '8,500 sq ft',
-    desc: 'Complete restoration and modernization of a century-old building, preserving historic character while adding contemporary amenities.',
-    prompt: 'Beautifully restored historic brick building with modern windows, blend of old and new architecture, downtown streetscape, warm sunset light',
+    size: '4.5 km Works',
+    desc: 'Heavy civil engineering project featuring municipal stormwater drainage, reinforced culverts, earthworks, and asphalt paving.',
+    prompt: 'Civil engineering road construction and drainage site in East Africa, heavy excavators, concrete culverts, paved asphalt, professional construction photography',
   },
   {
-    title: 'Suburban Family Home Development',
-    category: 'Residential',
-    location: 'Green Valley',
+    title: 'Mukono 193-Acre Masterplan Estate',
+    category: 'Developments',
+    location: 'Mukono District',
     year: '2025',
-    size: '12 Home Community',
-    desc: 'Master-planned community of 12 custom family homes with cohesive design, shared green spaces, and community amenities.',
-    prompt: 'Row of beautiful new suburban family homes with landscaped front yards, tree-lined street, community development, blue sky day',
+    size: '193-Acre Parcel',
+    desc: 'Comprehensive land masterplanning, cadastral boundary verification, internal road networks, and residential parcel subdivision on Private Mailo land.',
+    prompt: 'Expansive lush green farmland and agricultural estate in Uganda, aerial drone shot, rolling hills, organized boundary lines, sunny clear sky',
   },
   {
-    title: 'Industrial Logistics Center',
-    category: 'Industrial',
-    location: 'Commerce Park',
+    title: 'Bunga Soya Executive Apartments',
+    category: 'Residential',
+    location: 'Bunga Soya, Kampala',
     year: '2024',
-    size: '120,000 sq ft',
-    desc: 'State-of-the-art distribution facility with high ceilings, automated loading docks, and advanced climate control systems.',
+    size: '18-Unit Complex',
+    desc: 'Modern multi-family residential development engineered with high-efficiency floor plates, backup utilities, and dedicated secure parking.',
+    prompt: 'Modern apartment building exterior with balconies, clean architectural lines, paved driveway, palm trees, warm daylight photography',
+  },
+  {
+    title: 'Muyenga Kisugu Townhome Community',
+    category: 'Developments',
+    location: 'Muyenga Kisugu, Kampala',
+    year: '2025',
+    size: '12 Townhomes',
+    desc: 'Bespoke gated residential enclave combining modern architecture, private access roads, perimeter security, and landscaped gardens.',
+    prompt: 'Modern luxury residential townhomes in gated community, brick and stone accents, manicured lawns, paved access street, golden hour light',
+  },
+  {
+    title: 'Industrial Logistics & Concreting Facility',
+    category: 'Commercial',
+    location: 'Namanve Industrial Park',
+    year: '2024',
+    size: '65,000 sq ft',
+    desc: 'Heavy industrial warehouse featuring laser-screeded reinforced concrete floors, high-clearance steel framing, and heavy vehicle loading docks.',
     prompt: 'Large modern industrial warehouse and logistics center, loading docks with trucks, expansive facility, aerial view, professional commercial photography',
   },
   {
-    title: 'Urban Mixed-Use Development',
-    category: 'Commercial',
-    location: 'Central District',
+    title: 'Kololo Residential Modernization',
+    category: 'Residential',
+    location: 'Kololo, Kampala',
     year: '2025',
-    size: '78,000 sq ft',
-    desc: 'Vibrant mixed-use building featuring ground-floor retail, upper-floor offices, and premium residential penthouses.',
-    prompt: 'Modern mixed-use urban building with retail storefronts on ground floor, offices and residential above, bustling city street, contemporary architecture',
-  },
-  {
-    title: 'Waterfront Estate Renovation',
-    category: 'Renovations',
-    location: 'Harbor View',
-    year: '2024',
-    size: '9,800 sq ft',
-    desc: 'Comprehensive renovation of a waterfront property, including expanded living spaces, outdoor entertaining areas, and private dock.',
-    prompt: 'Luxury waterfront home with private dock, expansive deck overlooking water, modern estate, sunset reflections on water, high-end real estate',
-  },
-  {
-    title: 'Advanced Manufacturing Facility',
-    category: 'Industrial',
-    location: 'Tech Park',
-    year: '2025',
-    size: '95,000 sq ft',
-    desc: 'Purpose-built manufacturing plant with cleanroom environments, advanced HVAC systems, and integrated technology infrastructure.',
-    prompt: 'Modern advanced manufacturing facility exterior, clean industrial architecture, large windows, landscaped grounds, professional aerial view',
+    size: '7,500 sq ft',
+    desc: 'Full structural retrofitting, interior reconfiguration, foundation reinforcement, and contemporary architectural finish upgrades.',
+    prompt: 'Beautifully restored modern luxury villa exterior with clean white walls, glass balconies, swimming pool, manicured grounds, sunset lighting',
   },
 ]
 
@@ -165,11 +165,11 @@ export default function Projects({ onOpenQuote }) {
               className="font-heading hero-h1 text-white mb-5"
               style={{ textShadow: '0 4px 30px rgba(0,0,0,0.45)', fontSize: 'clamp(2rem, 4.5vw, 3.5rem)' }}
             >
-              Featured <span style={{ color: 'var(--color-cyan-accent)' }}>Projects</span>
+              Featured <span style={{ color: 'var(--color-cyan-accent)' }}>Projects & Developments</span>
             </h1>
             <p className="text-white/85 text-[18px] lg:text-[20px] leading-relaxed max-w-2xl font-body">
-              A selection of our recent work across residential, commercial, industrial, and
-              renovation projects — each one delivered with quality and precision.
+              A selection of civil construction, residential developments, commercial
+              facilities, and land masterplans delivered by Metrak across Uganda.
             </p>
           </div>
         </div>
@@ -294,17 +294,17 @@ export default function Projects({ onOpenQuote }) {
             <div className="feature-card text-center">
               <div className="feature-icon mx-auto"><i className="fa-solid fa-building-circle-check" /></div>
               <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>250+</h3>
-              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Projects Completed</p>
+              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Projects & Transactions</p>
             </div>
             <div className="feature-card text-center">
-              <div className="feature-icon mx-auto"><i className="fa-solid fa-calendar-check" /></div>
-              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>94%</h3>
-              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">On-Time Delivery</p>
+              <div className="feature-icon mx-auto"><i className="fa-solid fa-cubes" /></div>
+              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>10k</h3>
+              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">sqm Daily Concreting</p>
             </div>
             <div className="feature-card text-center">
-              <div className="feature-icon mx-auto"><i className="fa-solid fa-sack-dollar" /></div>
-              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>97%</h3>
-              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">On-Budget Projects</p>
+              <div className="feature-icon mx-auto"><i className="fa-solid fa-file-shield" /></div>
+              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>100%</h3>
+              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Verified Titles & Permits</p>
             </div>
             <div className="feature-card text-center">
               <div className="feature-icon mx-auto"><i className="fa-solid fa-face-smile" /></div>
@@ -332,11 +332,11 @@ export default function Projects({ onOpenQuote }) {
         <div className="relative container-site text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="section-h2 text-white mb-7" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}>
-              Have a Project in <span style={{ color: 'var(--color-cyan-accent)' }}>Mind?</span>
+              Have a Project or Land in <span style={{ color: 'var(--color-cyan-accent)' }}>Mind?</span>
             </h2>
             <p className="text-body-copy-lg text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
-              Let's discuss your vision. Whether it's residential, commercial, industrial, or
-              a renovation, we'd love to bring your next project to life.
+              Let's discuss your vision. Whether it's residential construction, commercial
+              development, land acquisition, or certified valuation, Metrak brings it to life.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button type="button" onClick={onOpenQuote} className="btn-primary">

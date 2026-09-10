@@ -117,19 +117,19 @@ export default function Contact({ onOpenQuote }) {
               {
                 icon: 'fa-map-location-dot',
                 title: 'Visit Us',
-                lines: ['Mama Africa Close, Old Kira Road', 'Kampala, Uganda'],
+                lines: ['Dungu 5 Building Rm. D.1, Press House Road, Kampala', 'Mbarara Branch: Mbarara, Uganda'],
                 accent: 'var(--color-cyan-accent)',
               },
               {
                 icon: 'fa-phone',
                 title: 'Call Us',
-                lines: ['+256 709 220 000', '+256 773 186 768'],
+                lines: ['+256 200 959 400 (Kampala)', '+256 700 312 036 (Mbarara)'],
                 accent: 'var(--color-gold-accent)',
               },
               {
                 icon: 'fa-envelope',
                 title: 'Email Us',
-                lines: ['info@spectrumproperties.co.ug', 'We reply within 24 hours'],
+                lines: ['info@metrakrealestate.com', 'We reply within 24 business hours'],
                 accent: 'var(--color-cyan-accent)',
               },
             ].map((c) => (
@@ -160,9 +160,9 @@ export default function Contact({ onOpenQuote }) {
                   Let's Start a <span style={{ color: 'var(--color-cyan-accent)' }}>Conversation</span>
                 </h2>
                 <p className="text-body-copy text-text-body/85 leading-relaxed mb-8">
-                  Prefer the convenience of online messaging? Fill out the form and a
-                  member of our team will get back to you within 24 business hours with a
-                  response tailored to your project needs.
+                  Prefer online messaging? Fill out the form and our engineering and property
+                  consultants will get back to you within 24 business hours with answers
+                  tailored to your project.
                 </p>
               </div>
               <div
@@ -188,8 +188,8 @@ export default function Contact({ onOpenQuote }) {
                 </h3>
                 <div className="space-y-3 text-[15px]">
                   {[
-                    ['Monday – Friday', '7:00am – 6:00pm'],
-                    ['Saturday', '8:00am – 2:00pm'],
+                    ['Monday – Friday', '8:00am – 6:00pm'],
+                    ['Saturday', '9:00am – 3:00pm'],
                     ['Sunday', 'Closed'],
                   ].map(([day, hours]) => (
                     <div key={day} className="flex items-center justify-between border-b border-black/5 pb-3 last:border-0 last:pb-0">
@@ -301,7 +301,7 @@ export default function Contact({ onOpenQuote }) {
                         value={form.phone}
                         onChange={handleChange}
                         className="form-input"
-                        placeholder="(000) 000-0000"
+                        placeholder="+256 000 000 000"
                       />
                     </div>
                   </div>
@@ -316,10 +316,12 @@ export default function Contact({ onOpenQuote }) {
                         className="form-input"
                       >
                         <option value="">Select a service</option>
-                        <option>Residential Construction</option>
-                        <option>Commercial Construction</option>
-                        <option>Renovations & Additions</option>
-                        <option>Both / Not Sure</option>
+                        <option>Construction & Civil Engineering</option>
+                        <option>Real Estate Sales & Brokerage</option>
+                        <option>Land Acquisition & Disposal</option>
+                        <option>Valuation & Advisory</option>
+                        <option>Property Development</option>
+                        <option>General Inquiry</option>
                       </select>
                     </div>
                     <div>
@@ -330,7 +332,7 @@ export default function Contact({ onOpenQuote }) {
                         value={form.location}
                         onChange={handleChange}
                         className="form-input"
-                        placeholder="City, State or Service Area"
+                        placeholder="City, District or Region in Uganda"
                       />
                     </div>
                   </div>

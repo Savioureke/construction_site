@@ -2,88 +2,88 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { buildImgUrl, useBgReady, MAX_WAIT_MS } from '../utils/images.js'
 
-const BLOG_CATEGORIES = ['All Articles', 'Construction Tips', 'Project Spotlights', 'Design Trends', 'Homeowner Guides', 'Business Growth']
+const BLOG_CATEGORIES = ['All Articles', 'Real Estate Guide', 'Construction Tips', 'Land & Legal', 'Market Trends']
 
 const POSTS = [
   {
-    title: '10 Essential Questions to Ask Before Hiring a Contractor',
-    category: 'Homeowner Guides',
+    title: 'Essential Guide to Land Title Verification in Uganda',
+    category: 'Land & Legal',
     date: 'September 2, 2026',
     readTime: '7 min read',
-    author: 'Spectrum Properties Team',
-    excerpt: 'Hiring the right construction partner is the single most important decision for your project success. Here are 10 critical questions to ask before you sign anything.',
+    author: 'Metrak Advisory Team',
+    excerpt: 'How to verify Mailo, Freehold, and Leasehold titles at the Ministry of Lands before executing property purchases in Kampala and beyond.',
     prompt: 'Modern home construction site with detailed planning documents, blueprints, and hard hat on wooden table, professional aesthetic, warm natural lighting',
   },
   {
-    title: 'Project Spotlight: The Harbor View Waterfront Estate',
-    category: 'Project Spotlights',
-    date: 'August 25, 2026',
-    readTime: '9 min read',
-    author: 'Spectrum Properties Team',
-    excerpt: 'Go behind the scenes of our most ambitious residential renovation to date — a complete transformation of a 30-year-old waterfront property into a modern luxury estate.',
+    title: 'Reinforced Concrete Standards: Why Mix Design Matters in High-Rise Builds',
+    category: 'Construction Tips',
+    date: 'August 26, 2026',
+    readTime: '8 min read',
+    author: 'Metrak Advisory Team',
+    excerpt: 'An engineering analysis of slump tests, cube crushing strength, and curing practices for durable multi-storey structures in Uganda.',
     prompt: 'Luxury waterfront modern home exterior with infinity pool overlooking water, sunset golden hour, premium real estate photography, detailed architecture',
   },
   {
-    title: '2026 Commercial Construction Trends Every Business Owner Should Know',
-    category: 'Design Trends',
-    date: 'August 18, 2026',
+    title: 'Emerging Real Estate Investment Hotspots in Kampala and Mbarara',
+    category: 'Market Trends',
+    date: 'August 19, 2026',
     readTime: '6 min read',
-    author: 'Spectrum Properties Team',
-    excerpt: 'From sustainable materials to flexible workspace design, explore the top commercial construction trends shaping projects in 2026 and beyond.',
+    author: 'Metrak Advisory Team',
+    excerpt: 'Analyzing infrastructure expansion, road corridors, and urbanization driving high capital appreciation in Greater Kampala and Western Uganda.',
     prompt: 'Modern commercial office interior with sustainable materials, green walls, open collaborative workspace, natural light pouring in, contemporary design',
   },
   {
-    title: 'The Complete Guide to Construction Budgeting: Avoiding Cost Overruns',
+    title: 'Understanding Bills of Quantities (BOQ): How to Avoid Construction Overruns',
     category: 'Construction Tips',
-    date: 'August 11, 2026',
-    readTime: '10 min read',
-    author: 'Spectrum Properties Team',
-    excerpt: 'Cost overruns are the #1 cause of construction project stress. Learn proven strategies for accurate budgeting, contingency planning, and staying on track financially.',
+    date: 'August 12, 2026',
+    readTime: '9 min read',
+    author: 'Metrak Advisory Team',
+    excerpt: 'A practical guide for property developers on managing material schedules, labor rates, and contingency allowances effectively.',
     prompt: 'Construction budgeting documents, spreadsheets, calculator, blueprint on desk, organized financial planning, professional office setting with natural light',
   },
   {
-    title: 'Why Local SEO Matters for Construction Companies in 2026',
-    category: 'Business Growth',
-    date: 'August 4, 2026',
-    readTime: '8 min read',
-    author: 'Spectrum Properties Team',
-    excerpt: 'Did you know 87% of homeowners search online before hiring a contractor? Discover how local SEO puts your business in front of the right people at the right moment.',
+    title: 'Due Diligence Checklist for Large-Acre Agricultural & Farm Land',
+    category: 'Land & Legal',
+    date: 'August 5, 2026',
+    readTime: '7 min read',
+    author: 'Metrak Advisory Team',
+    excerpt: 'Crucial steps for acquiring 50+ acre Private Mailo farm land, boundary surveying, local council approvals, and deed transfers.',
     prompt: 'Digital marketing dashboard showing SEO analytics, search rankings, map results for construction business, modern computer screen, professional marketing concept',
   },
   {
-    title: 'Sustainable Building Materials: What\'s Worth the Investment?',
-    category: 'Construction Tips',
-    date: 'July 28, 2026',
-    readTime: '7 min read',
-    author: 'Spectrum Properties Team',
-    excerpt: 'From cross-laminated timber to solar-integrated roofing, we break down which sustainable building materials deliver real ROI and which ones to approach carefully.',
+    title: 'Residential Property Valuation: What Drives Market Value in Uganda?',
+    category: 'Real Estate Guide',
+    date: 'July 29, 2026',
+    readTime: '8 min read',
+    author: 'Metrak Advisory Team',
+    excerpt: 'How certified valuers assess location, accessibility, title status, construction quality, and neighborhood sales comparisons.',
     prompt: 'Sustainable construction materials, cross laminated timber panels, recycled steel beams, solar panels, eco-friendly building products displayed naturally',
   },
   {
-    title: 'Kitchen Renovation Mistakes to Avoid at All Costs',
-    category: 'Homeowner Guides',
-    date: 'July 21, 2026',
+    title: 'Sustainable Drainage Design & Stormwater Management in East Africa',
+    category: 'Construction Tips',
+    date: 'July 22, 2026',
     readTime: '6 min read',
-    author: 'Spectrum Properties Team',
-    excerpt: 'A kitchen renovation is one of the highest-ROI home improvements you can make — but only if done right. Here are the top 8 mistakes we see homeowners make.',
+    author: 'Metrak Advisory Team',
+    excerpt: 'Designing effective stormwater drainage, reinforced culverts, and erosion control systems for tropical rainfall seasons.',
     prompt: 'Beautiful modern renovated kitchen with island, premium cabinets, quartz countertops, designer lighting, clean and organized, high-end residential photography',
   },
   {
-    title: 'Project Spotlight: The Tech Park Advanced Manufacturing Facility',
-    category: 'Project Spotlights',
-    date: 'July 14, 2026',
+    title: 'Project Spotlight: The Munyonyo Luxury Villa Development',
+    category: 'Real Estate Guide',
+    date: 'July 15, 2026',
     readTime: '8 min read',
-    author: 'Spectrum Properties Team',
-    excerpt: 'How we delivered a 95,000 sq ft state-of-the-art manufacturing plant 3 weeks ahead of schedule and 4% under budget — without compromising quality.',
+    author: 'Metrak Advisory Team',
+    excerpt: 'How our engineering and construction team delivered a bespoke 6,200 sq ft luxury residence with full quality assurance and high finishes.',
     prompt: 'Modern advanced manufacturing facility exterior, clean industrial architecture, loading docks, large warehouse, professional aerial photography, clear sky',
   },
   {
-    title: 'Custom vs. Spec: Which Home Building Approach Is Right for You?',
-    category: 'Homeowner Guides',
+    title: 'Buying Off-Plan vs. Custom Development: A Comprehensive Financial Comparison',
+    category: 'Real Estate Guide',
     date: 'July 7, 2026',
     readTime: '9 min read',
-    author: 'Spectrum Properties Team',
-    excerpt: 'Trying to decide between a custom build and a spec home? We compare cost, timeline, customization, and resale value to help you make the right choice.',
+    author: 'Metrak Advisory Team',
+    excerpt: 'We weigh cashflow requirements, customization options, construction oversight, and return on investment for Ugandan property buyers.',
     prompt: 'Two contrasting home styles side by side concept: custom luxury home with unique architecture and move-in-ready spec home with standard finishes',
   },
 ]
@@ -178,11 +178,11 @@ export default function Blog({ onOpenQuote }) {
               className="font-heading hero-h1 text-white mb-5"
               style={{ textShadow: '0 4px 30px rgba(0,0,0,0.45)', fontSize: 'clamp(2rem, 4.5vw, 3.5rem)' }}
             >
-              Construction <span style={{ color: 'var(--color-cyan-accent)' }}>Blog & Resources</span>
+              Real Estate & Construction <span style={{ color: 'var(--color-cyan-accent)' }}>Insights</span>
             </h1>
             <p className="text-white/85 text-[18px] lg:text-[20px] leading-relaxed max-w-2xl font-body">
-              Practical guides, project spotlights, design trends, and industry insights —
-              curated for homeowners, business owners, and construction professionals.
+              Expert guides on Ugandan land acquisition, civil construction, property valuation,
+              and investment trends from the Metrak team.
             </p>
           </div>
         </div>
@@ -274,7 +274,7 @@ export default function Blog({ onOpenQuote }) {
                           className="w-8 h-8 flex items-center justify-center font-heading font-bold text-[13px] text-white rounded-full"
                           style={{ backgroundColor: 'var(--color-cyan-accent)' }}
                         >
-                          A
+                          M
                         </div>
                         {post.author}
                       </div>
@@ -298,16 +298,16 @@ export default function Blog({ onOpenQuote }) {
         <div className="container-site">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="section-eyebrow">Construction FAQ</span>
+              <span className="section-eyebrow">Real Estate & Construction FAQ</span>
               <h2 className="section-h2 mb-7">
                 Quick Answers to <span style={{ color: 'var(--color-cyan-accent)' }}>Common Questions</span>
               </h2>
               <div className="space-y-5">
                 {[
-                  { q: 'How long does a typical project take?', a: 'Timelines vary significantly by project size and complexity. A custom home typically takes 6–10 months, a major renovation 3–6 months, and commercial projects 9–18 months.' },
-                  { q: 'Do you handle permits and inspections?', a: 'Yes. We manage the entire permitting process, schedule all required inspections, and ensure full code compliance throughout your project.' },
-                  { q: 'Can I make changes once construction starts?', a: 'We understand plans evolve. Minor changes can be accommodated; major scope changes require a written change order to keep timelines and budgets transparent.' },
-                  { q: 'What warranty do you provide?', a: 'We provide a comprehensive 1-year workmanship warranty on every project, plus manufacturer warranties on materials. Extended warranties are available for certain systems.' },
+                  { q: 'How does Metrak verify land titles before purchase?', a: 'We conduct rigorous title searches at the Ministry of Lands, cross-check cadastral survey maps, and verify local council (LC) ownership records to ensure clean ownership.' },
+                  { q: 'What is your daily concrete batching and pumping capacity?', a: 'Metrak operates high-capacity concrete machinery and transit mixers capable of placing up to 10,000 sqm of certified concrete daily, backed by laboratory slump and cube tests.' },
+                  { q: 'Do you provide certified valuation reports for bank financing?', a: 'Yes. Our licensed valuation team provides official valuation and property appraisal reports recognized by commercial banks, courts, and financial institutions.' },
+                  { q: 'Do you execute construction projects outside Kampala?', a: 'Yes. In addition to our Kampala head office, we maintain our Mbarara branch and execute civil and building projects throughout Uganda.' },
                 ].map((item, i) => (
                   <details key={i} className="group bg-white p-6 border cursor-pointer" style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}>
                     <summary className="flex items-start justify-between gap-4 list-none font-heading font-bold text-[17px]" style={{ color: 'var(--color-navy-deep)' }}>

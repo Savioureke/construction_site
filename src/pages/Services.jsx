@@ -7,75 +7,75 @@ import { buildImgUrl, useBgReady } from '../utils/images.js'
 
 const SERVICE_DETAILS = [
   {
-    icon: 'fa-house',
-    title: 'Residential Construction',
-    desc: 'From custom dream homes to multi-unit residential developments, we deliver quality craftsmanship on every project.',
+    icon: 'fa-trowel-bricks',
+    title: 'Construction & Civil Engineering',
+    desc: 'Full-scope structural concrete, commercial buildings, residential estates, high-capacity batching, roads, and drainage.',
     bullets: [
-      'Custom home design and build',
-      'Multi-unit residential developments',
-      'Renovations and additions',
-      'Interior finishing and fit-outs',
-      'Energy-efficient builds',
+      'Commercial & high-rise structural builds',
+      'Residential housing estates & villas',
+      'Daily concreting capacity up to 10,000 sqm',
+      'Roads, culverts & stormwater drainage',
+      'Structural steel fabrication & erection',
     ],
   },
   {
-    icon: 'fa-building',
-    title: 'Commercial Construction',
-    desc: 'Full-service commercial construction for offices, retail, industrial facilities, and public infrastructure.',
+    icon: 'fa-building-shield',
+    title: 'Real Estate Sales & Brokerage',
+    desc: 'Trusted residential and commercial property brokerage, leasing, and tenant placement with 100% verified legal paperwork.',
     bullets: [
-      'Office buildings and corporate campuses',
-      'Retail centers and storefronts',
-      'Industrial warehouses and facilities',
-      'Hospitality and restaurant builds',
-      'Public sector projects',
+      'Residential apartments & luxury homes for sale',
+      'Commercial office & retail leasing',
+      'Verified property due diligence',
+      'Landlord representation & tenant placement',
+      'Investment property acquisitions',
+    ],
+  },
+  {
+    icon: 'fa-map-location-dot',
+    title: 'Land Acquisition & Disposal',
+    desc: 'Strategic land transactions across Uganda with comprehensive title searches, boundary surveying, and secure transfers.',
+    bullets: [
+      'Mailo, Freehold & Leasehold land transactions',
+      'Large-acre agricultural & farm land (e.g. 193-acre parcels)',
+      'Cadastral boundary confirmation & surveying',
+      'Ministry of Lands title search & verification',
+      'Deed transfers & local council documentation',
+    ],
+  },
+  {
+    icon: 'fa-scale-balanced',
+    title: 'Valuation & Advisory',
+    desc: 'Certified real estate appraisals, feasibility studies, investment analysis, and strategic property advisory.',
+    bullets: [
+      'Certified asset & property valuations',
+      'Project feasibility & financial modeling',
+      'Market rental rate assessments',
+      'Bank collateral & mortgage valuations',
+      'Development advisory & masterplanning',
     ],
   },
   {
     icon: 'fa-compass-drafting',
-    title: 'Project Management',
-    desc: 'End-to-end project management ensuring on-time delivery, budget adherence, and quality at every stage.',
+    title: 'Property Development',
+    desc: 'Turnkey property development management from architectural design and permitting to complete construction delivery.',
     bullets: [
-      'Comprehensive project planning',
-      'Budget tracking and cost control',
-      'Timeline management and scheduling',
-      'Subcontractor coordination',
-      'Quality assurance and inspections',
+      'Masterplanned residential communities',
+      'Commercial plazas & mixed-use complexes',
+      'Architectural & structural engineering plans',
+      'Physical planning & statutory approvals',
+      'End-to-end development oversight',
     ],
   },
   {
-    icon: 'fa-screwdriver-wrench',
-    title: 'Renovations & Additions',
-    desc: 'Transform existing spaces with our expert renovation and addition services, blending form and function.',
+    icon: 'fa-shield-halved',
+    title: 'HSE & Quality Compliance',
+    desc: 'Rigorous health, safety, and environmental standards paired with comprehensive materials testing for structural durability.',
     bullets: [
-      'Whole-home renovations',
-      'Kitchen and bathroom remodels',
-      'Room additions and expansions',
-      'Commercial tenant improvements',
-      'Historic restoration',
-    ],
-  },
-  {
-    icon: 'fa-helmet-safety',
-    title: 'Design-Build Services',
-    desc: 'Streamlined design-build process where we handle both the creative and construction sides of your project.',
-    bullets: [
-      'Architectural design collaboration',
-      'Engineering and structural design',
-      'Permits and regulatory compliance',
-      'Seamless design-to-build transition',
-      'Single point of contact',
-    ],
-  },
-  {
-    icon: 'fa-chart-line',
-    title: 'AI-Powered Marketing',
-    desc: 'Unique to our offering — construction-specific digital marketing and SEO that grows your pipeline continuously.',
-    bullets: [
-      'SEO-optimized professional website',
-      'Local search and maps optimization',
-      'Content marketing and blogging',
-      'Lead generation campaigns',
-      'Analytics and performance reporting',
+      'Site occupational health & safety management',
+      'Concrete cube testing & slump verification',
+      'Environmental impact compliance',
+      'Certified quality control inspections',
+      'Zero-compromise engineering safety protocols',
     ],
   },
 ]
@@ -145,8 +145,8 @@ export default function Services({ onOpenQuote }) {
               Our Full Range of <span style={{ color: 'var(--color-cyan-accent)' }}>Services</span>
             </h1>
             <p className="text-white/85 text-[18px] lg:text-[20px] leading-relaxed max-w-2xl font-body">
-              End-to-end construction services paired with intelligent digital marketing —
-              everything you need to build great projects and a strong pipeline.
+              End-to-end civil construction, architectural engineering, land acquisition,
+              valuation, and real estate brokerage across Uganda.
             </p>
           </div>
         </div>
@@ -157,12 +157,12 @@ export default function Services({ onOpenQuote }) {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <span className="section-eyebrow">Our Specialties</span>
             <h2 className="section-h2 mb-6">
-              Comprehensive Solutions for Every <span style={{ color: 'var(--color-cyan-accent)' }}>Construction Need</span>
+              Comprehensive Solutions for Every <span style={{ color: 'var(--color-cyan-accent)' }}>Construction & Property Need</span>
             </h2>
             <p className="text-body-copy text-text-body/85 leading-relaxed max-w-3xl mx-auto">
-              Whether you're breaking ground on a custom home, developing a commercial
-              complex, or looking to grow your company's online presence, our integrated
-              services deliver results at every stage.
+              From heavy civil engineering and multi-unit developments to verified land
+              sales and valuation advisory, Metrak delivers professional execution at
+              every stage.
             </p>
           </div>
           <div className="grid-3-to-2 card-scaled">

@@ -1,19 +1,19 @@
 const HIGHLIGHTS = [
   {
-    label: 'SEO Built In From Day One',
-    icon: 'fa-seedling',
+    label: 'Proven Multi-Sector Experience',
+    icon: 'fa-shield-halved',
   },
   {
-    label: 'Continuously Optimized, Not Static',
-    icon: 'fa-arrows-rotate',
+    label: 'Rigorous Health & Safety Standards',
+    icon: 'fa-helmet-safety',
   },
   {
-    label: 'Built for Enquiries & Conversions',
-    icon: 'fa-chart-simple',
+    label: '10,000+ SQM Daily Concreting Capacity',
+    icon: 'fa-trowel-bricks',
   },
   {
-    label: 'Mobile, Tablet & Desktop Ready',
-    icon: 'fa-desktop',
+    label: 'Full Legal & Environmental Compliance',
+    icon: 'fa-file-circle-check',
   },
 ]
 

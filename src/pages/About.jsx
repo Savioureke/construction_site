@@ -71,11 +71,11 @@ export default function About({ onOpenQuote }) {
               className="font-heading hero-h1 text-white mb-5"
               style={{ textShadow: '0 4px 30px rgba(0,0,0,0.45)', fontSize: 'clamp(2rem, 4.5vw, 3.5rem)' }}
             >
-              About <span style={{ color: 'var(--color-cyan-accent)' }}>Our Company</span>
+              About <span style={{ color: 'var(--color-cyan-accent)' }}>Metrak Real Estate</span>
             </h1>
             <p className="text-white/85 text-[18px] lg:text-[20px] leading-relaxed max-w-2xl font-body">
-              Quality craftsmanship, intelligent marketing, and a long-term partnership
-              approach to building your brand and your projects.
+              Civil engineering precision, trusted real estate brokerage, and premier property
+              development across Uganda.
             </p>
           </div>
         </div>
@@ -87,22 +87,21 @@ export default function About({ onOpenQuote }) {
         <div className="container-site">
           <div className="grid lg:grid-cols-2 gap-14 items-start">
             <div>
-              <span className="section-eyebrow">Our Story</span>
+              <span className="section-eyebrow">Our Heritage & Expertise</span>
               <h2 className="section-h2 mb-7">
-                Building Excellence Since <span style={{ color: 'var(--color-cyan-accent)' }}>Day One</span>
+                Engineering Excellence & <span style={{ color: 'var(--color-cyan-accent)' }}>Trusted Solutions</span>
               </h2>
               <p className="text-body-copy text-text-body/85 leading-relaxed mb-6">
-                Founded on the principle that construction companies deserve better than
-                static, brochure-style websites, we combine traditional quality craftsmanship
-                with modern, AI-powered digital marketing systems. The result? A construction
-                partner that doesn't just build buildings — we builds brands, visibility, and
-                sustainable business growth.
+                Metrak Real Estate and Construction Ltd was established with a singular mission:
+                to deliver premier construction, civil engineering, and real estate solutions
+                defined by structural integrity, transparent transactions, and lasting value.
               </p>
               <p className="text-body-copy text-text-body/85 leading-relaxed mb-6">
-                Every project we undertake, whether it's a custom residential build or a
-                large-scale commercial development, is approached with the same meticulous
-                attention to detail and commitment to excellence. Our team of experienced
-                professionals brings decades of combined expertise to every job site.
+                Led by an experienced multidisciplinary team of engineers, quantity surveyors,
+                and certified real estate specialists, Metrak has built an outstanding track
+                record across Kampala, Mbarara, and regions throughout Uganda. From 10,000 sqm
+                daily concreting capacity to comprehensive land due diligence, our standard
+                remains uncompromising.
               </p>
               <div className="grid grid-cols-3 gap-6 mt-10">
                 <div className="text-center">
@@ -111,11 +110,11 @@ export default function About({ onOpenQuote }) {
                 </div>
                 <div className="text-center">
                   <div className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>250+</div>
-                  <p className="text-text-gray uppercase tracking-wider text-[12px] font-bold">Projects Completed</p>
+                  <p className="text-text-gray uppercase tracking-wider text-[12px] font-bold">Projects Delivered</p>
                 </div>
                 <div className="text-center">
-                  <div className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>98%</div>
-                  <p className="text-text-gray uppercase tracking-wider text-[12px] font-bold">Client Satisfaction</p>
+                  <div className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>100%</div>
+                  <p className="text-text-gray uppercase tracking-wider text-[12px] font-bold">HSE & Legal Compliance</p>
                 </div>
               </div>
             </div>
@@ -144,8 +143,8 @@ export default function About({ onOpenQuote }) {
                   Our Mission
                 </p>
                 <p className="font-heading text-white text-[20px] leading-tight font-bold">
-                  To deliver construction excellence while continuously growing our clients'
-                  market visibility through intelligent, data-driven digital strategies.
+                  To deliver exceptional construction and real estate services through
+                  innovation, integrity, precision engineering, and client-focused solutions.
                 </p>
               </div>
             </div>
@@ -173,11 +172,11 @@ export default function About({ onOpenQuote }) {
         <div className="relative container-site text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="section-h2 text-white mb-7" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}>
-              Ready to Work With a Team That <span style={{ color: 'var(--color-cyan-accent)' }}>Cares About Results?</span>
+              Ready to Work With a Proven <span style={{ color: 'var(--color-cyan-accent)' }}>Construction & Property Partner?</span>
             </h2>
             <p className="text-body-copy-lg text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
-              Let's discuss your next construction project and how our integrated approach to
-              building and marketing can set you apart.
+              Let's discuss your next construction project, land acquisition, or development in
+              Uganda. Our team provides end-to-end expertise you can trust.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button type="button" onClick={onOpenQuote} className="btn-primary">
