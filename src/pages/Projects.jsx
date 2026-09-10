@@ -2,80 +2,89 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { buildImgUrl, useBgReady, MAX_WAIT_MS } from '../utils/images.js'
 
-const CATEGORIES = ['All Projects', 'Residential', 'Commercial', 'Civil Engineering', 'Developments']
+const CATEGORIES = ['All Projects', 'Residential', 'Commercial', 'Infrastructure']
 
 const PROJECTS = [
   {
-    title: 'Munyonyo Luxury Residential Villa',
+    title: 'Victoria Heights Luxury Apartments',
     category: 'Residential',
-    location: 'Munyonyo, Kampala',
-    year: '2025',
-    size: '6,200 sq ft',
-    desc: 'High-end bespoke residential development featuring reinforced concrete framing, premium architectural finishes, and integrated smart building systems.',
+    location: 'Kampala, Uganda',
+    year: 'Completed',
+    size: '24 Units • 4,500 m²',
+    desc: 'Modern architectural luxury residential complex featuring 24 premium units, automated access, and panoramic city views.',
     prompt: 'Modern luxury residential home exterior with glass facade, landscaped garden, infinity pool, modern architecture, golden hour, high-end real estate photography',
   },
   {
-    title: 'Dungu Commercial Complex',
+    title: 'Metrak Commercial Plaza',
     category: 'Commercial',
-    location: 'Press House Road, Kampala',
-    year: '2024',
-    size: '38,000 sq ft',
-    desc: 'Multi-storey commercial office and retail development with subterranean parking, advanced MEP systems, and modern glass curtain wall.',
+    location: 'Central Business District, Kampala',
+    year: 'Completed',
+    size: '8 Floors • 12,000 m²',
+    desc: 'Eight-storey modern office complex featuring energy-efficient glass facade, underground parking, and flexible floor plans.',
     prompt: 'Modern glass office building exterior with landscaped plaza, reflective glass facade, contemporary commercial architecture, professional photography',
   },
   {
-    title: 'Mbarara Urban Infrastructure & Drainage',
-    category: 'Civil Engineering',
-    location: 'Mbarara Central',
-    year: '2024',
-    size: '4.5 km Works',
-    desc: 'Heavy civil engineering project featuring municipal stormwater drainage, reinforced culverts, earthworks, and asphalt paving.',
-    prompt: 'Civil engineering road construction and drainage site in East Africa, heavy excavators, concrete culverts, paved asphalt, professional construction photography',
-  },
-  {
-    title: 'Mukono 193-Acre Masterplan Estate',
-    category: 'Developments',
-    location: 'Mukono District',
-    year: '2025',
-    size: '193-Acre Parcel',
-    desc: 'Comprehensive land masterplanning, cadastral boundary verification, internal road networks, and residential parcel subdivision on Private Mailo land.',
-    prompt: 'Expansive lush green farmland and agricultural estate in Uganda, aerial drone shot, rolling hills, organized boundary lines, sunny clear sky',
-  },
-  {
-    title: 'Bunga Soya Executive Apartments',
+    title: 'Greenwood Gated Community Estate',
     category: 'Residential',
-    location: 'Bunga Soya, Kampala',
-    year: '2024',
-    size: '18-Unit Complex',
-    desc: 'Modern multi-family residential development engineered with high-efficiency floor plates, backup utilities, and dedicated secure parking.',
-    prompt: 'Modern apartment building exterior with balconies, clean architectural lines, paved driveway, palm trees, warm daylight photography',
+    location: 'Entebbe Corridor, Uganda',
+    year: 'Under Construction',
+    size: '45 Villas • 15 Acres',
+    desc: 'Master-planned residential community with paved access roads, solar streetlights, and dedicated community green park zones.',
+    prompt: 'Row of beautiful new suburban family homes with landscaped front yards, tree-lined street, community development, blue sky day',
   },
   {
-    title: 'Muyenga Kisugu Townhome Community',
-    category: 'Developments',
-    location: 'Muyenga Kisugu, Kampala',
-    year: '2025',
-    size: '12 Townhomes',
-    desc: 'Bespoke gated residential enclave combining modern architecture, private access roads, perimeter security, and landscaped gardens.',
-    prompt: 'Modern luxury residential townhomes in gated community, brick and stone accents, manicured lawns, paved access street, golden hour light',
-  },
-  {
-    title: 'Industrial Logistics & Concreting Facility',
-    category: 'Commercial',
+    title: 'Industrial Logistics & Warehouse Hub',
+    category: 'Infrastructure',
     location: 'Namanve Industrial Park',
-    year: '2024',
-    size: '65,000 sq ft',
-    desc: 'Heavy industrial warehouse featuring laser-screeded reinforced concrete floors, high-clearance steel framing, and heavy vehicle loading docks.',
+    year: 'Completed',
+    size: '10,000 m² Floor',
+    desc: 'Heavy-duty steel warehouse development with reinforced concrete flooring engineered for heavy logistics and container transport.',
     prompt: 'Large modern industrial warehouse and logistics center, loading docks with trucks, expansive facility, aerial view, professional commercial photography',
   },
   {
-    title: 'Kololo Residential Modernization',
+    title: 'Executive Lakeside Condominiums',
     category: 'Residential',
-    location: 'Kololo, Kampala',
-    year: '2025',
-    size: '7,500 sq ft',
-    desc: 'Full structural retrofitting, interior reconfiguration, foundation reinforcement, and contemporary architectural finish upgrades.',
-    prompt: 'Beautifully restored modern luxury villa exterior with clean white walls, glass balconies, swimming pool, manicured grounds, sunset lighting',
+    location: 'Munyonyo, Kampala',
+    year: 'Upcoming',
+    size: '18 Luxury Condos',
+    desc: 'Ultra-contemporary residences designed for executive expatriates, diplomats, and discerning real estate investors.',
+    prompt: 'Luxury waterfront modern home exterior with infinity pool overlooking water, sunset golden hour, premium real estate photography, detailed architecture',
+  },
+  {
+    title: 'Highway Drainage & Stormwater Works',
+    category: 'Infrastructure',
+    location: 'Wakiso Metro Corridor',
+    year: 'Completed',
+    size: '4.8 km Drainage',
+    desc: 'Civil engineering stormwater management and reinforced culvert project ensuring long-term flood resilience and road longevity.',
+    prompt: 'Civil engineering road construction and drainage site in East Africa, heavy excavators, concrete culverts, paved asphalt, professional construction photography',
+  },
+  {
+    title: 'Multi-Storey Commercial Retail Center',
+    category: 'Commercial',
+    location: 'Ntinda Business Strip, Kampala',
+    year: 'Completed',
+    size: '3,200 m² Retail Space',
+    desc: 'Modern retail and corporate banking premises engineered with open-span structural steel beams and high-traffic floor finishes.',
+    prompt: 'Modern mixed-use urban building with retail storefronts on ground floor, offices and residential above, bustling city street, contemporary architecture',
+  },
+  {
+    title: 'Suburban Villa Development',
+    category: 'Residential',
+    location: 'Kigo, Lake Victoria',
+    year: 'Completed',
+    size: '12 Luxury Villas',
+    desc: 'Private boutique estate featuring luxury 4-bedroom villas with individual swimming pools and Lake Victoria views.',
+    prompt: 'Modern luxury residential townhomes in gated community, brick and stone accents, manicured lawns, paved access street, golden hour light',
+  },
+  {
+    title: 'Heavy-Duty Reinforced Concrete Paving',
+    category: 'Infrastructure',
+    location: 'Industrial Estate, Mukono',
+    year: 'Completed',
+    size: '10,000 m² Yard',
+    desc: 'Expansive 10,000 m² reinforced concrete yard engineered to withstand 60-tonne container transport trucks and heavy machinery.',
+    prompt: 'Industrial concrete paving works, smooth concrete yard, heavy machinery, high strength industrial flooring, professional photography',
   },
 ]
 
@@ -293,23 +302,23 @@ export default function Projects({ onOpenQuote }) {
           <div className="grid-4-to-2 card-scaled">
             <div className="feature-card text-center">
               <div className="feature-icon mx-auto"><i className="fa-solid fa-building-circle-check" /></div>
-              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>250+</h3>
-              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Projects & Transactions</p>
-            </div>
-            <div className="feature-card text-center">
-              <div className="feature-icon mx-auto"><i className="fa-solid fa-cubes" /></div>
-              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>10k</h3>
-              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">sqm Daily Concreting</p>
-            </div>
-            <div className="feature-card text-center">
-              <div className="feature-icon mx-auto"><i className="fa-solid fa-file-shield" /></div>
-              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>100%</h3>
-              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Verified Titles & Permits</p>
+              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>150+</h3>
+              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Completed Projects</p>
             </div>
             <div className="feature-card text-center">
               <div className="feature-icon mx-auto"><i className="fa-solid fa-face-smile" /></div>
-              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>98%</h3>
-              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Client Satisfaction</p>
+              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>350+</h3>
+              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Satisfied Clients</p>
+            </div>
+            <div className="feature-card text-center">
+              <div className="feature-icon mx-auto"><i className="fa-solid fa-cubes" /></div>
+              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>10k m²</h3>
+              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Daily Concrete Capacity</p>
+            </div>
+            <div className="feature-card text-center">
+              <div className="feature-icon mx-auto"><i className="fa-solid fa-award" /></div>
+              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>12+</h3>
+              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Years in Industry</p>
             </div>
           </div>
         </div>

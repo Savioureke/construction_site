@@ -9,6 +9,34 @@ const HERO_PROMPT = 'Modern construction company headquarters building exterior 
 const STORY_PROMPT = 'Construction team in hard hats and safety vests collaborating around blueprints at a job site trailer, sunlight streaming in, diverse team of engineers and foremen, professional commercial photography, high detail'
 const CTA_PROMPT = 'Close up of construction worker hands using precision tools on a modern building facade, golden hour lighting, craftsmanship detail shot, professional photography'
 
+const LEADERSHIP_TEAM = [
+  {
+    name: 'Tumuhimbise Akimu',
+    role: 'Metrak Director',
+    image: '/images/team/akimu.jpg',
+    bio: 'Executive Director providing strategic governance, institutional partnerships, and regional corporate expansion for Metrak.',
+  },
+  {
+    name: 'Dan Mwesigye',
+    role: 'Metrak Director',
+    image: '/images/team/mwesigye.jpg',
+    bio: 'Executive Director leading operations, commercial land acquisitions, and client portfolio developments across Uganda.',
+  },
+  {
+    name: 'Eng Denis Aniku',
+    role: 'Lead Project Engineer',
+    image: '/images/team/aniku.jpg',
+    bio: 'Lead Project Engineer spearheading civil engineering, structural integrity, high-volume concrete works, and site safety.',
+  },
+]
+
+const TRUSTED_CLIENTS = [
+  { name: 'Kazisa Investment Uganda Ltd', category: 'Investment Partner', logo: '/images/clients/kazisa.png' },
+  { name: 'POWERCHINA / YELLOW RIVER', category: 'Infrastructure & Energy', logo: '/images/clients/powerchina.png' },
+  { name: 'TACIT', category: 'Commercial Development', logo: '/images/clients/tacit.png' },
+  { name: 'CREC (China Railway Engineering Corp)', category: 'Engineering & Construction', logo: '/images/clients/crec.jpg' },
+]
+
 export default function About({ onOpenQuote }) {
   const HERO_IMG_URL = useMemo(() => buildImgUrl(HERO_PROMPT, 'landscape_16_9'), [])
   const STORY_IMG_URL = useMemo(() => buildImgUrl(STORY_PROMPT, 'portrait_4_3'), [])
@@ -92,29 +120,32 @@ export default function About({ onOpenQuote }) {
                 Engineering Excellence & <span style={{ color: 'var(--color-cyan-accent)' }}>Trusted Solutions</span>
               </h2>
               <p className="text-body-copy text-text-body/85 leading-relaxed mb-6">
-                Metrak Real Estate and Construction Ltd was established with a singular mission:
-                to deliver premier construction, civil engineering, and real estate solutions
-                defined by structural integrity, transparent transactions, and lasting value.
+                Metrak Real Estate and Construction Ltd is a fully registered, multi-service
+                real estate and construction company headquartered at Dungu 5 Building Rm. D.1,
+                Kampala, Uganda.
               </p>
               <p className="text-body-copy text-text-body/85 leading-relaxed mb-6">
-                Led by an experienced multidisciplinary team of engineers, quantity surveyors,
-                and certified real estate specialists, Metrak has built an outstanding track
-                record across Kampala, Mbarara, and regions throughout Uganda. From 10,000 sqm
-                daily concreting capacity to comprehensive land due diligence, our standard
-                remains uncompromising.
+                Led by seasoned directors and civil engineers, Metrak delivers premier
+                property development, high-capacity concreting up to 10,000 m² daily,
+                certified valuations, and secure land transactions across Uganda and the East
+                African region.
               </p>
-              <div className="grid grid-cols-3 gap-6 mt-10">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10">
                 <div className="text-center">
-                  <div className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>15+</div>
-                  <p className="text-text-gray uppercase tracking-wider text-[12px] font-bold">Years Experience</p>
+                  <div className="font-heading font-black text-3xl mb-1" style={{ color: 'var(--color-cyan-accent)' }}>150+</div>
+                  <p className="text-text-gray uppercase tracking-wider text-[11px] font-bold">Completed Projects</p>
                 </div>
                 <div className="text-center">
-                  <div className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>250+</div>
-                  <p className="text-text-gray uppercase tracking-wider text-[12px] font-bold">Projects Delivered</p>
+                  <div className="font-heading font-black text-3xl mb-1" style={{ color: 'var(--color-cyan-accent)' }}>350+</div>
+                  <p className="text-text-gray uppercase tracking-wider text-[11px] font-bold">Satisfied Clients</p>
                 </div>
                 <div className="text-center">
-                  <div className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>100%</div>
-                  <p className="text-text-gray uppercase tracking-wider text-[12px] font-bold">HSE & Legal Compliance</p>
+                  <div className="font-heading font-black text-3xl mb-1" style={{ color: 'var(--color-cyan-accent)' }}>10,000m²</div>
+                  <p className="text-text-gray uppercase tracking-wider text-[11px] font-bold">Daily Concreting</p>
+                </div>
+                <div className="text-center">
+                  <div className="font-heading font-black text-3xl mb-1" style={{ color: 'var(--color-cyan-accent)' }}>12+</div>
+                  <p className="text-text-gray uppercase tracking-wider text-[11px] font-bold">Years in Industry</p>
                 </div>
               </div>
             </div>
@@ -148,6 +179,97 @@ export default function About({ onOpenQuote }) {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Authentic Leadership Staff Section */}
+      <section className="py-section fade-section" style={{ backgroundColor: 'var(--color-bg-light)' }}>
+        <div className="container-site">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <span className="section-eyebrow">Executive Leadership</span>
+            <h2 className="section-h2 mb-6">
+              Experienced Leaders Guiding <span style={{ color: 'var(--color-cyan-accent)' }}>Every Project</span>
+            </h2>
+            <p className="text-body-copy text-text-body/85 leading-relaxed max-w-2xl mx-auto">
+              Meet the executive leadership and engineering heads driving Metrak's commitment
+              to structural excellence, transparency, and regional growth.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 card-scaled">
+            {LEADERSHIP_TEAM.map((member) => (
+              <div
+                key={member.name}
+                className="bg-white border p-8 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2"
+                style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}
+              >
+                <div className="w-28 h-28 rounded-full overflow-hidden mb-6 border-4 shadow-sm" style={{ borderColor: 'var(--color-cyan-accent)' }}>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none'
+                      e.currentTarget.parentElement.innerHTML = `<div class="w-full h-full flex items-center justify-center font-heading font-bold text-2xl text-white" style="background-color: var(--color-cyan-accent)">${member.name[0]}</div>`
+                    }}
+                  />
+                </div>
+                <h3 className="font-heading font-bold text-xl mb-1" style={{ color: 'var(--color-navy-deep)' }}>
+                  {member.name}
+                </h3>
+                <p
+                  className="font-heading font-bold uppercase tracking-[0.12em] text-[12px] mb-4"
+                  style={{ color: 'var(--color-gold-accent)' }}
+                >
+                  {member.role}
+                </p>
+                <p className="text-text-body/75 leading-relaxed text-[14.5px]">
+                  {member.bio}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted Corporate Clients / Institutional Partners */}
+      <section className="py-section bg-white fade-section">
+        <div className="container-site">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <span className="section-eyebrow">Institutional Partnerships</span>
+            <h2 className="section-h2 mb-4">
+              Trusted By Leading <span style={{ color: 'var(--color-cyan-accent)' }}>Organizations</span>
+            </h2>
+            <p className="text-body-copy text-text-body/85 leading-relaxed">
+              Metrak collaborates with major institutional investors, energy contractors, and developers across East Africa.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 card-scaled">
+            {TRUSTED_CLIENTS.map((client) => (
+              <div
+                key={client.name}
+                className="p-6 border bg-slate-50 flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-md"
+                style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}
+              >
+                <div className="h-16 w-full flex items-center justify-center mb-3">
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="max-h-12 max-w-[140px] object-contain"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none'
+                      e.currentTarget.parentElement.innerHTML = `<i class="fa-solid fa-building-flag text-3xl" style="color: var(--color-cyan-accent)"></i>`
+                    }}
+                  />
+                </div>
+                <h4 className="font-heading font-bold text-[14px] leading-tight mb-1" style={{ color: 'var(--color-navy-deep)' }}>
+                  {client.name}
+                </h4>
+                <p className="text-[12px] text-text-gray font-medium">{client.category}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

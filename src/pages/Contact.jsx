@@ -115,21 +115,21 @@ export default function Contact({ onOpenQuote }) {
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {[
               {
-                icon: 'fa-map-location-dot',
-                title: 'Visit Us',
-                lines: ['Dungu 5 Building Rm. D.1, Press House Road, Kampala', 'Mbarara Branch: Mbarara, Uganda'],
+                icon: 'fa-building-columns',
+                title: 'Kampala Head Office',
+                lines: ['Dungu 5 Building Rm. D.1, Kampala Uganda', 'Phone: +256 200 959 400', 'Mon - Sat: 8:00 AM - 6:00 PM'],
                 accent: 'var(--color-cyan-accent)',
               },
               {
-                icon: 'fa-phone',
-                title: 'Call Us',
-                lines: ['+256 200 959 400 (Kampala)', '+256 700 312 036 (Mbarara)'],
+                icon: 'fa-map-location-dot',
+                title: 'Mbarara Branch (Western)',
+                lines: ['Mbarara Commercial Hub, Western Region', 'Phone: +256 700 312 036', 'Mon - Fri: 8:30 AM - 5:30 PM'],
                 accent: 'var(--color-gold-accent)',
               },
               {
-                icon: 'fa-envelope',
-                title: 'Email Us',
-                lines: ['info@metrakrealestate.com', 'We reply within 24 business hours'],
+                icon: 'fa-envelope-open-text',
+                title: 'Jinja Office & Direct Email',
+                lines: ['Main Street Commercial Plaza, Jinja', 'Email: info@metrakrealestate.com', 'WhatsApp: +256 200 959 400'],
                 accent: 'var(--color-cyan-accent)',
               },
             ].map((c) => (
@@ -184,17 +184,18 @@ export default function Contact({ onOpenQuote }) {
               </div>
               <div className="bg-white border p-7" style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}>
                 <h3 className="font-heading font-bold text-xl mb-5" style={{ color: 'var(--color-navy-deep)' }}>
-                  Business Hours
+                  Regional Operating Hours
                 </h3>
                 <div className="space-y-3 text-[15px]">
                   {[
-                    ['Monday – Friday', '8:00am – 6:00pm'],
-                    ['Saturday', '9:00am – 3:00pm'],
-                    ['Sunday', 'Closed'],
+                    ['Kampala Head Office', 'Mon – Sat: 8:00am – 6:00pm'],
+                    ['Mbarara Western Branch', 'Mon – Fri: 8:30am – 5:30pm'],
+                    ['Jinja Eastern Office', 'Mon – Fri: 8:30am – 5:00pm'],
+                    ['Sundays & Public Holidays', 'Closed / Emergency on Call'],
                   ].map(([day, hours]) => (
                     <div key={day} className="flex items-center justify-between border-b border-black/5 pb-3 last:border-0 last:pb-0">
                       <span className="font-semibold text-text-body">{day}</span>
-                      <span className="text-text-gray">{hours}</span>
+                      <span className="text-text-gray text-right">{hours}</span>
                     </div>
                   ))}
                 </div>

@@ -194,7 +194,7 @@ export default function Footer({ onOpenQuote }) {
             <a href="#" className="hover:text-white/70 transition-colors">Site Map</a>
           </p>
           <p className="text-white/35 text-[11.5px] text-center md:text-right">
-            Metrak Real Estate & Construction — Dungu 5 Building Rm. D.1, Press House Road, Kampala, Uganda.
+            Kampala Head Office: Dungu 5 Building Rm. D.1 • Mbarara Western Branch • Jinja Eastern Office
           </p>
         </div>
       </div>
