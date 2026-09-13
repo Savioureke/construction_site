@@ -38,16 +38,16 @@ export default function Footer({ onOpenQuote }) {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <img
-                src="/images/spectrum logo.jpg"
+                src="/images/Metrak logo -2.png"
                 alt="Metrak Real Estate and Construction"
-                className="w-11 h-11 object-cover rounded-lg shadow-md border border-cyan-accent/30"
+                className="w-11 h-11 object-contain rounded-lg shadow-md border border-cyan-accent/30 bg-white/5"
               />
               <div className="flex flex-col leading-tight">
                 <span className="font-heading font-bold text-white text-[17px] tracking-wide">
                   METRAK REAL ESTATE
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.2em] font-semibold" style={{ color: 'var(--color-gold-accent)' }}>
-                  Real Estate & Construction Ltd
+                  Building & Construction Ltd
                 </span>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function Footer({ onOpenQuote }) {
                 <i className="fa-brands fa-linkedin-in" />
               </a>
               <a
-                href="https://wa.me/256200959400" aria-label="WhatsApp" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#25D366'; e.currentTarget.style.borderColor = '#25D366' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
+                href="https://wa.me/256792170974" aria-label="WhatsApp" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#25D366'; e.currentTarget.style.borderColor = '#25D366' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
               >
                 <i className="fa-brands fa-whatsapp" />
               </a>

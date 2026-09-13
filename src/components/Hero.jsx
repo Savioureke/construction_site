@@ -5,7 +5,7 @@ import { buildImgUrl, useBgReady } from '../utils/images.js'
 const HERO_PROMPT = 'Wide aerial panoramic photograph of a large-scale modern construction site at golden hour sunset, multiple cranes silhouetted against orange and deep blue sky, heavy machinery in foreground, steel beams and building frameworks rising, cinematic lighting, high-end editorial photography style, ultra sharp, professional'
 
 export default function Hero({ onOpenQuote }) {
-  const HERO_IMG_URL = '/extracted_images/home/home_2.jpg'
+  const HERO_IMG_URL = '/images/html-img-1.jpg'
   const bgReady = useBgReady(HERO_IMG_URL)
 
   return (
@@ -37,7 +37,7 @@ export default function Hero({ onOpenQuote }) {
           <div className="mb-6 flex items-center gap-4">
             <span className="w-10 h-[2px]" style={{ backgroundColor: 'var(--color-gold-accent)' }} />
             <span className="uppercase tracking-[0.22em] font-bold text-[11.5px] text-white/80">
-              Metrak Real Estate & Construction
+              Premier Property & Civil Engineering
             </span>
           </div>
 

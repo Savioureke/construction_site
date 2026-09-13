@@ -26,7 +26,7 @@ export default function CompanyOverview() {
     <section className="py-section bg-white fade-section overflow-x-hidden w-full">
       <div className="container-site">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="section-eyebrow">Metrak Real Estate and Construction Ltd</span>
+          <span className="section-eyebrow">Who We Are</span>
           <h2 className="section-h2 mb-6">
             Building Excellence & Developing Real Estate{' '}
             <span style={{ color: 'var(--color-cyan-accent)' }}>Across Uganda & East Africa</span>

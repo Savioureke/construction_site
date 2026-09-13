@@ -113,7 +113,7 @@ export default function Contact({ onOpenQuote }) {
               {
                 icon: 'fa-building-columns',
                 title: 'Kampala Head Office',
-                lines: ['Dungu 5 Building Rm. D.1, Kampala Uganda', 'Phone: +256 200 959 400', 'Mon - Sat: 8:00 AM - 6:00 PM'],
+                lines: ['Dungu 5 Building Rm. D.1, Kampala Uganda', 'Reception (Calls): +256 200 959 400', 'Mon - Sat: 8:00 AM - 6:00 PM'],
                 accent: 'var(--color-cyan-accent)',
               },
               {
@@ -125,7 +125,7 @@ export default function Contact({ onOpenQuote }) {
               {
                 icon: 'fa-envelope-open-text',
                 title: 'Jinja Office & Direct Email',
-                lines: ['Main Street Commercial Plaza, Jinja', 'Email: info@metrakrealestate.com', 'WhatsApp: +256 200 959 400'],
+                lines: ['Main Street Commercial Plaza, Jinja', 'Email: info@metrakrealestate.com', 'Official WhatsApp: 0792170974'],
                 accent: 'var(--color-cyan-accent)',
               },
             ].map((c) => (

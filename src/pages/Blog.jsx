@@ -30,7 +30,7 @@ const POSTS = [
     readTime: '6 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'Analyzing infrastructure expansion, road corridors, and urbanization driving high capital appreciation in Greater Kampala and Western Uganda.',
-    image: '/extracted_images/real-estate-sales-brokerage/real-estate-sales-brokerage_2.jpg',
+    image: '/extracted_images/real-estate-sales-brokerage/real-estate-sales-brokerage_2.webp',
   },
   {
     title: 'Understanding Bills of Quantities (BOQ): How to Avoid Construction Overruns',
@@ -92,7 +92,7 @@ export default function Blog({ onOpenQuote }) {
   const [activeCategory, setActiveCategory] = useState('All Articles')
   const [cardReady, setCardReady] = useState({})
 
-  const HERO_IMG_URL = '/extracted_images/real-estate-sales-brokerage/real-estate-sales-brokerage_2.jpg'
+  const HERO_IMG_URL = '/extracted_images/real-estate-sales-brokerage/real-estate-sales-brokerage_2.webp'
   const FAQ_IMG_URL = '/extracted_images/real-estate-consultancy-valuation/real-estate-consultancy-valuation_3.jpg'
   const CTA_IMG_URL = '/extracted_images/about-us/about-us_4.jpg'
 
