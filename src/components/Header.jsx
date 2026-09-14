@@ -53,15 +53,15 @@ export default function Header({ scrolled, onOpenQuote }) {
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
             <img
               src="/images/Metrak logo -2.png"
-              alt="Metrak Real Estate and Construction"
+              alt="Metrak Real Estate"
               className="w-11 h-11 object-contain rounded-lg shadow-md border border-cyan-accent/30 bg-white/5"
             />
             <div className="flex flex-col leading-tight">
               <span className="font-heading font-bold text-white text-[18px] tracking-wide">
                 METRAK REAL ESTATE
               </span>
-              <span className="text-[10.5px] uppercase tracking-[0.22em] font-semibold" style={{ color: 'var(--color-gold-accent)' }}>
-                Building & Construction Ltd
+              <span className="text-[10px] uppercase tracking-[0.15em] font-semibold" style={{ color: 'var(--color-gold-accent)' }}>
+                Trusted Partner in Real Estate
               </span>
             </div>
           </Link>
@@ -128,7 +128,7 @@ export default function Header({ scrolled, onOpenQuote }) {
             <Link to="/" onClick={closeMobile} className="flex items-center gap-3">
               <img
                 src="/images/Metrak logo -2.png"
-                alt="Metrak Real Estate and Construction"
+                alt="Metrak Real Estate"
                 className="w-11 h-11 object-contain rounded-lg shadow-md border border-cyan-accent/30 bg-white/5"
               />
               <span className="font-heading font-bold text-white text-[17px] tracking-wide">

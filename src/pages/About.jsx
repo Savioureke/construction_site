@@ -120,8 +120,8 @@ export default function About({ onOpenQuote }) {
                 Engineering Excellence & <span style={{ color: 'var(--color-cyan-accent)' }}>Trusted Solutions</span>
               </h2>
               <p className="text-body-copy text-text-body/85 leading-relaxed mb-6">
-                Metrak Real Estate and Construction Ltd is a fully registered, multi-service
-                real estate and construction company headquartered at Dungu 5 Building Rm. D.1,
+                Metrak Real Estate is a fully registered, multi-service
+                company headquartered at Dungu 5 Building Rm. D.1,
                 Kampala, Uganda.
               </p>
               <p className="text-body-copy text-text-body/85 leading-relaxed mb-6">

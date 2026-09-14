@@ -113,7 +113,7 @@ export default function WhyUs({ onOpenQuote }) {
             </h1>
             <p className="text-white/85 text-[18px] lg:text-[20px] leading-relaxed max-w-2xl font-body">
               Six compelling reasons why investors, developers, and homeowners partner with
-              Metrak Real Estate and Construction Ltd across Uganda.
+              Metrak Real Estate across Uganda.
             </p>
           </div>
         </div>

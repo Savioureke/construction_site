@@ -32,7 +32,7 @@ export default function CompanyOverview() {
             <span style={{ color: 'var(--color-cyan-accent)' }}>Across Uganda & East Africa</span>
           </h2>
           <p className="text-body-copy text-text-body/85 leading-relaxed max-w-3xl mx-auto">
-            Metrak Real Estate and Construction Ltd is a fully registered, multi-service company delivering property development, land transactions, civil engineering, building construction, and real estate advisory to individuals, investors, and organizations.
+            Metrak Real Estate is a fully registered, multi-service company delivering property development, land transactions, civil engineering, building construction, and real estate advisory to individuals, investors, and organizations.
           </p>
         </div>
 

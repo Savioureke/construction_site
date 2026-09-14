@@ -39,21 +39,21 @@ export default function Footer({ onOpenQuote }) {
             <div className="flex items-center gap-3 mb-6">
               <img
                 src="/images/Metrak logo -2.png"
-                alt="Metrak Real Estate and Construction"
+                alt="Metrak Real Estate"
                 className="w-11 h-11 object-contain rounded-lg shadow-md border border-cyan-accent/30 bg-white/5"
               />
               <div className="flex flex-col leading-tight">
                 <span className="font-heading font-bold text-white text-[17px] tracking-wide">
                   METRAK REAL ESTATE
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.2em] font-semibold" style={{ color: 'var(--color-gold-accent)' }}>
-                  Building & Construction Ltd
+                <span className="text-[10px] uppercase tracking-[0.15em] font-semibold" style={{ color: 'var(--color-gold-accent)' }}>
+                  Trusted Partner in Real Estate
                 </span>
               </div>
             </div>
 
             <p className="text-white/60 text-[14.5px] leading-relaxed mb-6">
-              Multi-service real estate, civil engineering, building construction, and land advisory company headquartered in Kampala, Uganda — delivering lasting value across East Africa.
+              Trusted Partner in Real Estate across Uganda. Shaping the skylines and building possibilities with premier property development, prime land transactions, and real estate advisory.
             </p>
 
             <button type="button" onClick={onOpenQuote} className="btn-primary">
@@ -187,7 +187,7 @@ export default function Footer({ onOpenQuote }) {
       <div className="border-t border-white/10">
         <div className="container-site py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <p className="text-white/45 text-[12.5px] text-center md:text-left">
-            © {new Date().getFullYear()} Metrak Real Estate and Construction Ltd. All Rights Reserved.
+            © {new Date().getFullYear()} Metrak Real Estate. All Rights Reserved.
             &nbsp;&nbsp;»&nbsp;&nbsp;
             <a href="#" className="hover:text-white/70 transition-colors">Privacy Policy</a>
             &nbsp;&nbsp;»&nbsp;&nbsp;

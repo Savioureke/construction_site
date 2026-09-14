@@ -60,7 +60,7 @@ export default function LongTermGrowth() {
               <span style={{ color: 'var(--color-cyan-accent)' }}>Long-Term Value</span>
             </h2>
             <p className="text-body-copy text-text-body/85 leading-relaxed mb-6">
-              Metrak Real Estate and Construction Ltd combines civil engineering excellence
+              Metrak Real Estate combines civil engineering excellence
               with end-to-end property advisory. Whether you are building from the ground up,
               acquiring land, or managing prime developments, our team supports your growth
               across Uganda.
