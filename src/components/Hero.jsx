@@ -12,21 +12,17 @@ export default function Hero({ onOpenQuote }) {
     <section
       className="relative w-full min-h-screen flex items-center overflow-hidden bg-slate-900"
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        className="absolute inset-0 w-full h-full object-cover"
-        src="/videos/video-home.mp4"
-        poster={HERO_IMG_URL}
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 scale-105"
+        style={{
+          backgroundImage: `url('${HERO_IMG_URL}')`,
+        }}
       />
       <div
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(90deg, rgba(3,42,58,0.85) 0%, rgba(3,42,58,0.65) 50%, rgba(3,42,58,0.4) 100%), linear-gradient(180deg, rgba(3,42,58,0.5) 0%, rgba(3,42,58,0.2) 50%, rgba(3,42,58,0.75) 100%)',
+            'linear-gradient(90deg, rgba(3,42,58,0.92) 0%, rgba(3,42,58,0.75) 50%, rgba(3,42,58,0.5) 100%), linear-gradient(180deg, rgba(3,42,58,0.6) 0%, rgba(3,42,58,0.3) 50%, rgba(3,42,58,0.85) 100%)',
         }}
       />
 
@@ -37,7 +33,7 @@ export default function Hero({ onOpenQuote }) {
           <div className="mb-6 flex items-center gap-4">
             <span className="w-10 h-[2px]" style={{ backgroundColor: 'var(--color-gold-accent)' }} />
             <span className="uppercase tracking-[0.22em] font-bold text-[11.5px] text-white/80">
-              Trusted Partner in Real Estate across Uganda
+              Shaping the Skyline
             </span>
           </div>
 
@@ -45,14 +41,14 @@ export default function Hero({ onOpenQuote }) {
             className="font-heading hero-h1 text-white mb-6"
             style={{ textShadow: '0 4px 30px rgba(0,0,0,0.45)' }}
           >
-            Shaping the Skylines &{' '}
+            Shaping the{' '}
             <span style={{ color: 'var(--color-cyan-accent)' }}>
-              Building Possibilities.
+              Skyline.
             </span>
           </h1>
 
           <p className="text-white/85 text-[19px] lg:text-[21px] leading-relaxed mb-10 max-w-2xl font-body">
-            Trusted Partner in Real Estate across Uganda — delivering excellence in property development, prime land transactions, civil engineering, and strategic advisory.
+            Metrak Real Estate & Construction Limited delivers premier property development, prime land transactions, civil engineering, and strategic advisory across Uganda.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-14 lg:mb-20">

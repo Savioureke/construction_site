@@ -131,7 +131,7 @@ export default function Contact({ onOpenQuote }) {
               {
                 icon: 'fa-envelope-open-text',
                 title: 'Jinja Office & Inquiries',
-                lines: ['Main Street Commercial Plaza, Jinja', 'Email: info@metrakrealestate.com', 'Mon - Fri: 8:30 AM - 5:00 PM'],
+                lines: ['Main Street Commercial Plaza, Jinja', 'Email: info@metrakrealestate.co.ug', 'Mon - Fri: 8:30 AM - 5:00 PM'],
                 accent: 'var(--color-gold-accent)',
               },
             ].map((c) => (

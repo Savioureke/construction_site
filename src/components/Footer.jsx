@@ -53,7 +53,7 @@ export default function Footer({ onOpenQuote }) {
             </div>
 
             <p className="text-white/60 text-[14.5px] leading-relaxed mb-6">
-              Trusted Partner in Real Estate across Uganda. Shaping the skylines and building possibilities with premier property development, prime land transactions, and real estate advisory.
+              Shaping the Skyline across Uganda with premier property development, prime land transactions, civil engineering, and strategic real estate advisory.
             </p>
 
             <button type="button" onClick={onOpenQuote} className="btn-primary">
@@ -125,8 +125,8 @@ export default function Footer({ onOpenQuote }) {
               </li>
               <li className="flex items-center gap-3">
                 <i className="fa fa-envelope text-cyan-accent" />
-                <a href="mailto:info@metrakrealestate.com" className="text-white/65 text-[14.5px] hover:text-white transition-colors">
-                  info@metrakrealestate.com
+                <a href="mailto:info@metrakrealestate.co.ug" className="text-white/65 text-[14.5px] hover:text-white transition-colors">
+                  info@metrakrealestate.co.ug
                 </a>
               </li>
             </ul>

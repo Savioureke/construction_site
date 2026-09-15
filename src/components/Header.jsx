@@ -33,11 +33,11 @@ export default function Header({ scrolled, onOpenQuote }) {
           <div className="container-site flex items-center justify-between h-9">
             <div className="text-[11.5px] uppercase tracking-[0.12em] font-semibold text-white/85 truncate">
               <span className="text-gold-accent mr-2">•</span>
-              Shaping the Skylines and Building Possibilities
+              Shaping the Skyline
             </div>
             <div className="hidden md:flex items-center gap-5 text-[11.5px] uppercase tracking-[0.1em] font-semibold text-white/80">
-              <a href="mailto:info@metrakrealestate.com" className="hover:text-gold-accent transition-colors">
-                <i className="fa fa-envelope mr-1.5" /> info@metrakrealestate.com
+              <a href="mailto:info@metrakrealestate.co.ug" className="hover:text-gold-accent transition-colors">
+                <i className="fa fa-envelope mr-1.5" /> info@metrakrealestate.co.ug
               </a>
               <a href="tel:+256200959400" className="hover:text-gold-accent transition-colors">
                 <i className="fa fa-phone mr-1.5" /> +256 200 959 400
@@ -180,7 +180,7 @@ export default function Header({ scrolled, onOpenQuote }) {
             </div>
             <div className="flex items-center gap-3">
               <i className="fa fa-envelope text-cyan-accent" />
-              info@metrakrealestate.com
+              info@metrakrealestate.co.ug
             </div>
             <div className="flex items-center gap-3">
               <i className="fa fa-map-marker-alt text-cyan-accent" />
