@@ -6,21 +6,21 @@ const CATEGORIES = ['All Projects', 'Residential', 'Commercial', 'Infrastructure
 
 const PROJECTS = [
   {
-    title: 'Panda Bay Lounge & Hospitality Complex',
+    title: 'Panda Bay Lounge & Commercial Complex',
     category: 'Commercial',
     location: 'Kololo Dundas Road, Kampala',
-    year: 'Completed',
-    size: 'Commercial Leisure Facility',
-    desc: 'Boutique hospitality and leisure development featuring structural steel pergolas, extensive paved outdoor courtyard, modern dining pavilions, and landscaped leisure grounds.',
+    year: 'Active & Progressing',
+    size: 'Hospitality & Commercial Complex',
+    desc: 'Prime commercial and hospitality development featuring an automatic car wash area, integrated café & restaurant, structural steel pergolas, and an extensive outdoor lounge courtyard.',
     image: '/images/panda-bay-lounge-1.jpeg',
   },
   {
-    title: 'Panda Bay Lounge — Outdoor Pavilion & Garden',
+    title: 'Panda Bay Lounge — Automatic Car Wash & Café',
     category: 'Commercial',
     location: 'Kololo Dundas Road, Kampala',
-    year: 'Completed',
-    size: 'Courtyard & Pavilion',
-    desc: 'Architectural landscaping and outdoor pavilion construction with engineered drainage, decorative planters, and ambient courtyard lighting.',
+    year: 'Active & Progressing',
+    size: 'Car Wash, Café & Pavilions',
+    desc: 'Custom automated vehicle service facility paired with dining terraces, engineered drainage, decorative planters, and modern leisure seating.',
     image: '/images/panda-bay-lounge-2.jpeg',
   },
   {

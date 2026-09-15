@@ -47,7 +47,7 @@ export default function Footer({ onOpenQuote }) {
                   METRAK REAL ESTATE
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.15em] font-semibold" style={{ color: 'var(--color-gold-accent)' }}>
-                  Trusted Partner in Real Estate
+                  AND CONSTRUCTION LIMITED
                 </span>
               </div>
             </div>

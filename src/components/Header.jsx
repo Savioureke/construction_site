@@ -33,7 +33,7 @@ export default function Header({ scrolled, onOpenQuote }) {
           <div className="container-site flex items-center justify-between h-9">
             <div className="text-[11.5px] uppercase tracking-[0.12em] font-semibold text-white/85 truncate">
               <span className="text-gold-accent mr-2">•</span>
-              Trusted Real Estate & Construction Across East Africa
+              Shaping the Skylines and Building Possibilities
             </div>
             <div className="hidden md:flex items-center gap-5 text-[11.5px] uppercase tracking-[0.1em] font-semibold text-white/80">
               <a href="mailto:info@metrakrealestate.com" className="hover:text-gold-accent transition-colors">
@@ -53,7 +53,7 @@ export default function Header({ scrolled, onOpenQuote }) {
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
             <img
               src="/images/Metrak logo -2.png"
-              alt="Metrak Real Estate"
+              alt="Metrak Real Estate & Construction Limited"
               className="w-11 h-11 object-contain rounded-lg shadow-md border border-cyan-accent/30 bg-white/5"
             />
             <div className="flex flex-col leading-tight">
@@ -61,7 +61,7 @@ export default function Header({ scrolled, onOpenQuote }) {
                 METRAK REAL ESTATE
               </span>
               <span className="text-[10px] uppercase tracking-[0.15em] font-semibold" style={{ color: 'var(--color-gold-accent)' }}>
-                Trusted Partner in Real Estate
+                AND CONSTRUCTION LIMITED
               </span>
             </div>
           </Link>
