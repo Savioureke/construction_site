@@ -111,26 +111,120 @@ export default function About({ onOpenQuote }) {
 
       <CompanyOverview />
 
+      {/* Dedicated Vision & Mission Section */}
+      <section className="py-section fade-section relative overflow-hidden" style={{ backgroundColor: 'var(--color-bg-light)' }}>
+        <div className="container-site">
+          <div className="max-w-3xl mx-auto text-center mb-14">
+            <span className="section-eyebrow">Our Guiding Purpose</span>
+            <h2 className="section-h2 mb-4">
+              Vision & <span style={{ color: 'var(--color-cyan-accent)' }}>Mission</span>
+            </h2>
+            <p className="text-body-copy text-text-body/85 leading-relaxed">
+              The foundational principles guiding every development, client partnership, and civil engineering endeavor across Africa.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+            {/* Vision Card */}
+            <div
+              className="bg-white p-8 lg:p-10 rounded-2xl border shadow-sm relative overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}
+            >
+              <div className="absolute top-0 left-0 w-2 h-full" style={{ backgroundColor: 'var(--color-gold-accent)' }} />
+              <div>
+                <div className="flex items-center gap-4 mb-6">
+                  <div
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl text-white shadow-md"
+                    style={{ backgroundColor: 'var(--color-navy-deep)' }}
+                  >
+                    <i className="fa-solid fa-eye" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] uppercase tracking-[0.2em] font-bold block" style={{ color: 'var(--color-gold-accent)' }}>
+                      Our Aspiration
+                    </span>
+                    <h3 className="font-heading font-black text-2xl" style={{ color: 'var(--color-navy-deep)' }}>
+                      VISION
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-text-body text-[16px] lg:text-[17px] leading-relaxed font-body">
+                  “To become a leading real estate and construction brand in Africa known for excellence, integrity, and transformative developments that enhance communities and support sustainable growth.”
+                </p>
+              </div>
+              <div className="mt-8 pt-4 border-t border-black/5 flex items-center gap-2 text-gold-accent text-xs font-bold uppercase tracking-wider">
+                <i className="fa-solid fa-compass" />
+                <span>Strategic Regional Goal</span>
+              </div>
+            </div>
+
+            {/* Mission Card */}
+            <div
+              className="bg-white p-8 lg:p-10 rounded-2xl border shadow-sm relative overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}
+            >
+              <div className="absolute top-0 left-0 w-2 h-full" style={{ backgroundColor: 'var(--color-cyan-accent)' }} />
+              <div>
+                <div className="flex items-center gap-4 mb-6">
+                  <div
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl text-white shadow-md"
+                    style={{ backgroundColor: 'var(--color-navy-deep)' }}
+                  >
+                    <i className="fa-solid fa-bullseye" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] uppercase tracking-[0.2em] font-bold block" style={{ color: 'var(--color-cyan-accent)' }}>
+                      Our Daily Commitment
+                    </span>
+                    <h3 className="font-heading font-black text-2xl" style={{ color: 'var(--color-navy-deep)' }}>
+                      MISSION
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-text-body text-[16px] lg:text-[17px] leading-relaxed font-body">
+                  “To provide innovative, reliable, and sustainable real estate and construction services that deliver long-term value to our clients, partners, and society through professionalism, customer focus, and technical excellence.”
+                </p>
+              </div>
+              <div className="mt-8 pt-4 border-t border-black/5 flex items-center gap-2 text-cyan-accent text-xs font-bold uppercase tracking-wider">
+                <i className="fa-solid fa-handshake-angle" />
+                <span>Customer-Centric Value</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Heritage & Office Locations Section */}
       <section className="py-section bg-white fade-section w-full overflow-x-hidden">
         <div className="container-site">
-          <div className="grid lg:grid-cols-2 gap-14 items-start">
+          <div className="grid lg:grid-cols-2 gap-14 items-start mb-16">
             <div>
-              <span className="section-eyebrow">Our Heritage & Expertise</span>
+              <span className="section-eyebrow">Our Heritage & Presence</span>
               <h2 className="section-h2 mb-7">
                 Engineering Excellence & <span style={{ color: 'var(--color-cyan-accent)' }}>Trusted Solutions</span>
               </h2>
               <p className="text-body-copy text-text-body/85 leading-relaxed mb-6">
-                Metrak Real Estate is a fully registered, multi-service
-                company headquartered at Dungu 5 Building Rm. D.1,
-                Kampala, Uganda.
+                Metrak Real Estate is a fully registered, multi-service company with established offices in Kampala, delivering premier property development, high-capacity concreting up to 10,000 m² daily, certified valuations, and secure land transactions across Uganda.
               </p>
-              <p className="text-body-copy text-text-body/85 leading-relaxed mb-6">
-                Led by seasoned directors and civil engineers, Metrak delivers premier
-                property development, high-capacity concreting up to 10,000 m² daily,
-                certified valuations, and secure land transactions across Uganda and the East
-                African region.
-              </p>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10">
+              
+              <div className="space-y-4 mb-8">
+                <div className="p-4 rounded-xl border bg-slate-50 flex items-start gap-4" style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}>
+                  <i className="fa-solid fa-building text-gold-accent text-xl mt-1" />
+                  <div>
+                    <h4 className="font-heading font-bold text-navy-deep text-base">Head Office</h4>
+                    <p className="text-text-gray text-sm">Dungu 5 Building Rm. D.1, Kampala, Uganda</p>
+                  </div>
+                </div>
+                <div className="p-4 rounded-xl border bg-slate-50 flex items-start gap-4" style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}>
+                  <i className="fa-solid fa-store text-cyan-accent text-xl mt-1" />
+                  <div>
+                    <h4 className="font-heading font-bold text-navy-deep text-base">Marketing & Sales Office</h4>
+                    <p className="text-text-gray text-sm">1st Street Industrial Area, Near Club Guvnor, Kampala, Uganda</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6">
                 <div className="text-center">
                   <div className="font-heading font-black text-3xl mb-1" style={{ color: 'var(--color-cyan-accent)' }}>150+</div>
                   <p className="text-text-gray uppercase tracking-wider text-[11px] font-bold">Completed Projects</p>
@@ -149,34 +243,22 @@ export default function About({ onOpenQuote }) {
                 </div>
               </div>
             </div>
-            <div
-              className="relative h-full min-h-[480px] w-full bg-img-placeholder-portrait"
-              style={{
-                backgroundImage: `url('${STORY_IMG_URL}')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            >
-              {!storyReady && (
-                <div className="img-loader" style={{ backgroundColor: 'transparent' }}>
-                  <div className="img-loader-spinner" />
+
+            <div className="space-y-6">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-black/10">
+                <img
+                  src="/images/marketing-sales-office.jpeg"
+                  alt="Metrak Marketing and Sales Office Kampala"
+                  className="w-full h-[320px] object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent text-white">
+                  <span className="text-[11px] uppercase tracking-widest text-gold-accent font-bold block mb-1">
+                    Metrak Commercial Presence
+                  </span>
+                  <p className="font-heading font-bold text-lg">
+                    Marketing & Sales Office — 1st Street Industrial Area, Kampala
+                  </p>
                 </div>
-              )}
-              <div className="absolute inset-0" style={{ backgroundColor: 'rgba(3, 42, 58, 0.2)' }} />
-              <div
-                className="absolute bottom-0 left-0 right-0 p-8"
-                style={{ backgroundColor: 'rgba(3, 42, 58, 0.94)' }}
-              >
-                <p
-                  className="font-heading font-bold uppercase tracking-[0.15em] text-[12px] mb-3"
-                  style={{ color: 'var(--color-gold-accent)' }}
-                >
-                  Our Mission
-                </p>
-                <p className="font-heading text-white text-[20px] leading-tight font-bold">
-                  To deliver exceptional construction and real estate services through
-                  innovation, integrity, precision engineering, and client-focused solutions.
-                </p>
               </div>
             </div>
           </div>

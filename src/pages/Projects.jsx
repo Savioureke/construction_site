@@ -6,6 +6,42 @@ const CATEGORIES = ['All Projects', 'Residential', 'Commercial', 'Infrastructure
 
 const PROJECTS = [
   {
+    title: 'Panda Bay Lounge & Hospitality Complex',
+    category: 'Commercial',
+    location: 'Kololo Dundas Road, Kampala',
+    year: 'Completed',
+    size: 'Commercial Leisure Facility',
+    desc: 'Boutique hospitality and leisure development featuring structural steel pergolas, extensive paved outdoor courtyard, modern dining pavilions, and landscaped leisure grounds.',
+    image: '/images/panda-bay-lounge-1.jpeg',
+  },
+  {
+    title: 'Panda Bay Lounge — Outdoor Pavilion & Garden',
+    category: 'Commercial',
+    location: 'Kololo Dundas Road, Kampala',
+    year: 'Completed',
+    size: 'Courtyard & Pavilion',
+    desc: 'Architectural landscaping and outdoor pavilion construction with engineered drainage, decorative planters, and ambient courtyard lighting.',
+    image: '/images/panda-bay-lounge-2.jpeg',
+  },
+  {
+    title: 'Upcoming Commercial Plaza & Corporate Suites',
+    category: 'Commercial',
+    location: 'Prime Business District, Kampala',
+    year: 'Upcoming',
+    size: 'Multi-Storey Development',
+    desc: 'High-end mixed-use commercial development with illuminated glass street facade, modern banking hall space, and executive office floor plans.',
+    image: '/images/upcoming-projects.jpeg',
+  },
+  {
+    title: 'Automated Car Wash, Café & Restaurant Hub',
+    category: 'Infrastructure',
+    location: 'Industrial & Commercial Corridor, Kampala',
+    year: 'Completed',
+    size: 'Service Facility & Café',
+    desc: 'Turnkey structural development with overhead vehicle service bays, high-strength industrial flooring, and integrated café lounge.',
+    image: '/images/marketing-sales-office.jpeg',
+  },
+  {
     title: 'Victoria Heights Luxury Apartments',
     category: 'Residential',
     location: 'Kampala, Uganda',

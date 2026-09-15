@@ -2,6 +2,13 @@ import { useState, useRef } from 'react'
 
 const REELS = [
   {
+    title: 'Automated Car Wash, Café & Restaurant Tour',
+    location: 'Kampala Commercial District',
+    video: '/videos/automatic-car-wash-cafe.mp4',
+    poster: '/images/marketing-sales-office.jpeg',
+    tag: 'Commercial Hub',
+  },
+  {
     title: 'Modern 1-Bedroom Apartment Rental',
     location: 'Munyonyo Kampala',
     video: '/videos/video-home.mp4',

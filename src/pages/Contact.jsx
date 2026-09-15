@@ -108,42 +108,50 @@ export default function Contact({ onOpenQuote }) {
 
       <section className="py-section bg-white fade-section w-full overflow-x-hidden">
         <div className="container-site">
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {[
               {
                 icon: 'fa-building-columns',
                 title: 'Kampala Head Office',
-                lines: ['Dungu 5 Building Rm. D.1, Kampala Uganda', 'Reception (Calls): +256 200 959 400', 'Mon - Sat: 8:00 AM - 6:00 PM'],
+                lines: ['Dungu 5 Building Rm. D.1, Kampala Uganda', 'Reception: +256 200 959 400', 'Mon - Sat: 8:00 AM - 6:00 PM'],
                 accent: 'var(--color-cyan-accent)',
               },
               {
-                icon: 'fa-map-location-dot',
-                title: 'Mbarara Branch (Western)',
-                lines: ['Mbarara Commercial Hub, Western Region', 'Phone: +256 700 312 036', 'Mon - Fri: 8:30 AM - 5:30 PM'],
+                icon: 'fa-store',
+                title: 'Marketing & Sales Office',
+                lines: ['1st Street Industrial Area, Near Club Guvnor, Kampala', 'Official WhatsApp: 0792170974', 'Mon - Sat: 8:00 AM - 6:00 PM'],
                 accent: 'var(--color-gold-accent)',
               },
               {
-                icon: 'fa-envelope-open-text',
-                title: 'Jinja Office & Direct Email',
-                lines: ['Main Street Commercial Plaza, Jinja', 'Email: info@metrakrealestate.com', 'Official WhatsApp: 0792170974'],
+                icon: 'fa-map-location-dot',
+                title: 'Mbarara Branch',
+                lines: ['Mbarara Commercial Hub, Western Region', 'Phone: +256 700 312 036', 'Mon - Fri: 8:30 AM - 5:30 PM'],
                 accent: 'var(--color-cyan-accent)',
               },
+              {
+                icon: 'fa-envelope-open-text',
+                title: 'Jinja Office & Inquiries',
+                lines: ['Main Street Commercial Plaza, Jinja', 'Email: info@metrakrealestate.com', 'Mon - Fri: 8:30 AM - 5:00 PM'],
+                accent: 'var(--color-gold-accent)',
+              },
             ].map((c) => (
-              <div key={c.title} className="relative p-8 bg-white border transition-all duration-300 hover:-translate-y-2 text-center" style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}>
-                <div
-                  className="w-16 h-16 mx-auto flex items-center justify-center text-2xl text-white mb-5"
-                  style={{ backgroundColor: c.accent }}
-                >
-                  <i className={`fa-solid ${c.icon}`} />
+              <div key={c.title} className="relative p-7 bg-white border rounded-xl transition-all duration-300 hover:-translate-y-1.5 text-center shadow-sm flex flex-col justify-between" style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}>
+                <div>
+                  <div
+                    className="w-14 h-14 mx-auto flex items-center justify-center text-xl text-white mb-4 rounded-xl shadow"
+                    style={{ backgroundColor: c.accent }}
+                  >
+                    <i className={`fa-solid ${c.icon}`} />
+                  </div>
+                  <h3 className="font-heading font-bold text-lg mb-2" style={{ color: 'var(--color-navy-deep)' }}>
+                    {c.title}
+                  </h3>
+                  {c.lines.map((line) => (
+                    <p key={line} className="text-text-body/75 leading-relaxed text-[14px]">
+                      {line}
+                    </p>
+                  ))}
                 </div>
-                <h3 className="font-heading font-bold text-xl mb-3" style={{ color: 'var(--color-navy-deep)' }}>
-                  {c.title}
-                </h3>
-                {c.lines.map((line) => (
-                  <p key={line} className="text-text-body/75 leading-relaxed text-[15px]">
-                    {line}
-                  </p>
-                ))}
               </div>
             ))}
           </div>
