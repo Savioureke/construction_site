@@ -48,7 +48,7 @@ const POSTS = [
     readTime: '7 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'Crucial steps for acquiring 50+ acre Private Mailo farm land, boundary surveying, local council approvals, and deed transfers.',
-    image: '/extracted_images/land-acquisition-disposal/land-acquisition-disposal_3.jpg',
+    image: '/images/image-from-the-old-website.webp',
   },
   {
     title: 'Residential Property Valuation: What Drives Market Value in Uganda?',
@@ -66,7 +66,7 @@ const POSTS = [
     readTime: '6 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'Designing effective stormwater drainage, reinforced culverts, and erosion control systems for tropical rainfall seasons.',
-    image: '/extracted_images/construction-civil-engineering/construction-civil-engineering_4.jpg',
+    image: '/images/change-that-picture-use-this-one.jpeg',
   },
   {
     title: 'Project Spotlight: The Munyonyo Luxury Villa Development',

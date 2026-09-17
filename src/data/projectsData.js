@@ -119,6 +119,7 @@ export const PROJECTS_DATA = [
     "mainImage": "/images/development-2.jpeg",
     "gallery": [
       "/images/development-2.jpeg",
+      "/images/change-that-picture-use-this-one.jpeg",
       "/images/development-3.jpeg",
       "/images/development-1.jpeg"
     ],
@@ -172,6 +173,7 @@ export const PROJECTS_DATA = [
     "mainImage": "/images/development-3.jpeg",
     "gallery": [
       "/images/development-3.jpeg",
+      "/images/change-that-picture-use-this-one.jpeg",
       "/images/development-2.jpeg",
       "/images/development-1.jpeg"
     ],
