@@ -230,21 +230,15 @@ export default function Services({ onOpenQuote }) {
         className="relative w-full flex items-center overflow-hidden fade-section bg-slate-900"
         style={{ minHeight: '360px' }}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/videos/video-services.mp4"
-          poster={HERO_IMG_URL}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/upcoming-projects.jpeg')" }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(90deg, rgba(3,42,58,0.88) 0%, rgba(3,42,58,0.72) 60%, rgba(3,42,58,0.45) 100%), linear-gradient(180deg, rgba(3,42,58,0.5) 0%, transparent 50%, rgba(3,42,58,0.75) 100%)',
+              'linear-gradient(90deg, rgba(3,42,58,0.92) 0%, rgba(3,42,58,0.75) 60%, rgba(3,42,58,0.5) 100%), linear-gradient(180deg, rgba(3,42,58,0.6) 0%, rgba(3,42,58,0.3) 50%, rgba(3,42,58,0.85) 100%)',
           }}
         />
         <div className="relative container-site py-20">

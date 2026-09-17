@@ -1,142 +1,22 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { buildImgUrl, useBgReady, MAX_WAIT_MS } from '../utils/images.js'
+import { PROJECTS_DATA } from '../data/projectsData.js'
+import { useBgReady } from '../utils/images.js'
 
 const CATEGORIES = ['All Projects', 'Residential', 'Commercial', 'Infrastructure']
 
-const PROJECTS = [
-  {
-    title: 'Panda Bay Lounge & Commercial Complex',
-    category: 'Commercial',
-    location: 'Kololo Dundas Road, Kampala',
-    year: 'Active & Progressing',
-    size: 'Hospitality & Commercial Complex',
-    desc: 'Prime commercial and hospitality development featuring an automatic car wash area, integrated café & restaurant, structural steel pergolas, and an extensive outdoor lounge courtyard.',
-    image: '/images/panda-bay-lounge-1.jpeg',
-  },
-  {
-    title: 'Panda Bay Lounge — Automatic Car Wash & Café',
-    category: 'Commercial',
-    location: 'Kololo Dundas Road, Kampala',
-    year: 'Active & Progressing',
-    size: 'Car Wash, Café & Pavilions',
-    desc: 'Custom automated vehicle service facility paired with dining terraces, engineered drainage, decorative planters, and modern leisure seating.',
-    image: '/images/panda-bay-lounge-2.jpeg',
-  },
-  {
-    title: 'Upcoming Commercial Plaza & Corporate Suites',
-    category: 'Commercial',
-    location: 'Prime Business District, Kampala',
-    year: 'Upcoming',
-    size: 'Multi-Storey Development',
-    desc: 'High-end mixed-use commercial development with illuminated glass street facade, modern banking hall space, and executive office floor plans.',
-    image: '/images/upcoming-projects.jpeg',
-  },
-  {
-    title: 'Automated Car Wash, Café & Restaurant Hub',
-    category: 'Infrastructure',
-    location: 'Industrial & Commercial Corridor, Kampala',
-    year: 'Completed',
-    size: 'Service Facility & Café',
-    desc: 'Turnkey structural development with overhead vehicle service bays, high-strength industrial flooring, and integrated café lounge.',
-    image: '/images/marketing-sales-office.jpeg',
-  },
-  {
-    title: 'Victoria Heights Luxury Apartments',
-    category: 'Residential',
-    location: 'Kampala, Uganda',
-    year: 'Completed',
-    size: '24 Units • 4,500 m²',
-    desc: 'Modern architectural luxury residential complex featuring 24 premium units, automated access, and panoramic city views.',
-    image: '/extracted_images/projects/projects_2.jpg',
-  },
-  {
-    title: 'Metrak Commercial Plaza',
-    category: 'Commercial',
-    location: 'Central Business District, Kampala',
-    year: 'Completed',
-    size: '8 Floors • 12,000 m²',
-    desc: 'Eight-storey modern office complex featuring energy-efficient glass facade, underground parking, and flexible floor plans.',
-    image: '/extracted_images/projects/projects_6.jpg',
-  },
-  {
-    title: 'Greenwood Gated Community Estate',
-    category: 'Residential',
-    location: 'Entebbe Corridor, Uganda',
-    year: 'Under Construction',
-    size: '45 Villas • 15 Acres',
-    desc: 'Master-planned residential community with paved access roads, solar streetlights, and dedicated community green park zones.',
-    image: '/extracted_images/projects/projects_3.jpg',
-  },
-  {
-    title: 'Industrial Logistics & Warehouse Hub',
-    category: 'Infrastructure',
-    location: 'Namanve Industrial Park',
-    year: 'Completed',
-    size: '10,000 m² Floor',
-    desc: 'Heavy-duty steel warehouse development with reinforced concrete flooring engineered for heavy logistics and container transport.',
-    image: '/extracted_images/projects/projects_4.jpg',
-  },
-  {
-    title: 'Executive Lakeside Condominiums',
-    category: 'Residential',
-    location: 'Munyonyo, Kampala',
-    year: 'Upcoming',
-    size: '18 Luxury Condos',
-    desc: 'Ultra-contemporary residences designed for executive expatriates, diplomats, and discerning real estate investors.',
-    image: '/extracted_images/projects/projects_5.jpg',
-  },
-  {
-    title: 'Highway Drainage & Stormwater Works',
-    category: 'Infrastructure',
-    location: 'Wakiso Metro Corridor',
-    year: 'Completed',
-    size: '4.8 km Drainage',
-    desc: 'Civil engineering stormwater management and reinforced culvert project ensuring long-term flood resilience and road longevity.',
-    image: '/extracted_images/projects/projects_7.jpg',
-  },
-  {
-    title: 'Multi-Storey Commercial Retail Center',
-    category: 'Commercial',
-    location: 'Ntinda Business Strip, Kampala',
-    year: 'Completed',
-    size: '3,200 m² Retail Space',
-    desc: 'Modern retail and corporate banking premises engineered with open-span structural steel beams and high-traffic floor finishes.',
-    image: '/extracted_images/projects/projects_8.jpg',
-  },
-  {
-    title: 'Suburban Villa Development',
-    category: 'Residential',
-    location: 'Kigo, Lake Victoria',
-    year: 'Completed',
-    size: '12 Luxury Villas',
-    desc: 'Private boutique estate featuring luxury 4-bedroom villas with individual swimming pools and Lake Victoria views.',
-    image: '/extracted_images/projects/projects_9.jpg',
-  },
-  {
-    title: 'Heavy-Duty Reinforced Concrete Paving',
-    category: 'Infrastructure',
-    location: 'Industrial Estate, Mukono',
-    year: 'Completed',
-    size: '10,000 m² Yard',
-    desc: 'Expansive 10,000 m² reinforced concrete yard engineered to withstand 60-tonne container transport trucks and heavy machinery.',
-    image: '/extracted_images/projects/projects_10.jpg',
-  },
-]
-
 export default function Projects({ onOpenQuote }) {
   const [activeCategory, setActiveCategory] = useState('All Projects')
-  const [cardReady, setCardReady] = useState({})
 
-  const HERO_IMG_URL = '/extracted_images/projects/projects_2.jpg'
-  const CTA_IMG_URL = '/extracted_images/projects/projects_14.jpg'
+  const HERO_IMG_URL = '/images/upcoming-projects.jpeg'
+  const CTA_IMG_URL = '/images/development-1.jpeg'
 
   const heroReady = useBgReady(HERO_IMG_URL)
   const ctaReady = useBgReady(CTA_IMG_URL)
 
   const filteredProjects = activeCategory === 'All Projects'
-    ? PROJECTS
-    : PROJECTS.filter((p) => p.category === activeCategory)
+    ? PROJECTS_DATA
+    : PROJECTS_DATA.filter((p) => p.category === activeCategory)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -153,46 +33,22 @@ export default function Projects({ onOpenQuote }) {
     return () => observer.disconnect()
   }, [activeCategory])
 
-  useEffect(() => {
-    const timeouts = []
-    filteredProjects.forEach((proj) => {
-      const key = `proj-${proj.title}`
-      if (cardReady[key]) return
-      const img = new Image()
-      img.referrerPolicy = 'no-referrer-when-downgrade'
-      const done = () => setCardReady((prev) => prev[key] ? prev : { ...prev, [key]: true })
-      img.onload = done
-      img.onerror = done
-      img.src = proj.image
-      const t = setTimeout(done, MAX_WAIT_MS)
-      timeouts.push(t)
-    })
-    return () => timeouts.forEach((t) => clearTimeout(t))
-  }, [filteredProjects])
-
   return (
     <main className="w-full pt-32">
+      {/* Hero Header - Clean consistent background */}
       <section
         className="relative w-full flex items-center overflow-hidden fade-section bg-slate-900"
-        style={{
-          minHeight: '340px',
-        }}
+        style={{ minHeight: '360px' }}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/videos/video-projects.mp4"
-          poster={HERO_IMG_URL}
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 scale-105"
+          style={{ backgroundImage: `url('${HERO_IMG_URL}')` }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(90deg, rgba(3,42,58,0.85) 0%, rgba(3,42,58,0.65) 60%, rgba(3,42,58,0.35) 100%), linear-gradient(180deg, rgba(3,42,58,0.5) 0%, transparent 50%, rgba(3,42,58,0.7) 100%)',
+              'linear-gradient(90deg, rgba(3,42,58,0.92) 0%, rgba(3,42,58,0.75) 50%, rgba(3,42,58,0.5) 100%), linear-gradient(180deg, rgba(3,42,58,0.6) 0%, rgba(3,42,58,0.3) 50%, rgba(3,42,58,0.85) 100%)',
           }}
         />
         <div className="relative container-site py-20">
@@ -200,23 +56,23 @@ export default function Projects({ onOpenQuote }) {
             <div className="mb-5 flex items-center gap-4">
               <span className="w-10 h-[2px]" style={{ backgroundColor: 'var(--color-gold-accent)' }} />
               <span className="uppercase tracking-[0.22em] font-bold text-[11.5px] text-white/80">
-                Our Portfolio
+                Shaping the Skyline
               </span>
             </div>
             <h1
               className="font-heading hero-h1 text-white mb-5"
               style={{ textShadow: '0 4px 30px rgba(0,0,0,0.45)', fontSize: 'clamp(2rem, 4.5vw, 3.5rem)' }}
             >
-              Featured <span style={{ color: 'var(--color-cyan-accent)' }}>Projects & Developments</span>
+              Featured <span style={{ color: 'var(--color-cyan-accent)' }}>Developments & Projects</span>
             </h1>
             <p className="text-white/85 text-[18px] lg:text-[20px] leading-relaxed max-w-2xl font-body">
-              A selection of civil construction, residential developments, commercial
-              facilities, and land masterplans delivered by Metrak across Uganda.
+              Explore authentic Metrak civil engineering developments, residential bungalow estates, commercial hospitality complexes, and infrastructure delivered across Uganda.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Projects Filter & Grid */}
       <section className="py-section-sm bg-white fade-section">
         <div className="container-site">
           <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
@@ -240,122 +96,87 @@ export default function Projects({ onOpenQuote }) {
             ))}
           </div>
 
-          <div className="grid-3-to-2 card-scaled">
-            {filteredProjects.map((proj) => {
-              const imgKey = `proj-${proj.title}`
-              const isReady = cardReady[imgKey]
-              return (
-                <article
-                  key={proj.title}
-                  className="relative bg-white border overflow-hidden transition-all duration-300 hover:-translate-y-2 group"
-                  style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}
-                >
-                  <div
-                    className="relative w-full overflow-hidden bg-img-placeholder-portrait"
-                    style={{ minHeight: '240px' }}
-                  >
-                    {!isReady && (
-                      <div className="img-loader img-loader-sm">
-                        <div className="img-loader-spinner" />
-                      </div>
-                    )}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((proj) => (
+              <article
+                key={proj.id}
+                className="relative bg-white border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group flex flex-col justify-between"
+                style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}
+              >
+                <div>
+                  <Link to={`/projects/${proj.slug}`} className="block relative w-full overflow-hidden bg-slate-100" style={{ height: '260px' }}>
                     <img
-                      src={proj.image}
+                      src={proj.mainImage}
                       alt={proj.title}
-                      referrerPolicy="no-referrer-when-downgrade"
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      style={{ minHeight: '240px' }}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute top-4 left-4 z-10">
                       <span
-                        className="px-3 py-1.5 font-bold uppercase tracking-[0.1em] text-[11px] text-white"
-                        style={{ backgroundColor: 'var(--color-navy-dark)' }}
+                        className="px-3 py-1.5 font-bold uppercase tracking-[0.1em] text-[11px] text-white rounded-full backdrop-blur-sm"
+                        style={{ backgroundColor: 'rgba(3, 42, 58, 0.9)' }}
                       >
                         {proj.category}
                       </span>
                     </div>
                     <div className="absolute top-4 right-4 z-10">
                       <span
-                        className="px-3 py-1.5 font-bold uppercase tracking-[0.1em] text-[11px]"
+                        className="px-3 py-1.5 font-bold uppercase tracking-[0.1em] text-[11px] rounded-full"
                         style={{ backgroundColor: 'var(--color-gold-accent)', color: 'var(--color-navy-dark)' }}
                       >
                         {proj.year}
                       </span>
                     </div>
-                  </div>
+                  </Link>
+
                   <div className="p-7">
-                    <div className="flex items-start justify-between mb-3 gap-4">
-                      <h3 className="font-heading font-bold text-xl leading-tight" style={{ color: 'var(--color-navy-deep)' }}>
+                    <Link to={`/projects/${proj.slug}`}>
+                      <h3 className="font-heading font-bold text-xl leading-tight mb-3 group-hover:text-cyan-accent transition-colors" style={{ color: 'var(--color-navy-deep)' }}>
                         {proj.title}
                       </h3>
-                    </div>
+                    </Link>
+
                     <div className="flex flex-wrap gap-4 mb-4 text-[13px] text-text-gray">
-                      <div className="flex items-center gap-1.5">
+                      <div className="flex items-center gap-1.5 font-medium">
                         <i className="fa-solid fa-location-dot text-cyan-accent" />
                         {proj.location}
                       </div>
-                      <div className="flex items-center gap-1.5">
-                        <i className="fa-solid fa-ruler-combined text-cyan-accent" />
+                      <div className="flex items-center gap-1.5 font-medium">
+                        <i className="fa-solid fa-layer-group text-gold-accent" />
                         {proj.size}
                       </div>
                     </div>
-                    <p className="text-text-body/75 leading-relaxed text-[15px] mb-5">
-                      {proj.desc}
+
+                    <p className="text-text-body/75 leading-relaxed text-[14.5px] mb-5 line-clamp-3">
+                      {proj.shortDesc}
                     </p>
-                    <div className="pt-5 border-t border-black/5 flex items-center justify-between">
-                      <button
-                        type="button"
-                        onClick={onOpenQuote}
-                        className="font-bold uppercase tracking-[0.1em] text-[12px] transition-colors inline-flex items-center gap-2"
-                        style={{ color: 'var(--color-cyan-accent)' }}
-                      >
-                        Start similar project
-                        <i className="fa-solid fa-arrow-right text-[10px]" />
-                      </button>
-                      <i className="fa-solid fa-arrow-up-right-from-square text-text-gray/60 group-hover:text-cyan-accent transition-colors" />
-                    </div>
                   </div>
-                </article>
-              )
-            })}
+                </div>
+
+                <div className="px-7 pb-6 pt-0 border-t border-black/5 flex items-center justify-between mt-2">
+                  <Link
+                    to={`/projects/${proj.slug}`}
+                    className="font-bold uppercase tracking-[0.1em] text-[12px] transition-colors inline-flex items-center gap-2"
+                    style={{ color: 'var(--color-cyan-accent)' }}
+                  >
+                    View Project Details
+                    <i className="fa-solid fa-arrow-right text-[10px]" />
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={onOpenQuote}
+                    className="text-xs font-semibold text-text-gray hover:text-gold-accent transition-colors"
+                  >
+                    Inquire
+                  </button>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-section fade-section" style={{ backgroundColor: 'var(--color-bg-light)' }}>
-        <div className="container-site">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <span className="section-eyebrow">Project Stats</span>
-            <h2 className="section-h2 mb-6">
-              Track Record of <span style={{ color: 'var(--color-cyan-accent)' }}>Delivering Excellence</span>
-            </h2>
-          </div>
-          <div className="grid-4-to-2 card-scaled">
-            <div className="feature-card text-center">
-              <div className="feature-icon mx-auto"><i className="fa-solid fa-building-circle-check" /></div>
-              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>150+</h3>
-              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Completed Projects</p>
-            </div>
-            <div className="feature-card text-center">
-              <div className="feature-icon mx-auto"><i className="fa-solid fa-face-smile" /></div>
-              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>350+</h3>
-              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Satisfied Clients</p>
-            </div>
-            <div className="feature-card text-center">
-              <div className="feature-icon mx-auto"><i className="fa-solid fa-cubes" /></div>
-              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>10k m²</h3>
-              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Daily Concrete Capacity</p>
-            </div>
-            <div className="feature-card text-center">
-              <div className="feature-icon mx-auto"><i className="fa-solid fa-award" /></div>
-              <h3 className="font-heading font-black text-4xl mb-2" style={{ color: 'var(--color-cyan-accent)' }}>12+</h3>
-              <p className="text-text-gray font-semibold uppercase tracking-wider text-[13px]">Years in Industry</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* CTA Section */}
       <section
         className="py-section relative overflow-hidden fade-section bg-img-placeholder"
         style={{
@@ -369,24 +190,26 @@ export default function Projects({ onOpenQuote }) {
             <div className="img-loader-spinner" />
           </div>
         )}
-        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(3, 42, 58, 0.9)' }} />
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(3, 42, 58, 0.92)' }} />
         <div className="relative container-site text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="section-h2 text-white mb-7" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}>
-              Have a Project or Land in <span style={{ color: 'var(--color-cyan-accent)' }}>Mind?</span>
+            <span className="uppercase tracking-[0.22em] font-bold text-[11.5px] text-gold-accent block mb-3">
+              Partner with Metrak
+            </span>
+            <h2 className="section-h2 text-white mb-6" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.4)' }}>
+              Have a Development or Land <span style={{ color: 'var(--color-cyan-accent)' }}>Project?</span>
             </h2>
             <p className="text-body-copy-lg text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
-              Let's discuss your vision. Whether it's residential construction, commercial
-              development, land acquisition, or certified valuation, Metrak brings it to life.
+              From commercial lounges and modern bungalows to joint ventures and civil engineering, our team is ready to assist you.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button type="button" onClick={onOpenQuote} className="btn-primary">
                 <i className="fa fa-file-invoice-dollar mr-2" />
-                Request a Free Quote
+                Request Project Proposal
               </button>
               <Link to="/contact" className="btn-outline-white">
-                <i className="fa fa-phone mr-2" />
-                Get In Touch
+                <i className="fa fa-comments mr-2" />
+                Contact Our Engineers
               </Link>
             </div>
           </div>

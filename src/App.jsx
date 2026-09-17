@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Services from './pages/Services.jsx'
 import Projects from './pages/Projects.jsx'
+import ProjectDetail from './pages/ProjectDetail.jsx'
 import WhyUs from './pages/WhyUs.jsx'
 import Blog from './pages/Blog.jsx'
 import Contact from './pages/Contact.jsx'
@@ -56,6 +57,7 @@ export default function App() {
             <Route path="/about" element={<About onOpenQuote={() => setIsQuoteOpen(true)} />} />
             <Route path="/services" element={<Services onOpenQuote={() => setIsQuoteOpen(true)} />} />
             <Route path="/projects" element={<Projects onOpenQuote={() => setIsQuoteOpen(true)} />} />
+            <Route path="/projects/:id" element={<ProjectDetail onOpenQuote={() => setIsQuoteOpen(true)} />} />
             <Route path="/why-us" element={<WhyUs onOpenQuote={() => setIsQuoteOpen(true)} />} />
             <Route path="/blog" element={<Blog onOpenQuote={() => setIsQuoteOpen(true)} />} />
             <Route path="/contact" element={<Contact onOpenQuote={() => setIsQuoteOpen(true)} />} />

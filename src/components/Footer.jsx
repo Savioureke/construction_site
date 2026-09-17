@@ -19,7 +19,7 @@ const SERVICES = [
   { label: 'Health & Safety Quality Assurance', to: '/services' },
 ]
 
-const INSTAGRAM_LINK = 'https://metrakrealestate.com/'
+const INSTAGRAM_LINK = 'https://metrakrealestate.co.ug/'
 
 export default function Footer({ onOpenQuote }) {
   const [email, setEmail] = useState('')
@@ -133,12 +133,12 @@ export default function Footer({ onOpenQuote }) {
 
             <div className="flex items-center gap-2.5 mb-7">
               <a
-                href="https://metrakrealestate.com/" aria-label="Facebook" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1877F2'; e.currentTarget.style.borderColor = '#1877F2' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
+                href="https://metrakrealestate.co.ug/" aria-label="Facebook" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1877F2'; e.currentTarget.style.borderColor = '#1877F2' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
               >
                 <i className="fa-brands fa-facebook-f" />
               </a>
               <a
-                href="https://metrakrealestate.com/"
+                href="https://metrakrealestate.co.ug/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -147,7 +147,7 @@ export default function Footer({ onOpenQuote }) {
                 <i className="fa-brands fa-instagram" />
               </a>
               <a
-                href="https://metrakrealestate.com/" aria-label="LinkedIn" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0A66C2'; e.currentTarget.style.borderColor = '#0A66C2' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
+                href="https://metrakrealestate.co.ug/" aria-label="LinkedIn" className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all hover:-translate-y-0.5" style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0A66C2'; e.currentTarget.style.borderColor = '#0A66C2' }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)' }}
               >
                 <i className="fa-brands fa-linkedin-in" />
               </a>

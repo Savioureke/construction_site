@@ -3,59 +3,45 @@ import { useState, useRef } from 'react'
 const REELS = [
   {
     title: 'Automated Car Wash, Café & Restaurant Tour',
-    location: 'Kampala Commercial District',
+    location: '1st Street Industrial Area, Kampala',
     video: '/videos/automatic-car-wash-cafe.mp4',
     poster: '/images/marketing-sales-office.jpeg',
     tag: 'Commercial Hub',
   },
   {
-    title: 'Modern 1-Bedroom Apartment Rental',
-    location: 'Munyonyo Kampala',
-    video: '/videos/video-home.mp4',
-    poster: '/images/html-img-1.jpg',
-    tag: 'Home Section',
+    title: 'Panda Bay Lounge & Commercial Complex',
+    location: 'Kololo Dundas Road, Kampala',
+    video: '/videos/automatic-car-wash-cafe.mp4',
+    poster: '/images/panda-bay-lounge-1.jpeg',
+    tag: 'Panda Bay',
   },
   {
-    title: '193-Acre Private Mailo Cattle Farm',
-    location: 'Mukono Uganda',
-    video: '/videos/video-about.mp4',
-    poster: '/images/html-img-2.jpg',
-    tag: 'About Us',
+    title: 'Modern Residential Bungalow Estate',
+    location: 'Kampala Prime Corridor',
+    video: '/videos/automatic-car-wash-cafe.mp4',
+    poster: '/images/development-1.jpeg',
+    tag: 'Residential Estate',
   },
   {
-    title: '2 Bedrooms Apartment UGX 1.1M',
-    location: 'Munyonyo Kampala',
-    video: '/videos/video-services.mp4',
-    poster: '/images/html-img-3.jpg',
-    tag: 'Services',
+    title: 'Executive Contemporary Bungalow Development',
+    location: 'Entebbe – Wakiso Corridor',
+    video: '/videos/automatic-car-wash-cafe.mp4',
+    poster: '/images/development-2.jpeg',
+    tag: 'Luxury Bungalow',
   },
   {
-    title: 'Luxury Architecture & Modern Villa',
-    location: 'Kampala Prime',
-    video: '/videos/video-projects.mp4',
-    poster: '/images/html-img-4.jpg',
-    tag: 'Projects',
+    title: 'Suburban Residential Villa Series',
+    location: 'Mukono – Kira Corridor',
+    video: '/videos/automatic-car-wash-cafe.mp4',
+    poster: '/images/development-3.jpeg',
+    tag: 'Turnkey Villa',
   },
   {
-    title: '2-Bedroom Apartment For Rent',
-    location: 'Bunga Soya',
-    video: '/videos/video-whyus.mp4',
-    poster: '/images/html-img-5.jpg',
-    tag: 'Why Choose Us',
-  },
-  {
-    title: '3-Bedroom Homes For Sale',
-    location: 'Muyenga Kisugu',
-    video: '/videos/video-blog.mp4',
-    poster: '/images/html-img-6.jpg',
-    tag: 'Blog & Resources',
-  },
-  {
-    title: 'Executive 1-Bedroom Apartment',
-    location: 'Munyonyo Kampala',
-    video: '/videos/video-contact.mp4',
-    poster: '/images/html-img-7.jpg',
-    tag: 'Contact',
+    title: 'Upcoming Commercial Plaza & Suites',
+    location: 'Central Business District, Kampala',
+    video: '/videos/automatic-car-wash-cafe.mp4',
+    poster: '/images/upcoming-projects.jpeg',
+    tag: 'Commercial Plaza',
   },
 ]
 
@@ -109,8 +95,8 @@ export default function SpectrumVideoShowcase() {
           </div>
         </div>
 
-        {/* 7 Video Reels Selector Thumbnails */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 max-w-6xl mx-auto">
+        {/* Video Reels Selector Thumbnails */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 max-w-6xl mx-auto">
           {REELS.map((reel, idx) => (
             <button
               key={reel.tag}
