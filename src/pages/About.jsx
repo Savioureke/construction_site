@@ -238,19 +238,34 @@ export default function About({ onOpenQuote }) {
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="grid sm:grid-cols-2 gap-5">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-black/10">
                 <img
                   src="/images/marketing-sales-office.jpeg"
                   alt="Metrak Marketing and Sales Office Kampala"
                   className="w-full h-[320px] object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent text-white">
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent text-white">
                   <span className="text-[11px] uppercase tracking-widest text-gold-accent font-bold block mb-1">
                     Metrak Commercial Presence
                   </span>
-                  <p className="font-heading font-bold text-lg">
-                    Marketing & Sales Office — 1st Street Industrial Area, Kampala
+                  <p className="font-heading font-bold text-base">
+                    Marketing & Sales Office — 1st Street Industrial Area
+                  </p>
+                </div>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-black/10">
+                <img
+                  src="/images/creating-landmarks-flyer.jpeg"
+                  alt="Metrak - Creating Landmarks, Not Just Buildings"
+                  className="w-full h-[320px] object-cover object-top"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent text-white">
+                  <span className="text-[11px] uppercase tracking-widest text-gold-accent font-bold block mb-1">
+                    Brand Philosophy
+                  </span>
+                  <p className="font-heading font-bold text-base">
+                    Creating Landmarks, Not Just Buildings
                   </p>
                 </div>
               </div>

@@ -40,7 +40,7 @@ export default function Header({ scrolled, onOpenQuote }) {
                 <i className="fa fa-envelope mr-1.5" /> info@metrakrealestate.co.ug
               </a>
               <a href="tel:+256200959400" className="hover:text-gold-accent transition-colors">
-                <i className="fa fa-phone mr-1.5" /> +256 200 959 400
+                <i className="fa fa-phone mr-1.5" /> +256 200 959 400 / +256 700 312 036
               </a>
             </div>
           </div>

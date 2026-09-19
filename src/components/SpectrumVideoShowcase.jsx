@@ -30,11 +30,11 @@ const REELS = [
     tag: 'Luxury Bungalow',
   },
   {
-    title: 'Suburban Residential Villa Series',
-    location: 'Mukono – Kira Corridor',
+    title: 'Custom Contemporary Residence & Villa',
+    location: 'Wakiso – Kampala Metropolitan',
     video: '/videos/automatic-car-wash-cafe.mp4',
-    poster: '/images/development-3.jpeg',
-    tag: 'Turnkey Villa',
+    poster: '/images/landscape-image.jpeg',
+    tag: 'Modern Villa',
   },
   {
     title: 'Upcoming Commercial Plaza & Suites',

@@ -170,8 +170,9 @@ export const PROJECTS_DATA = [
     "year": "Completed",
     "status": "Completed Development",
     "size": "Spacious Family Villa with Veranda",
-    "mainImage": "/images/development-3.jpeg",
+    "mainImage": "/images/landscape-image.jpeg",
     "gallery": [
+      "/images/landscape-image.jpeg",
       "/images/development-3.jpeg",
       "/images/change-that-picture-use-this-one.jpeg",
       "/images/development-2.jpeg",

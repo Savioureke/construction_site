@@ -10,7 +10,7 @@ const SERVICES_DATA = [
     title: 'Construction & Civil Engineering',
     quote:
       'From plans to Reality. Construction is not simply a physical process. It is a management process that eventually becomes physical. Metrak provides structured construction and project delivery support focused on cost, quality, timelines, and execution.',
-    image: '/images/in-services-1.png',
+    image: '/images/landscape-image.jpeg',
     whatWeDoTitle: 'What We Do',
     whatWeDo: [
       {

@@ -21,7 +21,7 @@ const POSTS = [
     readTime: '8 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'An engineering analysis of slump tests, cube crushing strength, and curing practices for durable multi-storey structures in Uganda.',
-    image: '/extracted_images/construction-civil-engineering/construction-civil-engineering_2.jpg',
+    image: '/images/landscape-image.jpeg',
   },
   {
     title: 'Emerging Real Estate Investment Hotspots in Kampala and Mbarara',
@@ -75,7 +75,7 @@ const POSTS = [
     readTime: '8 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'How our engineering and construction team delivered a bespoke 6,200 sq ft luxury residence with full quality assurance and high finishes.',
-    image: '/extracted_images/real-estate-sales-brokerage/real-estate-sales-brokerage_3.jpg',
+    image: '/images/services-3.jpg',
   },
   {
     title: 'Buying Off-Plan vs. Custom Development: A Comprehensive Financial Comparison',
@@ -84,7 +84,7 @@ const POSTS = [
     readTime: '9 min read',
     author: 'Metrak Advisory Team',
     excerpt: 'We weigh cashflow requirements, customization options, construction oversight, and return on investment for Ugandan property buyers.',
-    image: '/extracted_images/company-profile/company-profile_2.jpg',
+    image: '/images/in-services-2.jpeg',
   },
 ]
 
@@ -93,7 +93,7 @@ export default function Blog({ onOpenQuote }) {
   const [cardReady, setCardReady] = useState({})
 
   const HERO_IMG_URL = '/extracted_images/real-estate-sales-brokerage/real-estate-sales-brokerage_2.webp'
-  const FAQ_IMG_URL = '/extracted_images/real-estate-consultancy-valuation/real-estate-consultancy-valuation_3.jpg'
+  const FAQ_IMG_URL = '/images/creating-landmarks-flyer.jpeg'
   const CTA_IMG_URL = '/extracted_images/about-us/about-us_4.jpg'
 
   const heroReady = useBgReady(HERO_IMG_URL)
