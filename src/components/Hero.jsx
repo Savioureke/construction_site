@@ -33,7 +33,7 @@ export default function Hero({ onOpenQuote }) {
           <div className="mb-6 flex items-center gap-4">
             <span className="w-10 h-[2px]" style={{ backgroundColor: 'var(--color-gold-accent)' }} />
             <span className="uppercase tracking-[0.22em] font-bold text-[11.5px] text-white/80">
-              Shaping the Skyline
+              Shaping Skylines
             </span>
           </div>
 
@@ -41,9 +41,9 @@ export default function Hero({ onOpenQuote }) {
             className="font-heading hero-h1 text-white mb-6"
             style={{ textShadow: '0 4px 30px rgba(0,0,0,0.45)' }}
           >
-            Shaping the{' '}
+            Shaping{' '}
             <span style={{ color: 'var(--color-cyan-accent)' }}>
-              Skyline.
+              Skylines.
             </span>
           </h1>
 

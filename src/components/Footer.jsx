@@ -53,7 +53,7 @@ export default function Footer({ onOpenQuote }) {
             </div>
 
             <p className="text-white/60 text-[14.5px] leading-relaxed mb-6">
-              Shaping the Skyline across Uganda with premier property development, prime land transactions, civil engineering, and strategic real estate advisory.
+              Shaping Skylines across Uganda with premier property development, prime land transactions, civil engineering, and strategic real estate advisory.
             </p>
 
             <button type="button" onClick={onOpenQuote} className="btn-primary">

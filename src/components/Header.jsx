@@ -33,7 +33,7 @@ export default function Header({ scrolled, onOpenQuote }) {
           <div className="container-site flex items-center justify-between h-9">
             <div className="text-[11.5px] uppercase tracking-[0.12em] font-semibold text-white/85 truncate">
               <span className="text-gold-accent mr-2">•</span>
-              Shaping the Skyline
+              Shaping Skylines
             </div>
             <div className="hidden md:flex items-center gap-5 text-[11.5px] uppercase tracking-[0.1em] font-semibold text-white/80">
               <a href="mailto:info@metrakrealestate.co.ug" className="hover:text-gold-accent transition-colors">

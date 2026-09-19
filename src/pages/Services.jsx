@@ -246,7 +246,7 @@ export default function Services({ onOpenQuote }) {
             <div className="mb-5 flex items-center gap-4">
               <span className="w-10 h-[2px]" style={{ backgroundColor: 'var(--color-gold-accent)' }} />
               <span className="uppercase tracking-[0.22em] font-bold text-[11.5px] text-white/80">
-                Shaping the Skyline
+                Shaping Skylines
               </span>
             </div>
             <h1
