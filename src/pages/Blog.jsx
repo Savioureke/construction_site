@@ -94,7 +94,7 @@ export default function Blog({ onOpenQuote }) {
 
   const HERO_IMG_URL = '/extracted_images/real-estate-sales-brokerage/real-estate-sales-brokerage_2.webp'
   const FAQ_IMG_URL = '/images/creating-landmarks-flyer.jpeg'
-  const CTA_IMG_URL = '/extracted_images/about-us/about-us_4.jpg'
+  const CTA_IMG_URL = '/images/upcoming-projects.jpeg'
 
   const heroReady = useBgReady(HERO_IMG_URL)
   const faqReady = useBgReady(FAQ_IMG_URL)

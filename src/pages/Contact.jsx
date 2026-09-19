@@ -107,44 +107,50 @@ export default function Contact({ onOpenQuote }) {
               {
                 icon: 'fa-building-columns',
                 title: 'Kampala Head Office',
-                lines: ['Dungu 5 Building Rm. D.1, Kampala Uganda', 'Reception: +256 200 959 400', 'Mon - Sat: 8:00 AM - 6:00 PM'],
+                lines: ['Dungu 5 Building Rm. D.1, Press House Road, Kampala', 'Reception: +256 200 959 400', 'Mon - Sat: 8:00 AM - 6:00 PM'],
                 accent: 'var(--color-cyan-accent)',
+                image: '/images/head-office.jpeg',
               },
               {
                 icon: 'fa-store',
                 title: 'Marketing & Sales Office',
                 lines: ['1st Street Industrial Area, Near Club Guvnor, Kampala', 'Official WhatsApp: 0792170974', 'Mon - Sat: 8:00 AM - 6:00 PM'],
                 accent: 'var(--color-gold-accent)',
+                image: '/images/street-marketing-sales-office.jpeg',
               },
               {
                 icon: 'fa-map-location-dot',
                 title: 'Mbarara Branch',
-                lines: ['Mbarara Commercial Hub, Western Region', 'Phone: +256 700 312 036', 'Mon - Fri: 8:30 AM - 5:30 PM'],
+                lines: ['Vision Empire, Mbarara Commercial Hub', 'Phone: +256 700 312 036', 'Mon - Fri: 8:30 AM - 5:30 PM'],
                 accent: 'var(--color-cyan-accent)',
+                image: '/images/mbarara-office.jpeg',
               },
               {
                 icon: 'fa-envelope-open-text',
                 title: 'Jinja Office & Inquiries',
                 lines: ['Main Street Commercial Plaza, Jinja', 'Email: info@metrakrealestate.co.ug', 'Mon - Fri: 8:30 AM - 5:00 PM'],
                 accent: 'var(--color-gold-accent)',
+                image: '/images/upcoming-projects.jpeg',
               },
             ].map((c) => (
-              <div key={c.title} className="relative p-7 bg-white border rounded-xl transition-all duration-300 hover:-translate-y-1.5 text-center shadow-sm flex flex-col justify-between" style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}>
+              <div key={c.title} className="relative overflow-hidden bg-white border rounded-xl transition-all duration-300 hover:-translate-y-1.5 shadow-sm flex flex-col justify-between" style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}>
                 <div>
-                  <div
-                    className="w-14 h-14 mx-auto flex items-center justify-center text-xl text-white mb-4 rounded-xl shadow"
-                    style={{ backgroundColor: c.accent }}
-                  >
-                    <i className={`fa-solid ${c.icon}`} />
+                  <div className="relative h-44 overflow-hidden">
+                    <img src={c.image} alt={c.title} className="w-full h-full object-cover" />
+                    <div className="absolute top-3 left-3 w-10 h-10 flex items-center justify-center text-lg text-white rounded-lg shadow" style={{ backgroundColor: c.accent }}>
+                      <i className={`fa-solid ${c.icon}`} />
+                    </div>
                   </div>
-                  <h3 className="font-heading font-bold text-lg mb-2" style={{ color: 'var(--color-navy-deep)' }}>
-                    {c.title}
-                  </h3>
-                  {c.lines.map((line) => (
-                    <p key={line} className="text-text-body/75 leading-relaxed text-[14px]">
-                      {line}
-                    </p>
-                  ))}
+                  <div className="p-6 text-center">
+                    <h3 className="font-heading font-bold text-lg mb-2" style={{ color: 'var(--color-navy-deep)' }}>
+                      {c.title}
+                    </h3>
+                    {c.lines.map((line) => (
+                      <p key={line} className="text-text-body/75 leading-relaxed text-[14px]">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}

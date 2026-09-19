@@ -241,7 +241,7 @@ export default function About({ onOpenQuote }) {
             <div className="grid sm:grid-cols-2 gap-5">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-black/10">
                 <img
-                  src="/images/marketing-sales-office.jpeg"
+                  src="/images/street-marketing-sales-office.jpeg"
                   alt="Metrak Marketing and Sales Office Kampala"
                   className="w-full h-[320px] object-cover"
                 />
@@ -267,6 +267,159 @@ export default function About({ onOpenQuote }) {
                   <p className="font-heading font-bold text-base">
                     Creating Landmarks, Not Just Buildings
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* METRAK Core Values Acronym Section */}
+      <section className="py-section fade-section text-white relative overflow-hidden" style={{ backgroundColor: '#032a3a' }}>
+        <div className="container-site relative z-10">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <span className="section-eyebrow" style={{ color: 'var(--color-gold-accent)' }}>
+              Our Core Identity & Values
+            </span>
+            <h2 className="section-h2 text-white mb-6">
+              What <span style={{ color: 'var(--color-cyan-accent)' }}>METRAK</span> Stands For
+            </h2>
+            <p className="text-body-copy text-white/80 leading-relaxed max-w-2xl mx-auto font-body">
+              Our name embodies six foundational pillars guiding every real estate transaction, civil engineering build, and client consultation across Uganda.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { letter: 'M', word: 'Masters', desc: 'Masters of real estate & engineering solutions delivering institutional quality.', accent: '#00bcd4' },
+              { letter: 'E', word: 'Excellence', desc: 'Uncompromising engineering standards, fine finishing, and structural durability.', accent: '#d4af37' },
+              { letter: 'T', word: 'Transparency', desc: '100% legal due diligence, clear BOQs, and honest client communication.', accent: '#00bcd4' },
+              { letter: 'R', word: 'Reliability', desc: 'On-schedule project delivery, reliable material sourcing, and asset protection.', accent: '#d4af37' },
+              { letter: 'A', word: 'Accountability', desc: 'Full responsibility for site safety, environmental stewardship, and quality assurance.', accent: '#00bcd4' },
+              { letter: 'K', word: 'Knowledge', desc: 'Deep technical expertise, market intelligence, and professional valuation insights.', accent: '#d4af37' },
+            ].map((item) => (
+              <div
+                key={item.letter}
+                className="p-7 rounded-2xl border transition-all duration-300 hover:-translate-y-1.5 flex items-start gap-5"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                  borderColor: 'rgba(255, 255, 255, 0.1)',
+                }}
+              >
+                <div
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center font-heading font-black text-2xl flex-shrink-0 shadow-lg"
+                  style={{ backgroundColor: item.accent, color: '#032a3a' }}
+                >
+                  {item.letter}
+                </div>
+                <div>
+                  <h3 className="font-heading font-bold text-xl text-white mb-1.5">
+                    {item.word}
+                  </h3>
+                  <p className="text-white/75 text-[14.5px] leading-relaxed font-body">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Authentic Regional Offices Showcase */}
+      <section className="py-section bg-white fade-section w-full overflow-x-hidden">
+        <div className="container-site">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <span className="section-eyebrow">Physical Presence</span>
+            <h2 className="section-h2 mb-6">
+              Visit Our <span style={{ color: 'var(--color-cyan-accent)' }}>Regional Offices</span>
+            </h2>
+            <p className="text-body-copy text-text-body/85 leading-relaxed max-w-2xl mx-auto font-body">
+              Metrak Real Estate & Construction Limited operates fully staffed commercial hubs across Uganda to serve your property and engineering needs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Kampala Head Office */}
+            <div className="rounded-2xl overflow-hidden border bg-white shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}>
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src="/images/head-office.jpeg"
+                  alt="Kampala Head Office - Dungu 5 Building"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 left-3 bg-navy-deep/90 text-cyan-accent px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-white/10">
+                  Head Office
+                </div>
+              </div>
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-heading font-bold text-xl text-navy-deep mb-2">
+                    Kampala Head Office
+                  </h3>
+                  <p className="text-text-gray text-sm leading-relaxed mb-4 font-body">
+                    Dungu 5 Building Rm. D.1, Press House Road, Kampala, Uganda
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-black/5 flex items-center justify-between text-xs text-text-body font-semibold">
+                  <span>📞 +256 200 959 400</span>
+                  <span className="text-gold-accent font-bold">Mon - Sat</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Marketing & Sales Office */}
+            <div className="rounded-2xl overflow-hidden border bg-white shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}>
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src="/images/street-marketing-sales-office.jpeg"
+                  alt="Marketing & Sales Office - 1st Street Industrial Area"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 left-3 bg-navy-deep/90 text-gold-accent px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-white/10">
+                  Sales & Advisory
+                </div>
+              </div>
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-heading font-bold text-xl text-navy-deep mb-2">
+                    1st Street Marketing Office
+                  </h3>
+                  <p className="text-text-gray text-sm leading-relaxed mb-4 font-body">
+                    1st Street Industrial Area, Near Club Guvnor, Kampala, Uganda
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-black/5 flex items-center justify-between text-xs text-text-body font-semibold">
+                  <span>💬 WhatsApp: 0792170974</span>
+                  <span className="text-gold-accent font-bold">Mon - Sat</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Mbarara Western Branch */}
+            <div className="rounded-2xl overflow-hidden border bg-white shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col justify-between" style={{ borderColor: 'rgba(3, 42, 58, 0.08)' }}>
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src="/images/mbarara-office.jpeg"
+                  alt="Mbarara Western Branch - Vision Empire"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 left-3 bg-navy-deep/90 text-cyan-accent px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-white/10">
+                  Western Branch
+                </div>
+              </div>
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-heading font-bold text-xl text-navy-deep mb-2">
+                    Mbarara Western Branch
+                  </h3>
+                  <p className="text-text-gray text-sm leading-relaxed mb-4 font-body">
+                    Vision Empire, Mbarara Commercial Hub, Western Region, Uganda
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-black/5 flex items-center justify-between text-xs text-text-body font-semibold">
+                  <span>📞 +256 700 312 036</span>
+                  <span className="text-gold-accent font-bold">Mon - Fri</span>
                 </div>
               </div>
             </div>
