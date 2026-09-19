@@ -4,10 +4,6 @@ import Hero from '../components/Hero.jsx'
 import CompanyOverview from '../components/CompanyOverview.jsx'
 import SpectrumVideoShowcase from '../components/SpectrumVideoShowcase.jsx'
 import WhatWeBuild from '../components/WhatWeBuild.jsx'
-import SEOAndMarketing from '../components/SEOAndMarketing.jsx'
-import RankingStrategy from '../components/RankingStrategy.jsx'
-import OurApproach from '../components/OurApproach.jsx'
-import MarketingAnalytics from '../components/MarketingAnalytics.jsx'
 import LongTermGrowth from '../components/LongTermGrowth.jsx'
 import HighlightsStrip from '../components/HighlightsStrip.jsx'
 import QuoteCTASection from '../components/QuoteCTASection.jsx'
@@ -34,10 +30,6 @@ export default function Home({ onOpenQuote }) {
       <CompanyOverview />
       <SpectrumVideoShowcase />
       <WhatWeBuild />
-      <SEOAndMarketing />
-      <RankingStrategy />
-      <OurApproach />
-      <MarketingAnalytics />
       <LongTermGrowth />
       <HighlightsStrip />
       <QuoteCTASection onOpenQuote={onOpenQuote} />
