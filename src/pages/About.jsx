@@ -241,16 +241,16 @@ export default function About({ onOpenQuote }) {
             <div className="grid sm:grid-cols-2 gap-5">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-black/10">
                 <img
-                  src="/images/street-marketing-sales-office.jpeg"
-                  alt="Metrak Marketing and Sales Office Kampala"
-                  className="w-full h-[320px] object-cover"
+                  src="/images/about_3.jpg"
+                  alt="Metrak Core Values - Masters of Real Estate & Engineering"
+                  className="w-full h-[360px] object-cover object-top"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent text-white">
                   <span className="text-[11px] uppercase tracking-widest text-gold-accent font-bold block mb-1">
-                    Metrak Commercial Presence
+                    Metrak Core Values
                   </span>
                   <p className="font-heading font-bold text-base">
-                    Marketing & Sales Office — 1st Street Industrial Area
+                    Masters of Real Estate & Engineering Solutions
                   </p>
                 </div>
               </div>
@@ -258,7 +258,7 @@ export default function About({ onOpenQuote }) {
                 <img
                   src="/images/creating-landmarks-flyer.jpeg"
                   alt="Metrak - Creating Landmarks, Not Just Buildings"
-                  className="w-full h-[320px] object-cover object-top"
+                  className="w-full h-[360px] object-cover object-top"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-transparent text-white">
                   <span className="text-[11px] uppercase tracking-widest text-gold-accent font-bold block mb-1">
@@ -270,58 +270,6 @@ export default function About({ onOpenQuote }) {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* METRAK Core Values Acronym Section */}
-      <section className="py-section fade-section text-white relative overflow-hidden" style={{ backgroundColor: '#032a3a' }}>
-        <div className="container-site relative z-10">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="section-eyebrow" style={{ color: 'var(--color-gold-accent)' }}>
-              Our Core Identity & Values
-            </span>
-            <h2 className="section-h2 text-white mb-6">
-              What <span style={{ color: 'var(--color-cyan-accent)' }}>METRAK</span> Stands For
-            </h2>
-            <p className="text-body-copy text-white/80 leading-relaxed max-w-2xl mx-auto font-body">
-              Our name embodies six foundational pillars guiding every real estate transaction, civil engineering build, and client consultation across Uganda.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              { letter: 'M', word: 'Masters', desc: 'Masters of real estate & engineering solutions delivering institutional quality.', accent: '#00bcd4' },
-              { letter: 'E', word: 'Excellence', desc: 'Uncompromising engineering standards, fine finishing, and structural durability.', accent: '#d4af37' },
-              { letter: 'T', word: 'Transparency', desc: '100% legal due diligence, clear BOQs, and honest client communication.', accent: '#00bcd4' },
-              { letter: 'R', word: 'Reliability', desc: 'On-schedule project delivery, reliable material sourcing, and asset protection.', accent: '#d4af37' },
-              { letter: 'A', word: 'Accountability', desc: 'Full responsibility for site safety, environmental stewardship, and quality assurance.', accent: '#00bcd4' },
-              { letter: 'K', word: 'Knowledge', desc: 'Deep technical expertise, market intelligence, and professional valuation insights.', accent: '#d4af37' },
-            ].map((item) => (
-              <div
-                key={item.letter}
-                className="p-7 rounded-2xl border transition-all duration-300 hover:-translate-y-1.5 flex items-start gap-5"
-                style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                  borderColor: 'rgba(255, 255, 255, 0.1)',
-                }}
-              >
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center font-heading font-black text-2xl flex-shrink-0 shadow-lg"
-                  style={{ backgroundColor: item.accent, color: '#032a3a' }}
-                >
-                  {item.letter}
-                </div>
-                <div>
-                  <h3 className="font-heading font-bold text-xl text-white mb-1.5">
-                    {item.word}
-                  </h3>
-                  <p className="text-white/75 text-[14.5px] leading-relaxed font-body">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
