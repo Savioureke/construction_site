@@ -5,7 +5,7 @@ const REELS = [
     title: 'Automated Car Wash, Café & Restaurant Tour',
     location: '1st Street Industrial Area, Kampala',
     video: '/videos/automatic-car-wash-cafe.mp4',
-    poster: '/images/marketing-sales-office.jpeg',
+    poster: '/images/car-wash-exterior.jpeg',
     tag: 'Commercial Hub',
   },
   {
